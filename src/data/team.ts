@@ -76,7 +76,7 @@ export const teamMembers: TeamMember[] = [
     links: {
       "home-page": "https://github.com/Ragingdemo",
       email: "shubh.sharma@estudiants.urv.cat",
-      orcid: "0009-0004-02207-3937",
+      orcid: "0009-0004-2207-3937",
     },
     aliases: ["S. sharma"],
   },
@@ -102,6 +102,27 @@ export const teamMembers: TeamMember[] = [
       orcid: "0000-0002-1987-4694",
     },
   },
+  {
+    name: "Gautam",
+    role: "PhD Student",
+    hierarchy: "phd",
+    bio: "Gautam is a PhD student focusing on machine learning applications in computational toxicology and the development of predictive models for chemical risk assessment.",
+    links: {},
+  },
+  {
+    name: "Yash Yogesh Gondegaonkar",
+    role: "PhD Student",
+    hierarchy: "phd",
+    bio: "Yash is researching advanced deep learning architectures to improve the reliability of in-silico toxicity predictions and analyze complex adverse outcome pathways.",
+    links: {},
+  },
+  {
+    name: "Vishak Viswalal",
+    role: "PhD Student",
+    hierarchy: "phd",
+    bio: "Vishak's research involves the integration of multi-omics data with systems biology models to understand metabolic disruptions caused by environmental pollutants.",
+    links: {},
+  },
 ];
 
 // Helper functions to get team members by hierarchy
@@ -117,7 +138,14 @@ export const getPhDStudents = () => {
   return teamMembers.filter((member) => member.hierarchy === "phd");
 };
 
-// Helper function to get team members by role (legacy support)
+export const getVisitingScientists = () => {
+  return teamMembers.filter((member) => member.hierarchy === "visiting");
+};
+
+export const getAlumni = () => {
+  return teamMembers.filter((member) => member.hierarchy === "alumni");
+};
+
 export const getTeamMembersByRole = (role: string) => {
   const roleMap: Record<string, string> = {
     pi: "Group Leader",
@@ -126,5 +154,14 @@ export const getTeamMembersByRole = (role: string) => {
     programmer: "Bioinformatician/Lead Programmer",
   };
   return teamMembers.filter((member) => member.role === roleMap[role] || member.role === role);
+};
+
+// Helper for URL routing
+export const createSlug = (name: string) => {
+  return name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)+/g, '');
+};
+
+export const getMemberBySlug = (slug: string) => {
+  return teamMembers.find((member) => createSlug(member.name) === slug);
 };
 

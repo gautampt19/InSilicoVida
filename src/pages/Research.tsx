@@ -4,48 +4,33 @@ import Footer from "@/components/Footer";
 import { researchAreas, researchDescription } from "@/data/research";
 import { HighlightedText } from "@/components/HighlightedText";
 import { useGSAP } from "@/hooks/useGSAP";
-import { scrollStagger, tilt3D, fadeInUp, underlineReveal } from "@/utils/animations";
+import { scrollStagger, fadeInUp } from "@/utils/animations";
 import gsap from "gsap";
+import { AnimatedNetwork } from "@/components/AnimatedNetwork";
 
 const Research = () => {
-  const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
-  const titleRef = useRef<HTMLHeadingElement>(null);
-  const descriptionRef = useRef<HTMLParagraphElement>(null);
   const cardsRef = useRef<HTMLDivElement>(null);
 
   useGSAP(() => {
-    // Animate header section
     if (headerRef.current) {
       fadeInUp(headerRef.current, { delay: 0.2, duration: 0.8 });
     }
-
-    // Animate title with underline
-    if (titleRef.current) {
-      fadeInUp(titleRef.current, { delay: 0.4, duration: 0.8 });
-      underlineReveal(titleRef.current);
-    }
-
-    // Animate description
-    if (descriptionRef.current) {
-      fadeInUp(descriptionRef.current, { delay: 0.6, duration: 0.8, y: 30 });
-    }
-
     if (cardsRef.current) {
       const cards = cardsRef.current.querySelectorAll(".research-card");
-      scrollStagger(cards, {
-        start: "top 85%",
-        stagger: 0.15,
-        once: true,
-        trigger: cardsRef.current,
-      });
-
-      // Add 3D tilt effect to each card
-      cards.forEach((card) => {
-        if (card instanceof HTMLElement) {
-          tilt3D(card);
+      gsap.fromTo(
+        cards,
+        { opacity: 0, y: 50, scale: 0.9 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.8,
+          delay: 0.4,
+          stagger: 0.12,
+          ease: "power3.out",
         }
-      });
+      );
     }
   }, []);
 
@@ -53,49 +38,62 @@ const Research = () => {
     <div className="min-h-screen bg-background">
       <Header />
       <main className="pt-20">
-        <section ref={sectionRef} className="py-24 px-6">
-          <div className="container mx-auto max-w-6xl">
-            <div ref={headerRef} className="text-center mb-16" style={{ opacity: 0 }}>
-              <p className="text-sm font-medium text-muted-foreground tracking-widest uppercase mb-3">
-                Our Focus
-              </p>
-              <h1
-                ref={titleRef}
-                className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-6 relative inline-block"
-                style={{ opacity: 0 }}
-              >
-                Research Areas
+        {/* Hero Section */}
+        <section className="relative pt-12 pb-20 px-6 overflow-hidden">
+          {/* Background Network & Gradients */}
+          <div className="absolute inset-0 z-0 pointer-events-none">
+            <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-primary/5 via-primary/5 to-transparent" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] opacity-70 translate-x-1/3 -translate-y-1/3" />
+            <div className="absolute top-1/2 left-1/4 w-[1000px] h-[500px] -translate-y-1/2 opacity-20">
+              <AnimatedNetwork />
+            </div>
+            {/* Edge fade gradients */}
+            <div className="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-t from-background to-transparent" />
+            <div className="absolute top-0 inset-x-0 h-16 bg-gradient-to-b from-background to-transparent" />
+            <div className="absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-background to-transparent" />
+            <div className="absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-background to-transparent" />
+          </div>
+
+          <div className="container mx-auto max-w-7xl relative z-10">
+            <div ref={headerRef} className="mb-12 max-w-3xl" style={{ opacity: 0 }}>
+              <p className="text-primary font-semibold text-sm tracking-widest uppercase mb-3">Our Focus</p>
+              <h1 className="font-serif text-3xl md:text-5xl font-normal text-foreground mb-6">
+                Research <span className="text-primary">Areas</span>
               </h1>
-              <p
-                ref={descriptionRef}
-                className="text-lg text-muted-foreground max-w-2xl mx-auto text-justify"
-                style={{ opacity: 0 }}
-              >
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 <HighlightedText text={researchDescription} />
               </p>
             </div>
+          </div>
+        </section>
 
-            <div ref={cardsRef} className="grid md:grid-cols-2 gap-8">
-              {researchAreas.map((area) => (
+        <section className="py-10 px-6">
+          <div className="container mx-auto max-w-7xl">
+
+            {/* Research Cards — 2-column grid, always expanded */}
+            <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {researchAreas.map((area, index) => (
                 <div
                   key={area.title}
-                  className="research-card group p-8 bg-card border border-border hover:border-muted transition-all duration-300 will-change-transform"
+                  className="research-card group border border-border rounded-lg bg-card p-6 md:p-8 hover:border-primary/30 hover:shadow-md transition-all duration-300"
                   style={{ opacity: 0 }}
                 >
-                  <div className="flex items-start gap-5">
-                    <div className="p-3 bg-background border border-border group-hover:bg-primary group-hover:border-primary transition-colors duration-300 relative">
-                      <area.icon className="w-6 h-6 text-foreground group-hover:text-primary-foreground transition-colors duration-300 relative z-10" />
-                      <div className="absolute inset-0 bg-primary/10 scale-0 group-hover:scale-100 transition-transform duration-300 rounded-sm" />
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-2.5 rounded-lg bg-primary/10 shrink-0">
+                      <area.icon className="w-5 h-5 text-primary" />
                     </div>
-                    <div className="flex-1">
-                      <h2 className="font-serif text-xl font-semibold text-foreground mb-3">
-                        {area.title}
-                      </h2>
-                      <p className="text-muted-foreground leading-relaxed text-justify">
-                        <HighlightedText text={area.description} />
-                      </p>
-                    </div>
+                    <h2 className="font-serif text-xl md:text-2xl font-medium text-foreground group-hover:text-primary transition-colors">
+                      {area.title.split("&").map((part, i, arr) => (
+                        <span key={i}>
+                          {part}
+                          {i < arr.length - 1 && <span className="font-sans">&amp;</span>}
+                        </span>
+                      ))}
+                    </h2>
                   </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed ml-[52px]">
+                    <HighlightedText text={area.description} />
+                  </p>
                 </div>
               ))}
             </div>

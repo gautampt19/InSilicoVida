@@ -79,7 +79,7 @@ export const AnimatedPath = () => {
     Q 700 20, 750 50`;
 
   return (
-    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+    <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20 animated-molecular-canvas">
       <svg
         ref={svgRef}
         viewBox="0 0 800 150"

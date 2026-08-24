@@ -10,6 +10,8 @@ export const projects: Project[] = [
     date: "2021",
     grantNumber: "101057014",
     funding: "EU Horizon Europe",
+    website: "https://www.eu-parc.eu/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=eu-parc.eu&sz=128",
   },
   {
     title: "MERLON",
@@ -18,6 +20,8 @@ export const projects: Project[] = [
       "MERLON is focused on EDCs (endocrine disruptor chemicals), and developing the adverse outcome pathway (AOP) framework especially quantitative AOP networks, and increase the availability of human-relevant NAMs (New Approach Methodology) to bridge the gap between science and policy needed to advance regulatory decision making and reduce health impacts of EDCs. Focused endpoint is reproductive toxicity after exposure to EDCs. The project is coordinated by Technical University of Denmark [DTU] with 10 other prominent EU institutions participating: 1) Vrije Universiteit, Netherland VUA, 2) Karolinska Institute, Sweden KI, 3) Research Institute For Environmental And Occupational Health, France IRSET, 4) The Capital Region of Denmark, Denmark REGIONH, 5) University of Lieg, Belgium ULIEGE, 6) Pere Virgili Institute for Health Research, Spain IISPV, 7) National Institute for Public Health and the Environment, Netherland RIVM, 8) University of Cordoba, Spain UCO, 9) Health and Environment Alliance, Belgium HEAL, and 10) Norwegian Institute for Water Research, Norway NIVA).",
     status: "active",
     date: "2021",
+    website: "https://merlon.dtu.dk/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=merlon.dtu.dk&sz=128",
   },
   {
     title: "ENVESOME",
@@ -28,6 +32,7 @@ export const projects: Project[] = [
     date: "2024",
     funding: "Horizon 2020",
     website: "https://envesome.eu/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=envesome.eu&sz=128",
   },
   {
     title: "FlameRISK",
@@ -38,6 +43,8 @@ export const projects: Project[] = [
     date: "2019",
     grantNumber: "RTI2018-095466-B-I00",
     funding: "Spanish Ministry of Science and Innovation",
+    website: "https://www.iispv.cat/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=iispv.cat&sz=128",
   },
   {
     title: "HBM4EU",
@@ -48,6 +55,8 @@ export const projects: Project[] = [
     date: "2017",
     grantNumber: "733032",
     funding: "Horizon 2020",
+    website: "https://www.hbm4eu.eu/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=hbm4eu.eu&sz=128",
   },
   {
     title: "NEUROSOME",
@@ -58,6 +67,8 @@ export const projects: Project[] = [
     date: "2017",
     grantNumber: "766251",
     funding: "Horizon 2020 MSCA-ITN",
+    website: "http://www.neurosome.eu/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=neurosome.eu&sz=128",
   },
   {
     title: "EarlyFOOD",
@@ -68,6 +79,8 @@ export const projects: Project[] = [
     date: "2018",
     grantNumber: "PCIN-2017-012",
     funding: "JPI HDHL",
+    website: "https://www.healthydietforhealthylife.eu/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=healthydietforhealthylife.eu&sz=128",
   },
   {
     title: "EUROMIX",
@@ -78,6 +91,8 @@ export const projects: Project[] = [
     date: "2015",
     grantNumber: "633172",
     funding: "Horizon 2020",
+    website: "https://www.euromixproject.eu/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=euromixproject.eu&sz=128",
   },
   {
     title: "HEALS",
@@ -88,6 +103,8 @@ export const projects: Project[] = [
     date: "2013",
     grantNumber: "603946",
     funding: "EU Seventh Framework Programme",
+    website: "http://www.heals-eu.eu/",
+    image: "https://s2.googleusercontent.com/s2/favicons?domain=heals-eu.eu&sz=128",
   },
 ];
 

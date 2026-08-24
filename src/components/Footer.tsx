@@ -1,156 +1,148 @@
 import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const navSections = [
+    {
+      title: "Research",
+      links: [
+        { label: "Research Areas", href: "/research" },
+        { label: "Projects", href: "/projects" },
+        { label: "Publications", href: "/publications" },
+      ],
+    },
+    {
+      title: "Resources",
+      links: [
+        { label: "Software & Tools", href: "/software" },
+        { label: "Team", href: "/team" },
+        { label: "Contact", href: "/contact" },
+      ],
+    },
+  ];
+
+  const affiliations = [
+    {
+      name: "Universitat Rovira i Virgili",
+      logo: "/images/urv-logo.png",
+      url: "https://www.urv.cat/en/",
+      fallback: "URV",
+    },
+    {
+      name: "TecnATox",
+      logo: "/images/tecnatox-logo.png",
+      url: "https://www.tecnatox.urv.cat/en/",
+      fallback: "TecnATox",
+    },
+    {
+      name: "IISPV",
+      logo: "/images/iispv-logo.png",
+      url: "https://www.iispv.cat/en/",
+      fallback: "IISPV",
+    },
+  ];
+
   return (
-    <footer className="py-12 px-6 bg-primary text-primary-foreground">
+    <footer className="relative pt-20 pb-8 px-6 border-t border-border/30 bg-gradient-to-b from-background to-background/80">
+      {/* Subtle mesh glow at top */}
+      <div
+        className="absolute top-0 left-1/2 -translate-x-1/2 w-[60%] h-px opacity-60"
+        style={{
+          background:
+            "linear-gradient(90deg, transparent, hsl(var(--primary) / 0.4), hsl(var(--mesh-2) / 0.3), transparent)",
+        }}
+      />
+
       <div className="container mx-auto max-w-6xl">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
-            <p className="font-serif text-lg font-semibold mb-1">
-              InSilicoVida Research Laboratory
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
+          {/* Brand Column */}
+          <div className="md:col-span-5">
+            <div className="flex items-center gap-2.5 mb-4">
+              <span className="w-2 h-2 rounded-full bg-primary" />
+              <span className="font-serif text-xl font-semibold text-foreground tracking-tight">
+                InSilicoVida
+              </span>
+            </div>
+            <p className="text-sm text-muted-foreground leading-relaxed max-w-sm mb-6">
+              A dynamic research group at the intersection of computational
+              toxicology, AI, and human health risk assessment. Part of TecnATox
+              Research Center.
             </p>
-            <p className="text-sm text-primary-foreground/70 mb-1">
-              Part of TecnATox Research Center
-            </p>
-            <p className="text-xs text-primary-foreground/60">
-              Advancing knowledge through rigorous research
+            <p className="text-xs text-muted-foreground/60">
+              Department of Chemical Engineering
+              <br />
+              Universitat Rovira i Virgili, Tarragona, Spain
             </p>
           </div>
-          
-          <nav className="flex items-center gap-6 flex-wrap justify-center md:justify-end">
-            <Link to="/research" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200">
-              Research
-            </Link>
-            <Link to="/research-projects" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200">
-              Projects
-            </Link>
-            <Link to="/publications" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200">
-              Publications
-            </Link>
-            <Link to="/software" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200">
-              Software
-            </Link>
-            <Link to="/team" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200">
-              Team
-            </Link>
-            <Link to="/contact" className="text-sm text-primary-foreground/70 hover:text-primary-foreground transition-colors duration-200">
-              Contact
-            </Link>
-          </nav>
-        </div>
-        
-        {/* Affiliations Section */}
-        <div className="mt-12 pt-8 border-t border-primary-foreground/20">
-          <div className="flex flex-col items-center gap-6">
-            <p className="text-sm text-primary-foreground/80 font-medium text-center">
+
+          {/* Navigation Columns */}
+          {navSections.map((section) => (
+            <div key={section.title} className="md:col-span-2">
+              <h3 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4">
+                {section.title}
+              </h3>
+              <ul className="space-y-3">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link
+                      to={link.href}
+                      className="text-sm text-muted-foreground hover:text-primary transition-colors duration-200"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+
+          {/* Affiliations Column */}
+          <div className="md:col-span-3">
+            <h3 className="text-xs font-semibold text-foreground uppercase tracking-widest mb-4">
               Affiliated with
-            </p>
-            <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12">
-              {/* URV Logo */}
-              <a
-                href="https://www.urv.cat/en/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 group hover:opacity-80 transition-opacity duration-200"
-                aria-label="Visit Universitat Rovira i Virgili website"
-              >
-                <div className="bg-white/10 p-4 rounded-lg border border-primary-foreground/20 group-hover:bg-white/20 transition-colors min-h-[60px] min-w-[120px] flex items-center justify-center">
+            </h3>
+            <div className="flex flex-wrap gap-3">
+              {affiliations.map((affiliation) => (
+                <a
+                  key={affiliation.name}
+                  href={affiliation.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-center justify-center p-3 rounded-xl bg-card/50 border border-border/50 hover:border-primary/20 hover:bg-card/80 transition-all duration-300 min-w-[72px] min-h-[48px]"
+                  aria-label={`Visit ${affiliation.name} website`}
+                  title={affiliation.name}
+                >
                   <img
-                    src="/images/urv-logo.png"
-                    alt="Universitat Rovira i Virgili (URV) Logo"
-                    className="h-12 w-auto object-contain max-w-[120px]"
+                    src={affiliation.logo}
+                    alt={affiliation.name}
+                    className="h-8 w-auto object-contain opacity-60 group-hover:opacity-100 transition-opacity duration-300"
                     onError={(e) => {
-                      // Fallback if logo not found
                       const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
+                      target.style.display = "none";
                       const parent = target.parentElement;
-                      if (parent && !parent.querySelector('.logo-fallback')) {
-                        const fallback = document.createElement('span');
-                        fallback.className = 'logo-fallback text-sm font-semibold text-primary-foreground';
-                        fallback.textContent = 'URV';
+                      if (parent && !parent.querySelector(".logo-fallback")) {
+                        const fallback = document.createElement("span");
+                        fallback.className =
+                          "logo-fallback text-xs font-semibold text-muted-foreground";
+                        fallback.textContent = affiliation.fallback;
                         parent.appendChild(fallback);
                       }
                     }}
                   />
-                </div>
-                <span className="text-xs text-primary-foreground/70 text-center max-w-[150px]">
-                  Universitat Rovira i Virgili
-                </span>
-              </a>
-
-              {/* Tecnatox Logo */}
-              <a
-                href="https://www.tecnatox.urv.cat/en/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 group hover:opacity-80 transition-opacity duration-200"
-                aria-label="Visit TecnATox website"
-              >
-                <div className="bg-white/10 p-4 rounded-lg border border-primary-foreground/20 group-hover:bg-white/20 transition-colors min-h-[60px] min-w-[120px] flex items-center justify-center">
-                  <img
-                    src="/images/tecnatox-logo.png"
-                    alt="TecnATox Logo"
-                    className="h-12 w-auto object-contain max-w-[120px]"
-                    onError={(e) => {
-                      // Fallback if logo not found
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const parent = target.parentElement;
-                      if (parent && !parent.querySelector('.logo-fallback')) {
-                        const fallback = document.createElement('span');
-                        fallback.className = 'logo-fallback text-sm font-semibold text-primary-foreground';
-                        fallback.textContent = 'TecnATox';
-                        parent.appendChild(fallback);
-                      }
-                    }}
-                  />
-                </div>
-                <span className="text-xs text-primary-foreground/70 text-center max-w-[150px]">
-                  TecnATox
-                </span>
-              </a>
-
-              {/* IISPV Logo */}
-              <a
-                href="https://www.iispv.cat/en/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 group hover:opacity-80 transition-opacity duration-200"
-                aria-label="Visit Institut d'Investigació Sanitària Pere Virgili website"
-              >
-                <div className="bg-white/10 p-4 rounded-lg border border-primary-foreground/20 group-hover:bg-white/20 transition-colors min-h-[60px] min-w-[120px] flex items-center justify-center">
-                  <img
-                    src="/images/iispv-logo.png"
-                    alt="Institut d'Investigació Sanitària Pere Virgili (IISPV) Logo"
-                    className="h-12 w-auto object-contain max-w-[120px]"
-                    onError={(e) => {
-                      // Fallback if logo not found
-                      const target = e.target as HTMLImageElement;
-                      target.style.display = 'none';
-                      const parent = target.parentElement;
-                      if (parent && !parent.querySelector('.logo-fallback')) {
-                        const fallback = document.createElement('span');
-                        fallback.className = 'logo-fallback text-sm font-semibold text-primary-foreground';
-                        fallback.textContent = 'IISPV';
-                        parent.appendChild(fallback);
-                      }
-                    }}
-                  />
-                </div>
-                <span className="text-xs text-primary-foreground/70 text-center max-w-[150px]">
-                  Institut d'Investigació<br />Sanitària Pere Virgili
-                </span>
-              </a>
+                </a>
+              ))}
             </div>
           </div>
         </div>
-        
-        <div className="mt-8 pt-8 border-t border-primary-foreground/20 text-center">
-          <p className="text-sm text-primary-foreground/60">
-            © {new Date().getFullYear()} InSilicoVida Research Laboratory, part of TecnATox. All rights reserved.
+
+        {/* Bottom Bar */}
+        <div className="pt-6 border-t border-border/30 flex flex-col sm:flex-row items-center justify-between gap-3">
+          <p className="text-xs text-muted-foreground/50">
+            © {new Date().getFullYear()} InSilicoVida Research Laboratory. All
+            rights reserved.
           </p>
-          <p className="text-xs text-primary-foreground/50 mt-2">
-            Department of Chemical Engineering, Universitat Rovira i Virgili, Tarragona, Spain
+          <p className="text-xs text-muted-foreground/40">
+            Part of TecnATox · Universitat Rovira i Virgili
           </p>
         </div>
       </div>

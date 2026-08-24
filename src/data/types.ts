@@ -3,6 +3,8 @@
 export type SoftwareCategory = "pbpk" | "text-mining" | "omics";
 
 export interface Software {
+  id?: string;
+  created_at?: string;
   name: string;
   description: string;
   language?: string;
@@ -24,14 +26,17 @@ export interface Publication {
   doi: string;
   image?: string;
   id?: string;
+  isOpenAccess?: boolean;
 }
 
 export interface TeamMember {
+  id?: string;
   name: string;
   role: string;
+  created_at?: string;
   bio: string;
   image: string;
-  hierarchy?: "leader" | "researcher" | "phd";
+  hierarchy?: "leader" | "researcher" | "phd" | "visiting" | "alumni";
   links?: {
     email?: string;
     orcid?: string;
@@ -58,6 +63,8 @@ export interface HomeContent {
 }
 
 export interface Project {
+  id?: string;
+  created_at?: string;
   title: string;
   subtitle: string;
   description: string;
@@ -68,4 +75,42 @@ export interface Project {
   website?: string;
   image?: string;
 }
+
+export interface NewsItem {
+  id?: string;
+  created_at?: string;
+  date: string;
+  title: string;
+  description: string;
+  link?: string;
+}
+
+export interface Poster {
+  id?: string;
+  created_at?: string;
+  title: string;
+  authors: string;
+  conference: string;
+  year: string;
+  zenodo_url?: string;
+  pdf_url?: string;
+  image_url?: string;
+  description?: string;
+}
+
+export interface BlogPost {
+  id?: string;
+  created_at?: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string;
+  category?: string;
+  image?: string;
+  read_time?: string;
+  published?: boolean;
+}
+
 

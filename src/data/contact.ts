@@ -1,5 +1,5 @@
 export const contactInfo = {
-  email: "vikas.kumar@urv.cat",
+  email: "info@insilicovida.com",
   phone: "(977) 55-85-76",
   phoneLink: "+34-977-55-85-76",
   location: {
