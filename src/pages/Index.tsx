@@ -134,10 +134,38 @@ const Index = () => {
       visiting: 4,
       alumni: 5,
     };
+    
+    const researcherOrder = ["deepika", "rajesh", "kanchan"];
+    const phdOrder = ["jordina", "saurav", "shubh"];
+
     return [...teamMembers].sort((a, b) => {
       const orderA = hierarchyOrder[a.hierarchy || "researcher"] || 4;
       const orderB = hierarchyOrder[b.hierarchy || "researcher"] || 4;
-      return orderA - orderB;
+      if (orderA !== orderB) return orderA - orderB;
+
+      // If they are both researchers, sort by explicit researcher order
+      if (a.hierarchy === "researcher" && b.hierarchy === "researcher") {
+        const aName = a.name.toLowerCase();
+        const bName = b.name.toLowerCase();
+        let aIdx = researcherOrder.findIndex(n => aName.includes(n));
+        let bIdx = researcherOrder.findIndex(n => bName.includes(n));
+        if (aIdx === -1) aIdx = 999;
+        if (bIdx === -1) bIdx = 999;
+        return aIdx - bIdx;
+      }
+
+      // If they are both PhD students, sort by explicit PhD order
+      if (a.hierarchy === "phd" && b.hierarchy === "phd") {
+        const aName = a.name.toLowerCase();
+        const bName = b.name.toLowerCase();
+        let aIdx = phdOrder.findIndex(n => aName.includes(n));
+        let bIdx = phdOrder.findIndex(n => bName.includes(n));
+        if (aIdx === -1) aIdx = 999;
+        if (bIdx === -1) bIdx = 999;
+        return aIdx - bIdx;
+      }
+
+      return 0; // Maintain original database insertion order for the rest
     });
   }, [teamMembers]);
 
@@ -334,7 +362,7 @@ const Index = () => {
             {/* About Section */}
             <div className="opacity-0">
               <h2 className="text-2xl font-serif text-foreground border-b border-border pb-3 mb-6">What We Do</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-[repeat(auto-fit,minmax(220px,1fr))] gap-6">
                 {homeData.highlights.map((highlight, index) => (
                   <div key={index} className="p-6 border border-border rounded bg-card shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 group">
                     <h3 className="font-serif text-xl font-medium text-foreground mb-3 group-hover:text-primary transition-colors">{highlight.title}</h3>

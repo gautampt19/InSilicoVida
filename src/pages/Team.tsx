@@ -168,8 +168,32 @@ const Team = () => {
   const { teamMembers, isLoading, error } = useTeam();
 
   const groupLeader = teamMembers.find((m) => m.hierarchy === "leader");
-  const researchers = teamMembers.filter((m) => m.hierarchy === "researcher");
-  const phdStudents = teamMembers.filter((m) => m.hierarchy === "phd");
+
+  const researcherOrder = ["deepika", "rajesh", "kanchan"];
+  const researchers = teamMembers
+    .filter((m) => m.hierarchy === "researcher")
+    .sort((a, b) => {
+      const aName = a.name.toLowerCase();
+      const bName = b.name.toLowerCase();
+      let aIndex = researcherOrder.findIndex((name) => aName.includes(name));
+      let bIndex = researcherOrder.findIndex((name) => bName.includes(name));
+      if (aIndex === -1) aIndex = 999;
+      if (bIndex === -1) bIndex = 999;
+      return aIndex - bIndex;
+    });
+
+  const phdOrder = ["jordina", "saurav", "shubh"];
+  const phdStudents = teamMembers
+    .filter((m) => m.hierarchy === "phd")
+    .sort((a, b) => {
+      const aName = a.name.toLowerCase();
+      const bName = b.name.toLowerCase();
+      let aIndex = phdOrder.findIndex((name) => aName.includes(name));
+      let bIndex = phdOrder.findIndex((name) => bName.includes(name));
+      if (aIndex === -1) aIndex = 999;
+      if (bIndex === -1) bIndex = 999;
+      return aIndex - bIndex;
+    });
   const visitingScientists = teamMembers.filter((m) => m.hierarchy === "visiting");
   const alumni = teamMembers.filter((m) => m.hierarchy === "alumni");
 

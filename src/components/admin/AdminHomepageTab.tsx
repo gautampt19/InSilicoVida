@@ -27,6 +27,21 @@ export default function AdminHomepageTab() {
     setFormData({ ...formData, tickerItems: updated });
   };
 
+  const handleAddHighlight = () => {
+    setFormData({
+      ...formData,
+      highlights: [
+        ...formData.highlights,
+        { title: "New Feature", text: "Describe what you do here.", link: "" },
+      ],
+    });
+  };
+
+  const handleDeleteHighlight = (index: number) => {
+    const updated = formData.highlights.filter((_, i) => i !== index);
+    setFormData({ ...formData, highlights: updated });
+  };
+
   const handleAddTickerItem = () => {
     setFormData({
       ...formData,
@@ -153,17 +168,36 @@ export default function AdminHomepageTab() {
 
         {/* What We Do Cards Edit Box */}
         <div className="p-6 rounded-2xl border border-border/50 bg-card space-y-6">
-          <div className="flex items-center gap-2 text-primary font-medium text-sm">
-            <Sparkles size={18} />
-            <span>"What We Do" Cards (4 Highlights)</span>
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2 text-primary font-medium text-sm">
+              <Sparkles size={18} />
+              <span>"What We Do" Cards ({formData.highlights.length} Highlights)</span>
+            </div>
+            <button
+              type="button"
+              onClick={handleAddHighlight}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-primary text-xs font-semibold hover:bg-primary/20 transition-colors cursor-pointer"
+            >
+              <Plus size={14} /> Add Card
+            </button>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {formData.highlights.map((item, idx) => (
-              <div key={idx} className="p-5 rounded-xl border border-border/40 bg-background/60 space-y-3">
+              <div key={idx} className="p-5 rounded-xl border border-border/40 bg-background/60 space-y-3 relative">
                 <div className="flex items-center justify-between text-xs font-semibold text-primary uppercase tracking-wider">
-                  <span>Card #{idx + 1}</span>
-                  <CheckCircle2 size={14} className="text-primary/70" />
+                  <div className="flex items-center gap-2">
+                    <span>Card #{idx + 1}</span>
+                    <CheckCircle2 size={14} className="text-primary/70" />
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => handleDeleteHighlight(idx)}
+                    className="p-1.5 text-muted-foreground/60 hover:text-destructive hover:bg-destructive/10 rounded-md transition-colors cursor-pointer"
+                    title="Delete Card"
+                  >
+                    <Trash2 size={14} />
+                  </button>
                 </div>
 
                 <div>
