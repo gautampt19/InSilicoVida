@@ -6,8 +6,15 @@ import { createSlug } from "@/data/team";
 import { HighlightedText } from "@/components/HighlightedText";
 import { useGSAP } from "@/hooks/useGSAP";
 import { fadeInUp } from "@/utils/animations";
-import { Mail, ExternalLink, Github, Twitter, Linkedin, ArrowLeft } from "lucide-react";
+import { Mail, ExternalLink, Github, Twitter, Linkedin, ArrowLeft, Globe } from "lucide-react";
 import { useTeam } from "@/contexts/TeamContext";
+import {
+  formatLinkedInUrl,
+  formatOrcidUrl,
+  formatGithubUrl,
+  formatTwitterUrl,
+  normalizeExternalUrl,
+} from "@/lib/utils";
 
 /* ─── Member Image with Fallback ─── */
 const MemberImage = ({
@@ -144,7 +151,7 @@ const TeamMemberProfile = () => {
                     )}
                     {member.links.orcid && (
                       <a
-                        href={`https://orcid.org/${member.links.orcid}`}
+                        href={formatOrcidUrl(member.links.orcid)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2.5 bg-card border border-border/50 rounded-xl text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 shadow-sm"
@@ -154,7 +161,7 @@ const TeamMemberProfile = () => {
                     )}
                     {member.links.github && (
                       <a
-                        href={`https://github.com/${member.links.github}`}
+                        href={formatGithubUrl(member.links.github)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2.5 bg-card border border-border/50 rounded-xl text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 shadow-sm"
@@ -164,7 +171,7 @@ const TeamMemberProfile = () => {
                     )}
                     {member.links["google scholar"] && (
                       <a
-                        href={member.links["google scholar"]}
+                        href={normalizeExternalUrl(member.links["google scholar"])}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2.5 bg-card border border-border/50 rounded-xl text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 shadow-sm"
@@ -174,7 +181,7 @@ const TeamMemberProfile = () => {
                     )}
                     {member.links.twitter && (
                       <a
-                        href={`https://twitter.com/${member.links.twitter}`}
+                        href={formatTwitterUrl(member.links.twitter)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2.5 bg-card border border-border/50 rounded-xl text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 shadow-sm"
@@ -184,9 +191,7 @@ const TeamMemberProfile = () => {
                     )}
                     {member.links.LinkedIn && (
                       <a
-                        href={`https://${
-                          member.links.LinkedIn.startsWith("www.") ? "" : "www."
-                        }${member.links.LinkedIn}`}
+                        href={formatLinkedInUrl(member.links.LinkedIn)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2.5 bg-card border border-border/50 rounded-xl text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 shadow-sm"
@@ -196,7 +201,7 @@ const TeamMemberProfile = () => {
                     )}
                     {member.links.researchgate && (
                       <a
-                        href={member.links.researchgate}
+                        href={normalizeExternalUrl(member.links.researchgate)}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2.5 bg-card border border-border/50 rounded-xl text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 shadow-sm"
@@ -206,12 +211,12 @@ const TeamMemberProfile = () => {
                     )}
                     {member.links["home-page"] && (
                       <a
-                        href={member.links["home-page"]}
+                        href={normalizeExternalUrl(member.links["home-page"])}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="flex items-center gap-2 px-4 py-2.5 bg-card border border-border/50 rounded-xl text-sm font-medium text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-200 shadow-sm"
                       >
-                        <Github size={16} /> GitHub
+                        <Globe size={16} /> Website
                       </a>
                     )}
                   </div>

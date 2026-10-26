@@ -1,11 +1,21 @@
 import { useState, useMemo } from "react";
 import { useTeam } from "@/contexts/TeamContext";
 import { TeamMember } from "@/data/types";
-import { Plus, Edit2, Trash2, X, Save } from "lucide-react";
+import { Plus, Edit2, Trash2, X, Save, Linkedin, Sparkles } from "lucide-react";
 import { toast } from "sonner";
+import { formatLinkedInUrl, generateLinkedInRssUrl } from "@/lib/utils";
 
 export default function AdminTeamTab() {
-  const { teamMembers, addTeamMember, updateTeamMember, deleteTeamMember, uploadImage } = useTeam();
+  const {
+    teamMembers,
+    addTeamMember,
+    updateTeamMember,
+    deleteTeamMember,
+    uploadImage,
+    createAndSaveMemberLinkedInRss,
+    syncAllMembersLinkedInRss,
+  } = useTeam();
+  const [isSyncingRss, setIsSyncingRss] = useState(false);
 
   const sortedTeamMembers = useMemo(() => {
     const hierarchyOrder: Record<string, number> = {
@@ -40,6 +50,7 @@ export default function AdminTeamTab() {
     scholar: "",
     twitter: "",
     linkedin: "",
+    linkedinFeed: "",
   });
 
   const handleOpenModal = (member?: TeamMember) => {
@@ -58,6 +69,7 @@ export default function AdminTeamTab() {
         scholar: member.links?.["google scholar"] || "",
         twitter: member.links?.twitter || "",
         linkedin: member.links?.LinkedIn || "",
+        linkedinFeed: member.links?.linkedinFeed || member.links?.rssFeed || "",
       });
     } else {
       setEditingMember(null);
@@ -73,6 +85,7 @@ export default function AdminTeamTab() {
         scholar: "",
         twitter: "",
         linkedin: "",
+        linkedinFeed: "",
       });
     }
     setIsModalOpen(true);
@@ -100,6 +113,15 @@ export default function AdminTeamTab() {
       }
     }
     
+    const linkedInClean = formData.linkedin.trim() ? formatLinkedInUrl(formData.linkedin) : "";
+    let feedClean = formData.linkedinFeed.trim();
+    if (feedClean.includes("rsshub.app/linkedin/post")) {
+      feedClean = "";
+    }
+    if (linkedInClean && !feedClean) {
+      feedClean = generateLinkedInRssUrl(linkedInClean);
+    }
+
     const memberData = {
       name: formData.name,
       role: formData.role,
@@ -107,12 +129,13 @@ export default function AdminTeamTab() {
       bio: formData.bio,
       image: finalImageUrl,
       links: {
-        ...(formData.email && { email: formData.email }),
-        ...(formData.orcid && { orcid: formData.orcid }),
-        ...(formData.github && { github: formData.github }),
-        ...(formData.scholar && { "google scholar": formData.scholar }),
-        ...(formData.twitter && { twitter: formData.twitter }),
-        ...(formData.linkedin && { LinkedIn: formData.linkedin }),
+        ...(formData.email.trim() && { email: formData.email.trim() }),
+        ...(formData.orcid.trim() && { orcid: formData.orcid.trim() }),
+        ...(formData.github.trim() && { github: formData.github.trim() }),
+        ...(formData.scholar.trim() && { "google scholar": formData.scholar.trim() }),
+        ...(formData.twitter.trim() && { twitter: formData.twitter.trim() }),
+        ...(linkedInClean && { LinkedIn: linkedInClean }),
+        ...(feedClean && { linkedinFeed: feedClean }),
       },
     };
 
@@ -149,14 +172,38 @@ export default function AdminTeamTab() {
 
   return (
     <div>
-      <div className="flex justify-between items-center mb-6">
-        <h2 className="font-serif text-2xl text-foreground">Team Members</h2>
-        <button
-          onClick={() => handleOpenModal()}
-          className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors shadow-sm"
-        >
-          <Plus size={16} /> Add Member
-        </button>
+      <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
+        <div>
+          <h2 className="font-serif text-2xl text-foreground">Team Members</h2>
+          <p className="text-xs text-muted-foreground mt-0.5">Manage team members, roles, and automated LinkedIn feeds</p>
+        </div>
+        <div className="flex items-center gap-2.5">
+          <button
+            type="button"
+            onClick={async () => {
+              setIsSyncingRss(true);
+              const res = await syncAllMembersLinkedInRss();
+              if (res.success) {
+                toast.success(`Generated and saved RSS feeds for ${res.updatedCount} team member(s)!`);
+              } else {
+                toast.error(res.error || "Failed to sync RSS feeds");
+              }
+              setIsSyncingRss(false);
+            }}
+            disabled={isSyncingRss}
+            className="flex items-center gap-2 bg-card border border-border/60 hover:bg-muted text-foreground px-4 py-2.5 rounded-full text-sm font-medium transition-colors shadow-2xs cursor-pointer"
+            title="Auto-generate RSS feeds for all members with LinkedIn"
+          >
+            <Sparkles size={15} className={isSyncingRss ? "animate-spin text-primary" : "text-primary"} />
+            <span>{isSyncingRss ? "Generating..." : "Sync All RSS Feeds"}</span>
+          </button>
+          <button
+            onClick={() => handleOpenModal()}
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors shadow-sm cursor-pointer"
+          >
+            <Plus size={16} /> Add Member
+          </button>
+        </div>
       </div>
 
       <div className="rounded-2xl border border-border/50 bg-card overflow-hidden shadow-sm">
@@ -181,7 +228,31 @@ export default function AdminTeamTab() {
                         className="w-10 h-10 rounded-full object-cover bg-muted"
                         onError={(e) => { (e.target as HTMLImageElement).src = 'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>'}}
                       />
-                      <span className="font-medium text-foreground">{member.name}</span>
+                      <div className="flex items-center gap-2">
+                        <span className="font-medium text-foreground">{member.name}</span>
+                        {(member.links?.linkedinFeed || member.links?.rssFeed) ? (
+                          <span className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-[#0A66C2]/15 text-[#0A66C2] dark:text-[#70b5f9]" title={member.links?.linkedinFeed || member.links?.rssFeed}>
+                            <Linkedin size={9} className="fill-current" /> Live Feed
+                          </span>
+                        ) : member.links?.LinkedIn ? (
+                          <button
+                            type="button"
+                            onClick={async () => {
+                              if (!member.id) return;
+                              const res = await createAndSaveMemberLinkedInRss(member.id);
+                              if (res.success) {
+                                toast.success(`Generated & saved RSS feed for ${member.name}!`);
+                              } else {
+                                toast.error(res.error || "Failed to generate RSS");
+                              }
+                            }}
+                            className="inline-flex items-center gap-1 px-1.5 py-0.5 rounded text-[10px] font-semibold bg-primary/10 text-primary hover:bg-primary/20 transition-colors cursor-pointer"
+                            title="Auto-generate and save RSS feed link for this member"
+                          >
+                            <Sparkles size={9} /> Auto-create RSS
+                          </button>
+                        ) : null}
+                      </div>
                     </div>
                   </td>
                   <td className="px-6 py-4 text-muted-foreground">{member.role}</td>
@@ -362,11 +433,14 @@ export default function AdminTeamTab() {
                     </div>
                     {/* LinkedIn */}
                     <div>
-                      <label className="block text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wider">LinkedIn URL</label>
+                      <label className="block text-xs font-medium text-muted-foreground mb-2 uppercase tracking-wider flex items-center justify-between">
+                        <span>LinkedIn Profile URL</span>
+                      </label>
                       <input
                         type="text"
                         value={formData.linkedin}
                         onChange={(e) => setFormData({ ...formData, linkedin: e.target.value })}
+                        placeholder="e.g. https://www.linkedin.com/in/username"
                         className="w-full px-4 py-2.5 rounded-xl bg-background/50 border border-border/50 text-foreground text-sm focus:outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/20"
                       />
                     </div>
@@ -377,8 +451,47 @@ export default function AdminTeamTab() {
                         type="text"
                         value={formData.twitter}
                         onChange={(e) => setFormData({ ...formData, twitter: e.target.value })}
+                        placeholder="e.g. @username"
                         className="w-full px-4 py-2.5 rounded-xl bg-background/50 border border-border/50 text-foreground text-sm focus:outline-none focus:border-primary/40 focus:ring-1 focus:ring-primary/20"
                       />
+                    </div>
+
+                    {/* LinkedIn RSS / Live Feed URL */}
+                    <div className="md:col-span-2">
+                      <div className="flex items-center justify-between mb-1">
+                        <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
+                          LinkedIn RSS / Live Feed XML URL
+                        </label>
+                        <div className="flex items-center gap-2">
+                          <a
+                            href="https://rss.app/rss-feed/create-linkedin-rss-feed"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[11px] text-[#0A66C2] dark:text-[#70b5f9] hover:underline flex items-center gap-1 font-medium"
+                          >
+                            Create on RSS.app ↗
+                          </a>
+                          <span className="text-muted-foreground/30 text-xs">•</span>
+                          <a
+                            href="https://fetchrss.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-[11px] text-[#0A66C2] dark:text-[#70b5f9] hover:underline flex items-center gap-1 font-medium"
+                          >
+                            FetchRSS ↗
+                          </a>
+                        </div>
+                      </div>
+                      <input
+                        type="url"
+                        value={formData.linkedinFeed}
+                        onChange={(e) => setFormData({ ...formData, linkedinFeed: e.target.value })}
+                        placeholder="e.g. https://rss.app/feeds/xxxx.xml or https://fetchrss.com/rss/..."
+                        className="w-full px-4 py-2.5 rounded-xl bg-background/50 border border-border/50 text-foreground text-sm focus:outline-none focus:border-[#0A66C2] focus:ring-1 focus:ring-[#0A66C2]/20 font-mono text-xs"
+                      />
+                      <p className="text-[11px] text-muted-foreground mt-1 leading-relaxed">
+                        LinkedIn personal profiles do not have direct open RSS feeds due to login restrictions. Paste a feed XML generated by <a href="https://rss.app/rss-feed/create-linkedin-rss-feed" target="_blank" rel="noopener noreferrer" className="text-[#0A66C2] dark:text-[#70b5f9] underline">RSS.app</a> or <a href="https://fetchrss.com/" target="_blank" rel="noopener noreferrer" className="text-[#0A66C2] dark:text-[#70b5f9] underline">FetchRSS</a>, or post directly with the <strong>Add LinkedIn Post</strong> button on the News tab.
+                      </p>
                     </div>
                   </div>
                 </div>

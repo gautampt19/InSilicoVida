@@ -19,6 +19,14 @@ import {
   Users,
   User,
 } from "lucide-react";
+import {
+  formatLinkedInUrl,
+  formatOrcidUrl,
+  extractOrcidId,
+  formatGithubUrl,
+  formatTwitterUrl,
+  normalizeExternalUrl,
+} from "@/lib/utils";
 
 /* ─── Avatar Colors ─── */
 const AVATAR_COLORS = [
@@ -242,7 +250,8 @@ const TeamMemberPageV2 = () => {
   /* ── Fetch publications when Publications tab is first opened ── */
   useEffect(() => {
     if (activeTab !== "publications" || pubsFetched) return;
-    const orcid = member?.links?.orcid;
+    const rawOrcid = member?.links?.orcid;
+    const orcid = extractOrcidId(rawOrcid);
     if (!orcid) {
       setPubsFetched(true);
       return;
@@ -481,12 +490,12 @@ const TeamMemberPageV2 = () => {
                           label="ORCID"
                           value={
                             <a
-                              href={`https://orcid.org/${member.links.orcid}`}
+                              href={formatOrcidUrl(member.links.orcid)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-primary hover:underline"
                             >
-                              {member.links.orcid}
+                              {extractOrcidId(member.links.orcid)}
                             </a>
                           }
                         />
@@ -496,7 +505,7 @@ const TeamMemberPageV2 = () => {
                           label="Scholar"
                           value={
                             <a
-                              href={member.links["google scholar"]}
+                              href={normalizeExternalUrl(member.links["google scholar"])}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-primary hover:underline"
@@ -511,12 +520,12 @@ const TeamMemberPageV2 = () => {
                           label="GitHub"
                           value={
                             <a
-                              href={`https://github.com/${member.links.github}`}
+                              href={formatGithubUrl(member.links.github)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-primary hover:underline"
                             >
-                              {member.links.github} ↗
+                              {member.links.github.trim()} ↗
                             </a>
                           }
                         />
@@ -526,7 +535,7 @@ const TeamMemberPageV2 = () => {
                           label="ResearchGate"
                           value={
                             <a
-                              href={member.links.researchgate}
+                              href={normalizeExternalUrl(member.links.researchgate)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-primary hover:underline"
@@ -541,12 +550,42 @@ const TeamMemberPageV2 = () => {
                           label="LinkedIn"
                           value={
                             <a
-                              href={`https://${member.links.LinkedIn.startsWith("www.") ? "" : "www."}${member.links.LinkedIn}`}
+                              href={formatLinkedInUrl(member.links.LinkedIn)}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="text-primary hover:underline"
                             >
                               LinkedIn ↗
+                            </a>
+                          }
+                        />
+                      )}
+                      {member.links?.twitter && (
+                        <FactRow
+                          label="Twitter / X"
+                          value={
+                            <a
+                              href={formatTwitterUrl(member.links.twitter)}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary hover:underline"
+                            >
+                              Twitter / X ↗
+                            </a>
+                          }
+                        />
+                      )}
+                      {member.links?.["home-page"] && (
+                        <FactRow
+                          label="Website"
+                          value={
+                            <a
+                              href={normalizeExternalUrl(member.links["home-page"])}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-primary hover:underline"
+                            >
+                              Website ↗
                             </a>
                           }
                         />

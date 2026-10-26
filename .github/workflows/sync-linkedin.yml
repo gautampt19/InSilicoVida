@@ -1,0 +1,46 @@
+name: Sync LinkedIn to News
+
+on:
+  schedule:
+    # Runs every 6 hours
+    - cron: '0 */1 * * *'
+  workflow_dispatch:
+    inputs:
+      post_url:
+        description: 'Optional single LinkedIn post URL to sync immediately'
+        required: false
+        type: string
+
+concurrency:
+  group: 'linkedin-sync'
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run LinkedIn Sync Script
+        env:
+          VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://ldmzlabnvcanmufwtuhr.supabase.co' }}
+          VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'sb_publishable_Z6mMKyOkrNLtPxzbalSRPQ_Is2QEi6z' }}
+          LINKEDIN_LI_AT: ${{ secrets.LINKEDIN_LI_AT }}
+          LINKEDIN_FEEDS: ${{ secrets.LINKEDIN_FEEDS }}
+          LINKEDIN_FEED_URL: ${{ secrets.LINKEDIN_FEED_URL }}
+          LINKEDIN_POST_URL: ${{ github.event.inputs.post_url }}
+        run: npx tsx scripts/sync_linkedin.ts
+

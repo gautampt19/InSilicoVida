@@ -1,6 +1,6 @@
 import { useRef, useState, useEffect, useMemo } from "react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Sparkles, BookOpen, FileText, Calendar, FlaskConical, Megaphone } from "lucide-react";
+import { ArrowRight, Sparkles, BookOpen, FileText, Calendar, FlaskConical, Megaphone, Linkedin, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { homeContent } from "@/data/home";
@@ -15,6 +15,7 @@ import { usePosters } from "@/contexts/PostersContext";
 import { usePublications } from "@/contexts/PublicationsContext";
 import { useHome } from "@/contexts/HomeContext";
 import { TeamMember } from "@/data/types";
+import { normalizeExternalUrl } from "@/lib/utils";
 
 const TeamAvatar = ({ member }: { member: TeamMember }) => {
   const [error, setError] = useState(false);
@@ -134,7 +135,7 @@ const Index = () => {
       visiting: 4,
       alumni: 5,
     };
-    
+
     const researcherOrder = ["deepika", "rajesh", "kanchan"];
     const phdOrder = ["jordina", "saurav", "shubh"];
 
@@ -168,6 +169,25 @@ const Index = () => {
       return 0; // Maintain original database insertion order for the rest
     });
   }, [teamMembers]);
+
+  const activeFeedAuthors = useMemo(() => {
+    const authorsMap = new Map<string, { name: string; image?: string }>();
+    newsItems.forEach((item) => {
+      if (item.link?.includes("#author=")) {
+        const raw = decodeURIComponent(item.link.split("#author=")[1]?.split("&")[0]);
+        const match = teamMembers.find(
+          (m) =>
+            m.name.toLowerCase().includes(raw.toLowerCase()) ||
+            raw.toLowerCase().includes(m.name.toLowerCase())
+        );
+        authorsMap.set(raw, {
+          name: match ? match.name : raw,
+          image: match?.image,
+        });
+      }
+    });
+    return Array.from(authorsMap.values());
+  }, [newsItems, teamMembers]);
 
   useGSAP(() => {
     if (isLoading) return;
@@ -312,37 +332,158 @@ const Index = () => {
               {/* Right Column: Latest News (Top Right) */}
               <div className="lg:col-span-4 w-full">
                 <div className="border border-border/50 rounded-2xl bg-card/60 backdrop-blur-md shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                  <div className="px-6 py-4 border-b border-border/40 bg-muted/20">
+                  <div className="px-6 py-4 border-b border-border/40 bg-muted/20 flex items-center justify-between">
                     <h2 className="text-lg font-serif text-foreground font-medium">Latest News</h2>
-                  </div>
-
-                    <div className="p-6 h-[650px] overflow-hidden relative group/ticker">
-                      {/* Fading edges for the ticker */}
-                      <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-card to-transparent z-10 pointer-events-none" />
-                      <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-card to-transparent z-10 pointer-events-none" />
-
-                      {newsLoading ? (
-                        <div className="py-20 flex justify-center">
-                          <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                      ) : newsItems.length === 0 ? (
-                        <p className="text-sm text-muted-foreground text-center py-10">No news available.</p>
-                      ) : (
-                        <div className="animate-marquee-vertical flex flex-col gap-3">
-                          {[...(newsItems.length < 5 ? [...newsItems, ...newsItems, ...newsItems] : [...newsItems, ...newsItems])].map((news, idx) => (
-                            <div key={news.id ? `${news.id}-${idx}` : idx} className={`p-4 rounded-xl border border-border/30 group shrink-0 transition-colors ${idx % 2 === 1 ? 'bg-primary/5' : 'bg-transparent'}`}>
-                              <span className="text-xs font-semibold text-primary uppercase tracking-wider block mb-1">{news.date}</span>
-                              {news.link ? (
-                                <a href={news.link} target="_blank" rel="noopener noreferrer" className="font-medium text-foreground leading-snug mb-2 group-hover:text-primary transition-colors cursor-pointer block">{news.title}</a>
-                              ) : (
-                                <h4 className="font-medium text-foreground leading-snug mb-2 group-hover:text-primary transition-colors cursor-pointer">{news.title}</h4>
-                              )}
-                              <p className="text-sm text-muted-foreground">{news.description}</p>
-                            </div>
+                    {activeFeedAuthors.length > 0 ? (
+                      <div className="flex items-center gap-2">
+                        <div className="flex -space-x-1.5 overflow-hidden">
+                          {activeFeedAuthors.map((author, idx) => (
+                            author.image ? (
+                              <img
+                                key={idx}
+                                src={author.image}
+                                alt={author.name}
+                                title={`Feed: ${author.name}`}
+                                className="inline-block h-5 w-5 rounded-full ring-2 ring-background object-cover"
+                              />
+                            ) : (
+                              <div
+                                key={idx}
+                                title={`Feed: ${author.name}`}
+                                className="inline-flex items-center justify-center h-5 w-5 rounded-full ring-2 ring-background bg-primary/10 text-primary text-[9px] font-bold"
+                              >
+                                {author.name.slice(0, 1)}
+                              </div>
+                            )
                           ))}
                         </div>
-                      )}
-                    </div>
+                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-[#0A66C2]/10 text-[#0A66C2] dark:text-[#70b5f9] border border-[#0A66C2]/20">
+                          <Linkedin size={10} className="fill-current" />
+                          <span>Team Feeds</span>
+                        </span>
+                      </div>
+                    ) : (
+                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#0A66C2]/10 text-[#0A66C2] dark:text-[#70b5f9] border border-[#0A66C2]/20">
+                        <Linkedin size={11} className="fill-current" />
+                        <span>Live Feed</span>
+                      </span>
+                    )}
+                  </div>
+
+                  <div className="p-6 h-[650px] overflow-hidden relative group/ticker">
+                    {/* Fading edges for the ticker */}
+                    <div className="absolute top-0 inset-x-0 h-10 bg-gradient-to-b from-card to-transparent z-10 pointer-events-none" />
+                    <div className="absolute bottom-0 inset-x-0 h-10 bg-gradient-to-t from-card to-transparent z-10 pointer-events-none" />
+
+                    {newsLoading ? (
+                      <div className="py-20 flex justify-center">
+                        <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin"></div>
+                      </div>
+                    ) : newsItems.length === 0 ? (
+                      <p className="text-sm text-muted-foreground text-center py-10">No news available.</p>
+                    ) : (
+                      <div className="animate-marquee-vertical flex flex-col gap-3">
+                        {[...(newsItems.length < 5 ? [...newsItems, ...newsItems, ...newsItems] : [...newsItems, ...newsItems])].map((news, idx) => {
+                          const isLinkedIn = Boolean(
+                            news.link &&
+                            (news.link.includes("linkedin.com") || news.link.includes("lnkd.in"))
+                          );
+
+                          const rawAuthor = news.link?.includes("#author=")
+                            ? decodeURIComponent(news.link.split("#author=")[1]?.split("&")[0])
+                            : null;
+
+                          const matchedMember = rawAuthor
+                            ? teamMembers.find(
+                                (m) =>
+                                  m.name.toLowerCase().includes(rawAuthor.toLowerCase()) ||
+                                  rawAuthor.toLowerCase().includes(m.name.toLowerCase())
+                              )
+                            : teamMembers.find((m) => {
+                                if (!m.links?.LinkedIn) return false;
+                                const cleanProfile = m.links.LinkedIn.toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/+$/, "");
+                                return cleanProfile.length > 5 && news.link?.toLowerCase().includes(cleanProfile);
+                              });
+
+                          const authorDisplay = matchedMember ? matchedMember.name : rawAuthor;
+                          const authorImage = matchedMember?.image;
+                          const cleanLink = news.link ? normalizeExternalUrl(news.link.split("#author=")[0].split("?author=")[0]) : undefined;
+
+                          return (
+                            <div
+                              key={news.id ? `${news.id}-${idx}` : idx}
+                              className={`p-4 rounded-xl border shrink-0 transition-all duration-200 group ${isLinkedIn
+                                ? "border-[#0A66C2]/25 bg-gradient-to-br from-[#0A66C2]/[0.03] to-transparent hover:border-[#0A66C2]/50 hover:bg-[#0A66C2]/[0.08]"
+                                : idx % 2 === 1
+                                  ? "border-border/30 bg-primary/5 hover:border-primary/40 hover:bg-primary/[0.08]"
+                                  : "border-border/30 bg-transparent hover:border-border/60 hover:bg-muted/10"
+                                }`}
+                            >
+                              <div className="flex items-center justify-between gap-2 mb-1.5">
+                                <span className="text-xs font-semibold text-primary uppercase tracking-wider block">
+                                  {news.date}
+                                </span>
+                                {isLinkedIn && (
+                                  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#0A66C2]/15 text-[#0A66C2] dark:text-[#70b5f9] border border-[#0A66C2]/20 shadow-2xs">
+                                    {authorImage ? (
+                                      <img
+                                        src={authorImage}
+                                        alt={authorDisplay || "Author"}
+                                        className="w-3.5 h-3.5 rounded-full object-cover shrink-0"
+                                      />
+                                    ) : (
+                                      <Linkedin size={10} className="fill-current shrink-0" />
+                                    )}
+                                    <span className="truncate max-w-[120px]">
+                                      {authorDisplay || "LinkedIn"}
+                                    </span>
+                                  </span>
+                                )}
+                              </div>
+
+                              {cleanLink ? (
+                                <a
+                                  href={cleanLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={`font-medium text-foreground leading-snug mb-2 flex items-start justify-between gap-1 transition-colors cursor-pointer ${isLinkedIn
+                                    ? "group-hover:text-[#0A66C2] dark:group-hover:text-[#70b5f9]"
+                                    : "group-hover:text-primary"
+                                    }`}
+                                >
+                                  <span>{news.title}</span>
+                                  <ExternalLink
+                                    size={12}
+                                    className="shrink-0 opacity-50 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all mt-1"
+                                  />
+                                </a>
+                              ) : (
+                                <h4 className="font-medium text-foreground leading-snug mb-2 group-hover:text-primary transition-colors cursor-pointer">
+                                  {news.title}
+                                </h4>
+                              )}
+
+                              <p className="text-sm text-muted-foreground line-clamp-3 leading-relaxed">
+                                {news.description}
+                              </p>
+
+                              {isLinkedIn && cleanLink && (
+                                <a
+                                  href={cleanLink}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="mt-2.5 pt-2 border-t border-[#0A66C2]/15 flex items-center justify-between text-xs text-[#0A66C2] dark:text-[#70b5f9] font-medium hover:underline"
+                                >
+                                  <span>{authorDisplay ? `View ${authorDisplay}'s Post` : "Read on LinkedIn"}</span>
+                                  <ArrowRight size={11} className="group-hover:translate-x-1 transition-transform" />
+                                </a>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    )}
+                  </div>
                 </div>
               </div>
 

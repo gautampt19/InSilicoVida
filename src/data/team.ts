@@ -35,7 +35,13 @@ export const teamMembers: TeamMember[] = [
     hierarchy: "researcher",
     bio: "Rajesh Kumar Pathak is a bioinformatics and systems biology researcher whose work spans computational genomics, next-generation sequencing, host–pathogen interactions, and computer-aided drug and vaccine design. His publications bridge plant and microbial systems, with applications in agriculture, infectious disease, and rational drug discovery.",
     image: "/images/members/rajesh_kumar_pathak.jpg",
-    links: {},
+    links: {
+      email: "rajeshkumar.pathak@urv.cat",
+      orcid: "0000-0003-3835-8430",
+      github: "rkpathakbioinfo",
+      LinkedIn: "https://www.linkedin.com/in/rajesh-kumar-pathak-8212499a",
+      "google scholar": "https://scholar.google.com/citations?hl=en&user=aGb3z1gAAAAJ&view_op=list_works&sortby=pubdate",
+    },
   },
   {
     name: "Judith Bosa-brull",

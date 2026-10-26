@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { Publication } from "@/data/types";
 import { useTeam } from "@/contexts/TeamContext";
+import { extractOrcidId } from "@/lib/utils";
 
 interface PublicationsContextType {
   publications: Publication[];
@@ -23,7 +24,7 @@ export const PublicationsProvider: React.FC<{ children: React.ReactNode }> = ({ 
     setIsLoading(true);
     try {
       const orcids = teamMembers
-        .map((m) => m.links?.orcid)
+        .map((m) => extractOrcidId(m.links?.orcid))
         .filter(Boolean) as string[];
 
       if (orcids.length === 0 && !teamLoading) {
