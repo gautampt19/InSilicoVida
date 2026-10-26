@@ -45,8 +45,6 @@ export interface TeamMember {
     twitter?: string;
     researchgate?: string;
     LinkedIn?: string;
-    linkedinFeed?: string;
-    rssFeed?: string;
     "home-page"?: string;
   };
   aliases?: string[];

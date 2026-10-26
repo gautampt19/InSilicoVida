@@ -87,34 +87,6 @@ export function extractLinkedInUsername(urlOrHandle?: string): string {
   return clean.replace(/^@/, "").replace(/^www\./, "");
 }
 
-/**
- * Automatically creates an RSS feed URL from a LinkedIn profile URL or username.
- * Supports configurable template via environment variable VITE_LINKEDIN_RSS_TEMPLATE,
- * defaulting to the standard RSS bridge route:
- * https://rsshub.app/linkedin/post/{username}
- */
-export function generateLinkedInRssUrl(linkedinUrlOrHandle?: string, customTemplate?: string): string {
-  const username = extractLinkedInUsername(linkedinUrlOrHandle);
-  if (!username) return "";
-
-  const template =
-    customTemplate ||
-    (typeof import.meta !== "undefined" && import.meta.env?.VITE_LINKEDIN_RSS_TEMPLATE) ||
-    (typeof process !== "undefined" && process.env?.VITE_LINKEDIN_RSS_TEMPLATE);
-
-  if (template) {
-    return template.replace("{username}", encodeURIComponent(username));
-  }
-
-  // RSSHub officially supports company posts route: /linkedin/company/:company_id/posts
-  if (linkedinUrlOrHandle?.toLowerCase().includes("/company/")) {
-    return `https://rsshub.app/linkedin/company/${encodeURIComponent(username)}/posts`;
-  }
-
-  // For personal profiles (/in/), public RSSHub does not host an open route due to LinkedIn login walls.
-  // We return empty so users use RSS.app/FetchRSS generated feeds or the direct "Add LinkedIn Post" feature.
-  return "";
-}
 
 
 /**
