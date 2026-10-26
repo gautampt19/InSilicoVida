@@ -9,6 +9,7 @@ import { fadeInUp } from "@/utils/animations";
 import { Publication, TeamMember } from "@/data/types";
 import { toast } from "sonner";
 import { useTeam } from "@/contexts/TeamContext";
+import { publications as labPublications } from "@/data/publications";
 import {
   ArrowLeft,
   ExternalLink,
@@ -247,9 +248,76 @@ const TeamMemberPageV2 = () => {
     }
   }, [memberSlug, isLoading]);
 
-  /* ── Fetch publications when Publications tab is first opened ── */
+  /* ── Helper to accurately match publications to a team member ── */
+  const matchesMember = (pub: Publication, memberName: string): boolean => {
+    if (!pub || !pub.authors || !memberName) return false;
+    const m = memberName.trim().toLowerCase();
+    const mParts = m.split(/\s+/).filter(Boolean);
+    if (mParts.length === 0) return false;
+
+    const mFirst = mParts[0];
+    const mLast = mParts[mParts.length - 1];
+    const mFirstInitial = mFirst[0];
+    // Concatenated initials of preceding names, e.g. "rk" for "Rajesh Kumar Pathak"
+    const mInitials = mParts.slice(0, -1).map((p) => p[0]).join("");
+
+    // Split authors into individual author tokens (by commas, semicolons, or 'and')
+    const authorTokens = pub.authors
+      .split(/[,;]|\band\b/i)
+      .map((t) => t.trim().toLowerCase())
+      .filter(Boolean);
+
+    for (const token of authorTokens) {
+      // 1. Exact full name match, e.g. "saurav kumar"
+      if (token === m) return true;
+
+      // 2. Reverse name: "kumar, saurav" or "kumar saurav"
+      if (token === `${mLast} ${mFirst}` || token === `${mLast}, ${mFirst}`) return true;
+
+      // 3. Single-name member e.g. "Deepika"
+      if (mParts.length === 1) {
+        const words = token.replace(/[^a-z\s]/g, " ").split(/\s+/).filter(Boolean);
+        if (words.includes(mFirst)) return true;
+      }
+
+      // 4. Multi-word name: check token word boundaries
+      if (mParts.length >= 2) {
+        const words = token.replace(/[^a-z\s]/g, " ").split(/\s+/).filter(Boolean);
+        if (words.length === 2) {
+          // e.g. ["rk", "pathak"] or ["r", "pathak"] or ["rajesh", "pathak"]
+          const validPrefixes = [mFirstInitial, mInitials, mFirst];
+          if (validPrefixes.includes(words[0]) && words[1] === mLast) return true;
+          if (words[0] === mLast && validPrefixes.includes(words[1])) return true;
+          if (words[0] === mFirst && words[1] === mLast) return true;
+          if (words[0] === mLast && words[1] === mFirst) return true;
+        } else if (words.length >= 3) {
+          // e.g. ["r", "k", "pathak"] or ["rajesh", "kumar", "pathak"]
+          if (words.includes(mLast)) {
+            if (words.includes(mFirst)) return true;
+            if (words[0] === mFirstInitial || words[words.length - 1] === mFirstInitial) return true;
+            if (words.slice(0, 2).join("") === mInitials) return true;
+          }
+        }
+      }
+    }
+
+    return false;
+  };
+
+  const normalizeTitle = (t: string): string => {
+    return (t || "").toLowerCase().replace(/[^a-z0-9]/g, "");
+  };
+
+  /* ── Fetch / Initialize publications when Publications tab is first opened ── */
   useEffect(() => {
-    if (activeTab !== "publications" || pubsFetched) return;
+    if (activeTab !== "publications" || !member || pubsFetched) return;
+
+    // 1. Instantly populate from curated lab publications (includes all Scholar works)
+    const localPubs = labPublications.filter((p) => matchesMember(p, member.name));
+    if (localPubs.length > 0 && publications.length === 0) {
+      setPublications(localPubs);
+    }
+
     const rawOrcid = member?.links?.orcid;
     const orcid = extractOrcidId(rawOrcid);
     if (!orcid) {
@@ -258,9 +326,12 @@ const TeamMemberPageV2 = () => {
     }
 
     const fetchPubs = async () => {
-      setPubsLoading(true);
+      // Only show full loading spinner if we don't already have local publications
+      if (localPubs.length === 0) {
+        setPubsLoading(true);
+      }
       try {
-        // 1. Fetch ALL works from the ORCID public API (has complete list)
+        // 1. Fetch works from the ORCID public API
         const orcidRes = await fetch(
           `https://pub.orcid.org/v3.0/${orcid}/works`,
           { headers: { Accept: "application/json" } }
@@ -278,9 +349,9 @@ const TeamMemberPageV2 = () => {
           const year = summary["publication-date"]?.year?.value || "Unknown Year";
 
           return {
-            id: doi || String(summary["put-code"] || Math.random()),
+            id: doi ? `doi:${doi}` : String(summary["put-code"] || Math.random()),
             title: summary.title?.title?.value || "Untitled",
-            authors: "", // ORCID doesn't provide author lists
+            authors: "",
             journal: summary["journal-title"]?.value || "Unknown Journal",
             year,
             doi: doi ? `https://doi.org/${doi}` : "",
@@ -289,12 +360,12 @@ const TeamMemberPageV2 = () => {
         });
 
         // 2. Enrich with Europe PMC data (author strings, open access status)
-        //    Fetch all Europe PMC results for this ORCID
         let epmcMap = new Map<string, any>();
         let cursorMark = "*";
         let hasMore = true;
+        let pageCount = 0;
 
-        while (hasMore) {
+        while (hasMore && pageCount < 3) {
           const epmcUrl = `https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=AUTHORID:"${orcid}"&format=json&resultType=core&pageSize=200&cursorMark=${encodeURIComponent(cursorMark)}`;
           const epmcRes = await fetch(epmcUrl);
           if (epmcRes.ok) {
@@ -312,29 +383,65 @@ const TeamMemberPageV2 = () => {
           } else {
             hasMore = false;
           }
+          pageCount++;
         }
 
-        // Merge: enrich ORCID pubs with Europe PMC data where available
-        const enriched = orcidPubs.map((pub) => {
-          const rawDoi = pub.doi.replace("https://doi.org/", "").toLowerCase();
-          const epmc = epmcMap.get(rawDoi);
-          if (epmc) {
-            return {
-              ...pub,
-              authors: epmc.authorString || pub.authors,
-              journal: epmc.journalTitle || pub.journal,
-              isOpenAccess: epmc.isOpenAccess === "Y",
-            };
+        // 3. Merge local publications (with full Scholar metadata) and ORCID publications
+        const mergedMap = new Map<string, Publication>();
+        const seenDois = new Set<string>();
+
+        // Local publications first (highest fidelity metadata from CrossRef & Scholar)
+        for (const p of localPubs) {
+          mergedMap.set(normalizeTitle(p.title), p);
+          if (p.doi && p.doi.startsWith("https://doi.org/")) {
+            seenDois.add(p.doi.toLowerCase());
           }
-          return pub;
-        });
+        }
+
+        // Add any additional ORCID publications that aren't already included
+        for (const op of orcidPubs) {
+          const normT = normalizeTitle(op.title);
+          const rawDoi = op.doi.replace("https://doi.org/", "").toLowerCase();
+          const epmc = rawDoi ? epmcMap.get(rawDoi) : null;
+
+          const authors = epmc?.authorString || op.authors || member.name;
+          const journal = epmc?.journalTitle || op.journal;
+          const isOpenAccess = epmc?.isOpenAccess === "Y";
+
+          if (op.doi && seenDois.has(op.doi.toLowerCase())) {
+            const existing = mergedMap.get(normT);
+            if (existing && isOpenAccess) {
+              existing.isOpenAccess = true;
+            }
+            continue;
+          }
+
+          if (mergedMap.has(normT)) {
+            const existing = mergedMap.get(normT)!;
+            if (isOpenAccess) existing.isOpenAccess = true;
+            if (!existing.doi && op.doi) existing.doi = op.doi;
+            continue;
+          }
+
+          const newPub: Publication = {
+            ...op,
+            authors,
+            journal,
+            isOpenAccess,
+          };
+          mergedMap.set(normT, newPub);
+          if (op.doi) seenDois.add(op.doi.toLowerCase());
+        }
 
         // Sort by year descending
-        enriched.sort((a, b) => Number(b.year) - Number(a.year));
-        setPublications(enriched);
+        const mergedList = Array.from(mergedMap.values());
+        mergedList.sort((a, b) => (parseInt(b.year, 10) || 0) - (parseInt(a.year, 10) || 0));
+        setPublications(mergedList);
       } catch (e) {
         console.error("Publication fetch error:", e);
-        toast.error("Failed to load publications.");
+        if (localPubs.length === 0) {
+          toast.error("Failed to load publications.");
+        }
       } finally {
         setPubsLoading(false);
         setPubsFetched(true);
@@ -600,8 +707,24 @@ const TeamMemberPageV2 = () => {
             {/* ─── PUBLICATIONS ─── */}
             {activeTab === "publications" && (
               <section className="animate-in fade-in slide-in-from-bottom-4 duration-300">
-                <div className="mb-6">
-                  <h2 className="font-serif text-3xl text-foreground mb-1">Publications</h2>
+                <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div>
+                    <h2 className="font-serif text-3xl text-foreground mb-1">Publications</h2>
+                    <p className="text-sm text-muted-foreground">
+                      Research articles, reviews, conference proceedings, and book chapters
+                    </p>
+                  </div>
+                  {member.links?.["google scholar"] && (
+                    <a
+                      href={normalizeExternalUrl(member.links["google scholar"])}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-medium text-primary hover:text-primary/80 bg-primary/5 hover:bg-primary/10 border border-primary/20 rounded-full px-3.5 py-1.5 transition-colors self-start sm:self-auto"
+                    >
+                      <span>Google Scholar</span>
+                      <ExternalLink size={12} />
+                    </a>
+                  )}
                 </div>
 
                 {pubsLoading ? (
@@ -622,9 +745,7 @@ const TeamMemberPageV2 = () => {
                   <div className="p-10 rounded-2xl border border-border/50 bg-card text-center">
                     <BookOpen size={32} className="mx-auto text-muted-foreground/30 mb-3" />
                     <p className="text-muted-foreground">
-                      {member.links?.orcid
-                        ? "No publications found for this ORCID."
-                        : "This member does not have an ORCID linked. Publications cannot be fetched automatically."}
+                      No publications found for this member.
                     </p>
                   </div>
                 )}

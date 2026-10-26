@@ -19,13 +19,13 @@ export const teamMembers: TeamMember[] = [
     role: "Researcher",
     hierarchy: "researcher",
     bio: "My work is to develop Physiologically Based Pharmacokinetic Models (PBPK) and Systems Biology models for evaluating toxicity using programming language like Rstudio and Python. I have hands-on-experience in culturing the cells (in-vitro), techniques like UV-Vis, PCR, transwell permeability etc. Also I am involved in ontology development for biomedical domain, and developing or refining the adverse outcome pathways (AOPs). I am currently involved with PARC (European Partnership for the Assessment of Risks from Chemicals) which consists of 200 partners in 28 countries. Skills: PBPK Modeling · Machine Learning · Toxicology and Risk Assessment · Systems Biology/Pharmacodynamic Modeling",
-    image: "/images/members/deepika.jpg",
+    image: "https://ldmzlabnvcanmufwtuhr.supabase.co/storage/v1/object/public/team-images/deepika_1787751218993.jpg",
     links: {
       email: "deepika@iispv.cat",
       twitter: "Deepika0601",
       orcid: "0000-0001-8345-1349",
       researchgate: "https://www.researchgate.net/profile/Deepika-Deepika-6",
-      LinkedIn: "www.linkedin.com/in/deepika-deepika-753261103",
+      LinkedIn: "https://www.linkedin.com/in/deepika-deepika-753261103",
       "google scholar": "https://scholar.google.es/citations?user=saX1XIwAAAAJ&hl=en",
     },
   },
@@ -34,7 +34,7 @@ export const teamMembers: TeamMember[] = [
     role: "Researcher",
     hierarchy: "researcher",
     bio: "Rajesh Kumar Pathak is a bioinformatics and systems biology researcher whose work spans computational genomics, next-generation sequencing, host–pathogen interactions, and computer-aided drug and vaccine design. His publications bridge plant and microbial systems, with applications in agriculture, infectious disease, and rational drug discovery.",
-    image: "/images/members/rajesh_kumar_pathak.jpg",
+    image: "https://ldmzlabnvcanmufwtuhr.supabase.co/storage/v1/object/public/team-images/rajesh_kumar_pathak_1787325785665.jpg",
     links: {
       email: "rajeshkumar.pathak@urv.cat",
       orcid: "0000-0003-3835-8430",
@@ -44,20 +44,18 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: "Judith Bosa-brull",
-    role: "Researcher",
-    hierarchy: "researcher",
-    bio: "Her work focuses on nutrition, metabolism, and related biomedical research questions, with a particular emphasis on experimental and omics-based approaches in animal models. A recent contribution includes co-authorship on a study examining transcriptomic changes in mice after a single dose of ibogaine, reflecting an interest in how bioactive compounds affect brain and metabolic pathways.",
-    image: "/images/members/judith_bosa_brull.jpg",
-    links: {},
-  },
-  {
     name: "Kanchan Bharti",
     role: "Researcher",
     hierarchy: "researcher",
     bio: "Her key areas of interest include pharmaceutics, formulation science, and advanced drug delivery, covering how medicines are designed, processed, and delivered in the body. Typical work in this domain involves developing novel carriers, controlled-release systems, or targeted formulations to enhance therapeutic outcomes.",
     image: "/images/members/kanchan_bharti.jpg",
-    links: {},
+    links: {
+      email: "kanchan.bharti@irbcatsud.cat",
+      orcid: "0000-0002-9686-9944",
+      github: "Kbhartee",
+      LinkedIn: "https://www.linkedin.com/in/kanchan-bharti-ph-d-bb7793107/",
+      "google scholar": "https://scholar.google.com/citations?user=lrHnjV4AAAAJ&hl=en&oi=ao",
+    },
   },
   {
     name: "saurav kumar",
@@ -69,6 +67,7 @@ export const teamMembers: TeamMember[] = [
       "home-page": "https://github.com/Crispae",
       email: "saurav.kumar@iispv.cat",
       orcid: "0000-0003-0593-2598",
+      github: "Crispae",
       "google scholar": "https://scholar.google.com/citations?user=D_srPckAAAAJ&hl=en",
     },
     aliases: ["S. Kumar"],
@@ -78,11 +77,12 @@ export const teamMembers: TeamMember[] = [
     role: "PhD Student",
     hierarchy: "phd",
     bio: "Predoctoral Research Fellow working on computational toxicology and AOP development.",
-    image: "/images/members/shubh.jpeg",
+    image: "https://ldmzlabnvcanmufwtuhr.supabase.co/storage/v1/object/public/team-images/shubh_sharma_1785247299954.jpg",
     links: {
       "home-page": "https://github.com/Ragingdemo",
       email: "shubh.sharma@estudiants.urv.cat",
       orcid: "0009-0004-2207-3937",
+      "google scholar": "https://scholar.google.com/citations?hl=en&user=73pr6BUAAAAJ",
     },
     aliases: ["S. sharma"],
   },
@@ -98,9 +98,57 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: "Oscar Sabuz Vidal",
+    name: "Gautam",
     role: "PhD Student",
     hierarchy: "phd",
+    bio: "Gautam is a PhD student focusing on machine learning applications in computational toxicology and the development of predictive models for chemical risk assessment.",
+    image: "https://ldmzlabnvcanmufwtuhr.supabase.co/storage/v1/object/public/team-images/gautam_1784722279791.jpg",
+    links: {
+      orcid: "0009-0007-0213-2997",
+      LinkedIn: "https://www.linkedin.com/in/gautam-738027ba/",
+    },
+  },
+  {
+    name: "Yash Yogesh Gondegaonkar",
+    role: "PhD Student",
+    hierarchy: "phd",
+    bio: "Yash is researching advanced deep learning architectures to improve the reliability of in-silico toxicity predictions and analyze complex adverse outcome pathways.",
+    image: "https://ldmzlabnvcanmufwtuhr.supabase.co/storage/v1/object/public/team-images/yash_yogesh_gondegaonkar_1787315226851.png",
+    links: {
+      email: "yashyogesh.gondegaonkar@estudiants.urv.cat",
+      orcid: "0009-0000-3355-9474",
+      LinkedIn: "https://www.linkedin.com/in/yash-gondegaonkar-211015196/",
+    },
+  },
+  {
+    name: "Vishak Viswalal",
+    role: "PhD Student",
+    hierarchy: "phd",
+    bio: "Vishak's research involves the integration of multi-omics data with systems biology models to understand metabolic disruptions caused by environmental pollutants.",
+    image: "https://ldmzlabnvcanmufwtuhr.supabase.co/storage/v1/object/public/team-images/vishak_viswalal_1787328900165.jpeg",
+    links: {
+      email: "vishak.viswalal@estudiants.urv.cat",
+      orcid: "0009-0002-3315-8827",
+      github: "vishakviswalal28",
+      LinkedIn: "https://www.linkedin.com/in/vishak-viswalal-1bb4bb290",
+    },
+  },
+  {
+    name: "Daniele Sebastiani",
+    role: "PhD Student",
+    hierarchy: "phd",
+    bio: "His PhD research focuses on developing advanced computational frameworks and QSAR models to predict ADMET parameters for direct integration into PBPK models within the EU PARC project. Driven by a background bridging pharmaceutical chemistry and biostatistics, his work leverages machine learning and data processing pipelines to analyze complex toxicological datasets while advancing animal-free research through New Approach Methodologies (NAMs). His current research interests include data science applications in molecular toxicology, the automation of predictive safety assessment workflows, and the development of computational approaches fully aligned with international regulatory standards, including REACH, CLP, and OECD principles.",
+    image: "",
+    links: {
+      email: "daniele.sebastiani@urv.cat",
+      orcid: "0009-0000-1522-1904",
+      LinkedIn: "https://www.linkedin.com/in/danielesebastiani",
+    },
+  },
+  {
+    name: "Oscar Sabuz Vidal",
+    role: "PhD Student",
+    hierarchy: "alumni",
     bio: "Oscar work is mostly focused on developing cross-link between gut microbiota and mimmunotoxicity.",
     image: "/images/members/oscar_sabuz_vidal.jpg",
     links: {
@@ -109,24 +157,11 @@ export const teamMembers: TeamMember[] = [
     },
   },
   {
-    name: "Gautam",
-    role: "PhD Student",
-    hierarchy: "phd",
-    bio: "Gautam is a PhD student focusing on machine learning applications in computational toxicology and the development of predictive models for chemical risk assessment.",
-    links: {},
-  },
-  {
-    name: "Yash Yogesh Gondegaonkar",
-    role: "PhD Student",
-    hierarchy: "phd",
-    bio: "Yash is researching advanced deep learning architectures to improve the reliability of in-silico toxicity predictions and analyze complex adverse outcome pathways.",
-    links: {},
-  },
-  {
-    name: "Vishak Viswalal",
-    role: "PhD Student",
-    hierarchy: "phd",
-    bio: "Vishak's research involves the integration of multi-omics data with systems biology models to understand metabolic disruptions caused by environmental pollutants.",
+    name: "Judit Bosa-brull",
+    role: "Researcher",
+    hierarchy: "alumni",
+    bio: "Her work focuses on nutrition, metabolism, and related biomedical research questions, with a particular emphasis on experimental and omics-based approaches in animal models. A recent contribution includes co-authorship on a study examining transcriptomic changes in mice after a single dose of ibogaine, reflecting an interest in how bioactive compounds affect brain and metabolic pathways.",
+    image: "/images/members/judith_bosa_brull.jpg",
     links: {},
   },
 ];
@@ -170,4 +205,3 @@ export const createSlug = (name: string) => {
 export const getMemberBySlug = (slug: string) => {
   return teamMembers.find((member) => createSlug(member.name) === slug);
 };
-

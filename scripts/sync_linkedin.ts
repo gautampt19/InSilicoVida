@@ -1,8 +1,12 @@
+import * as dotenv from "dotenv";
+dotenv.config();
+
 import { supabase } from "../src/lib/supabase";
 import fs from "fs";
 import path from "path";
 import { chromium } from "playwright";
 import { extractLinkedInUsername } from "../src/lib/utils";
+import { teamMembers } from "../src/data/team";
 
 interface RawPost {
   title: string;
@@ -19,17 +23,96 @@ interface FeedConfig {
 
 const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-function formatNewsDate(dateInput?: string | Date): string {
-  const d = dateInput ? new Date(dateInput) : new Date();
-  if (isNaN(d.getTime())) {
-    const now = new Date();
-    return `${MONTH_NAMES[now.getMonth()]} ${now.getFullYear()}`;
+export function parseLinkedInDate(dateInput?: string | Date): string {
+  const now = new Date();
+  const currentYear = now.getFullYear();
+
+  if (!dateInput) {
+    return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
   }
-  return `${MONTH_NAMES[d.getMonth()]} ${d.getFullYear()}`;
+
+  if (dateInput instanceof Date) {
+    return `${MONTH_NAMES[dateInput.getMonth()]} ${dateInput.getFullYear()}`;
+  }
+
+  const clean = dateInput
+    .replace(/\r/g, "")
+    .replace(/•.*$/, "")
+    .replace(/\bedited\b/i, "")
+    .trim();
+
+  if (!clean) {
+    return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
+  }
+
+  // Relative units: "3w", "2mo", "1yr", "5d", "4h"
+  const relMatch = clean.match(/^(\d+)\s*([whdmy]|mo|yr)/i);
+  if (relMatch) {
+    const count = parseInt(relMatch[1], 10);
+    const unit = relMatch[2].toLowerCase();
+    const target = new Date();
+    if (unit === "h" || unit === "d") {
+      target.setDate(target.getDate() - (unit === "d" ? count : 1));
+    } else if (unit === "w") {
+      target.setDate(target.getDate() - count * 7);
+    } else if (unit === "mo" || unit === "m") {
+      target.setMonth(target.getMonth() - count);
+    } else if (unit === "yr" || unit === "y") {
+      target.setFullYear(target.getFullYear() - count);
+    }
+    return `${MONTH_NAMES[target.getMonth()]} ${target.getFullYear()}`;
+  }
+
+  if (/yesterday/i.test(clean)) {
+    const target = new Date();
+    target.setDate(target.getDate() - 1);
+    return `${MONTH_NAMES[target.getMonth()]} ${target.getFullYear()}`;
+  }
+
+  if (/today|just now/i.test(clean)) {
+    return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
+  }
+
+  // Month + Day with year: "Nov 6, 2024" or "Jul 11, 2025"
+  const fullDateMatch = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},\s*(20\d{2})/i);
+  if (fullDateMatch) {
+    const monthIdx = MONTH_NAMES.findIndex(
+      (m) => m.toLowerCase() === fullDateMatch[1].slice(0, 3).toLowerCase()
+    );
+    const yr = parseInt(fullDateMatch[2], 10);
+    if (monthIdx !== -1) {
+      return `${MONTH_NAMES[monthIdx]} ${yr}`;
+    }
+  }
+
+  // Month + Day without year: "Feb 7" or "Apr 27"
+  const monthDayMatch = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}/i);
+  if (monthDayMatch) {
+    const monthIdx = MONTH_NAMES.findIndex(
+      (m) => m.toLowerCase() === monthDayMatch[1].slice(0, 3).toLowerCase()
+    );
+    if (monthIdx !== -1) {
+      const yr = monthIdx > now.getMonth() ? currentYear - 1 : currentYear;
+      return `${MONTH_NAMES[monthIdx]} ${yr}`;
+    }
+  }
+
+  const d = new Date(clean);
+  if (!isNaN(d.getTime()) && d.getFullYear() >= 2015 && d.getFullYear() <= currentYear + 1) {
+    return `${MONTH_NAMES[d.getMonth()]} ${d.getFullYear()}`;
+  }
+
+  return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
+}
+
+export function formatNewsDate(dateInput?: string | Date): string {
+  return parseLinkedInDate(dateInput);
 }
 
 function cleanText(text: string): string {
   return text
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
     .replace(/<[^>]*>/g, "") // strip HTML tags
     .replace(/&nbsp;/g, " ")
     .replace(/&amp;/g, "&")
@@ -69,14 +152,13 @@ function parseRssFeed(xml: string, authorName?: string): RawPost[] {
       /<link[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/link>/i.exec(itemContent);
     // Extract Description / Content
     const descMatch =
-      /<content:encoded[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/content:encoded>/i.exec(itemContent) ||
       /<description[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/description>/i.exec(itemContent) ||
-      /<summary[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/summary>/i.exec(itemContent);
-    // Extract PubDate
+      /<content[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/content>/i.exec(itemContent);
+    // Extract Date
     const dateMatch =
-      /<pubDate[^>]*>([\s\S]*?)<\/pubDate>/i.exec(itemContent) ||
-      /<updated[^>]*>([\s\S]*?)<\/updated>/i.exec(itemContent) ||
-      /<dc:date[^>]*>([\s\S]*?)<\/dc:date>/i.exec(itemContent);
+      /<pubDate[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/pubDate>/i.exec(itemContent) ||
+      /<published[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/published>/i.exec(itemContent) ||
+      /<updated[^>]*>(?:<!\[CDATA\[)?([\s\S]*?)(?:\]\]>)?<\/updated>/i.exec(itemContent);
 
     // Try extracting author if present inside XML item
     const authorMatch =
@@ -108,7 +190,7 @@ function parseRssFeed(xml: string, authorName?: string): RawPost[] {
         title,
         description: rawDesc || rawTitle || "Read more about our latest research update on LinkedIn.",
         link: rawLink,
-        date: formatNewsDate(rawDate),
+        date: parseLinkedInDate(rawDate),
         author: itemAuthor,
       });
     }
@@ -154,7 +236,7 @@ async function fetchPostMetadata(postUrl: string, authorName?: string): Promise<
       title: rawTitle.substring(0, 100),
       description: rawDesc || "Check out our latest update on LinkedIn.",
       link: finalLink,
-      date: formatNewsDate(),
+      date: parseLinkedInDate(),
       author: authorName,
     };
   } catch (err: any) {
@@ -174,7 +256,6 @@ async function parseFeedConfigs(): Promise<FeedConfig[]> {
 
   // 1. Fetch live feeds stored directly in the Supabase team_members database table!
   try {
-    console.log("Checking Supabase team_members table for configured feeds...");
     const { data: dbMembers, error: dbErr } = await supabase
       .from("team_members")
       .select("name, links");
@@ -191,7 +272,6 @@ async function parseFeedConfigs(): Promise<FeedConfig[]> {
           !feedUrl.includes("rsshub.app/linkedin/post")
         ) {
           const cleanUrl = feedUrl.trim();
-          console.log(`  ✓ Found custom feed for ${member.name}: ${cleanUrl}`);
           configs.push({
             name: member.name,
             url: cleanUrl,
@@ -240,38 +320,16 @@ async function parseFeedConfigs(): Promise<FeedConfig[]> {
     }
   }
 
-  // 3. If no env var or DB feeds, check local linkedin_feeds.json
-  if (configs.length === 0) {
-    try {
-      const localConfigPath = path.resolve(process.cwd(), "linkedin_feeds.json");
-      if (fs.existsSync(localConfigPath)) {
-        const fileContent = fs.readFileSync(localConfigPath, "utf-8");
-        const parsed = JSON.parse(fileContent);
-        if (Array.isArray(parsed)) {
-          for (const item of parsed) {
-            if (item.url && item.url.trim()) {
-              const cleanUrl = item.url.trim();
-              if (!registeredUrls.has(cleanUrl.toLowerCase())) {
-                configs.push({
-                  name: item.name || "InSilicoVida Team",
-                  url: cleanUrl,
-                });
-                registeredUrls.add(cleanUrl.toLowerCase());
-              }
-            }
-          }
-        }
-      }
-    } catch (e: any) {
-      console.warn("Could not read linkedin_feeds.json:", e.message);
-    }
-  }
-
-  // 4. Fallback to single feed env vars if configs is empty
-  const singleFeedUrl = process.env.LINKEDIN_FEED_URL || process.env.LINKEDIN_RSS_URL;
-  if (singleFeedUrl && configs.length === 0) {
+  // 3. Fallback to single feed URL
+  const singleFeedUrl = process.env.LINKEDIN_FEED_URL;
+  const singleAuthor = process.env.LINKEDIN_AUTHOR || "InSilicoVida Team";
+  if (
+    singleFeedUrl &&
+    !singleFeedUrl.includes("rsshub.app/linkedin/post") &&
+    !registeredUrls.has(singleFeedUrl.trim().toLowerCase())
+  ) {
     configs.push({
-      name: process.env.LINKEDIN_AUTHOR || "InSilicoVida Lab",
+      name: singleAuthor,
       url: singleFeedUrl.trim(),
     });
   }
@@ -280,20 +338,20 @@ async function parseFeedConfigs(): Promise<FeedConfig[]> {
 }
 
 /**
- * Automated headless scraper using Playwright to extract recent posts from team member profiles.
- * Authenticates using the LINKEDIN_LI_AT session cookie to bypass login barriers.
+ * Automates scraping team member LinkedIn posts via Playwright using an authenticated session cookie (li_at).
+ * Uses a human-like browser profile and visits each member's recent activity stream.
  */
 async function scrapeLinkedInTeamPosts(
   members: Array<{ name: string; linkedinUrl: string }>,
   liAtCookie: string
 ): Promise<RawPost[]> {
-  console.log(`\n==========================================`);
-  console.log(`Starting Headless Scraper for ${members.length} Member(s)`);
-  console.log(`==========================================\n`);
-
   const posts: RawPost[] = [];
-  let browser;
 
+  console.log("==========================================");
+  console.log(`Starting Headless Scraper for ${members.length} Member(s)`);
+  console.log("==========================================\n");
+
+  let browser;
   try {
     browser = await chromium.launch({
       headless: true,
@@ -324,8 +382,12 @@ async function scrapeLinkedInTeamPosts(
       const username = extractLinkedInUsername(member.linkedinUrl);
       if (!username) continue;
 
-      const activityUrl = `https://www.linkedin.com/in/${encodeURIComponent(username)}/recent-activity/all/`;
-      console.log(`- Scraping posts for "${member.name}" (${username})...`);
+      const isCompany = member.linkedinUrl.toLowerCase().includes("/company/");
+      const activityUrl = isCompany
+        ? `https://www.linkedin.com/company/${encodeURIComponent(username)}/home/`
+        : `https://www.linkedin.com/in/${encodeURIComponent(username)}/recent-activity/all/`;
+
+      console.log(`- Scraping posts for "${member.name}" (${username})${isCompany ? " [Company Page]" : ""}...`);
 
       try {
         await page.goto(activityUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
@@ -339,52 +401,117 @@ async function scrapeLinkedInTeamPosts(
         }
 
         const extracted = await page.evaluate((authorName) => {
-          const results: Array<{ text: string; link: string }> = [];
+          const links = Array.from(document.querySelectorAll<HTMLAnchorElement>("a[href*='/feed/update/urn:li:activity:']"));
+          const seenHrefs = new Set();
+          const results: Array<{ text: string; link: string; date?: string }> = [];
 
-          const postContainers = document.querySelectorAll(
-            '.feed-shared-update-v2, div[data-urn*="urn:li:activity:"], div[data-id*="urn:li:activity:"], article'
-          );
+          for (const link of links) {
+            if (results.length >= 5) break; // Keep up to 5 latest posts per member
 
-          postContainers.forEach((container, idx) => {
-            if (idx >= 3) return; // Keep top 3 most recent posts per member
+            const cleanHref = link.href.split("?")[0].replace(/\/+$/, "") + "/";
+            if (seenHrefs.has(cleanHref)) continue;
+            seenHrefs.add(cleanHref);
 
-            // 1. Try to find post direct URL / URN
-            let postLink = "";
-            const urn =
-              container.getAttribute("data-urn") ||
-              container.getAttribute("data-id") ||
-              "";
-
-            if (urn && urn.includes("urn:li:activity:")) {
-              const actId = urn.split("urn:li:activity:")[1]?.split(/[\s&?;'"]/)[0];
-              if (actId) {
-                postLink = `https://www.linkedin.com/feed/update/urn:li:activity:${actId}/`;
+            // Walk up DOM tree to find the enclosing post card container
+            let cur: HTMLElement | null = link;
+            let container: HTMLElement | null = null;
+            for (let i = 0; i < 9; i++) {
+              if (!cur.parentElement) break;
+              cur = cur.parentElement;
+              if (
+                cur.getAttribute("role") === "listitem" ||
+                cur.tagName === "LI" ||
+                cur.tagName === "ARTICLE" ||
+                cur.classList.contains("feed-shared-update-v2") ||
+                cur.getAttribute("data-id") ||
+                (cur.getAttribute("componentkey") && cur.getAttribute("componentkey")!.includes("update-card"))
+              ) {
+                container = cur;
+                break;
               }
             }
 
-            if (!postLink) {
-              const linkEl = container.querySelector(
-                'a[href*="/feed/update/urn:li:activity:"], a[href*="/posts/"], a[href*="/activity/"]'
-              );
-              if (linkEl) {
-                const href = linkEl.getAttribute("href") || "";
-                postLink = href.startsWith("http") ? href : `https://www.linkedin.com${href}`;
+            const target = container || link.parentElement?.parentElement?.parentElement;
+            const rawText = target ? (target.innerText || target.textContent || "") : "";
+
+            // Strip carriage returns which corrupt Windows terminal output
+            const cleanRaw = rawText.replace(/\r/g, "");
+            const lines = cleanRaw.split("\n").map((l) => l.trim()).filter(Boolean);
+
+            const contentLines: string[] = [];
+            let dateFound = "";
+            let datePassed = false;
+
+            for (const line of lines) {
+              if (
+                line === "Feed post" ||
+                line.startsWith("•") ||
+                line === "You" ||
+                line.includes("reposted this")
+              ) {
+                continue;
+              }
+
+              // 1. Before finding date: check if this is the publication date line
+              if (!datePassed) {
+                const cleanedDate = line.replace(/•.*$/, "").replace(/\bedited\b/i, "").trim();
+                const isDate =
+                  /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}(,\s*\d{4})?/i.test(cleanedDate) ||
+                  /^\d+\s*([whdmy]|mo|yr)\b/i.test(cleanedDate) ||
+                  /^(yesterday|today|just now)$/i.test(cleanedDate) ||
+                  (/\b20\d{2}\b/.test(cleanedDate) && cleanedDate.length < 25);
+
+                if (isDate) {
+                  dateFound = line;
+                  datePassed = true;
+                }
+                // Skip everything before the date line (author name, network degree, headline/job title)
+                continue;
+              }
+
+              // 2. After date: skip action/follow buttons
+              if (/^(Follow|\+\s*Follow|Following|Connect|Join now|Sign in|View analytics|Like|Comment|Repost|Send)$/i.test(line)) {
+                continue;
+              }
+
+              // 3. Stop collecting if footer badges or reaction counts are reached
+              if (
+                /^(Starting a new position|Celebrating a new certification|Open to work|Hiring)$/i.test(line) ||
+                /^\d+[\d,\.\s]*\s*(reactions?|impressions?|comments?|reposts?)?$/i.test(line) ||
+                /^(reactions?|impressions?|comments?|reposts?)$/i.test(line)
+              ) {
+                if (contentLines.length > 0) break;
+                continue;
+              }
+
+              // 4. Genuine post content line
+              contentLines.push(line.replace(/…\s*more$/, "").trim());
+            }
+
+            // Fallback if date line was not strictly recognized
+            if (contentLines.length === 0 && lines.length > 0) {
+              for (const line of lines) {
+                if (
+                  line.length > 50 &&
+                  !line.includes("PhD Researcher") &&
+                  !line.includes("Postdoctoral Researcher") &&
+                  !line.includes("Consulting") &&
+                  !line.includes("Feed post")
+                ) {
+                  contentLines.push(line.replace(/…\s*more$/, "").trim());
+                }
               }
             }
 
-            // 2. Extract content text
-            const textEl = container.querySelector(
-              '.feed-shared-update-v2__description, .feed-shared-text, .update-components-text, span.break-words, .feed-shared-inline-show-more-text'
-            );
-            const rawText = (textEl?.textContent || "").trim();
-
-            if (rawText && rawText.length > 10) {
+            const cleanContent = contentLines.join("\n").trim();
+            if (cleanContent.length > 10) {
               results.push({
-                text: rawText,
-                link: postLink,
+                link: cleanHref,
+                text: cleanContent,
+                date: dateFound,
               });
             }
-          });
+          }
 
           return results;
         }, member.name);
@@ -392,10 +519,29 @@ async function scrapeLinkedInTeamPosts(
         console.log(`  ✓ Found ${extracted.length} post(s) for ${member.name}.`);
 
         for (const item of extracted) {
-          const cleanDescription = item.text.replace(/\s+/g, " ").trim();
-          const firstLine = cleanDescription.split(". ")[0].trim();
+          const lines = item.text
+            .split("\n")
+            .map((l) => l.trim())
+            .filter((l) => l.length > 5);
+
+          // Find first line that isn't a simple greeting
+          let firstMeaningfulLine =
+            lines.find((l) => !/^(hello|hi|dear|greetings)[\s,\.!]*$/i.test(l)) || lines[0] || `${member.name} on LinkedIn`;
+
+          // If it still starts with greeting like "Hello everyone,", take next line if long enough
+          if (/^(hello|hi|dear|greetings)/i.test(firstMeaningfulLine) && lines.length > 1 && lines[1].length > 15) {
+            firstMeaningfulLine = lines[1];
+          }
+
+          // If line ends with a colon (e.g. "New paper from InSilico Vida group is out:"), append the next line
+          if (firstMeaningfulLine.endsWith(":") && lines.length > 1 && lines[1].length > 10) {
+            firstMeaningfulLine = `${firstMeaningfulLine} ${lines[1]}`;
+          }
+
           const title =
-            firstLine.length > 85 ? firstLine.substring(0, 82) + "..." : firstLine || `${member.name} on LinkedIn`;
+            firstMeaningfulLine.length > 85
+              ? firstMeaningfulLine.substring(0, 82) + "..."
+              : firstMeaningfulLine;
 
           let finalLink = item.link || member.linkedinUrl;
           if (!finalLink.includes("#author=")) {
@@ -404,9 +550,9 @@ async function scrapeLinkedInTeamPosts(
 
           posts.push({
             title,
-            description: cleanDescription,
+            description: item.text,
             link: finalLink,
-            date: formatNewsDate(),
+            date: parseLinkedInDate(item.date),
             author: member.name,
           });
         }
@@ -431,6 +577,24 @@ async function main() {
   console.log("   InSilicoVida Multi-Person LinkedIn Sync");
   console.log("==========================================\n");
 
+  // 0. Auto-clean corrupted legacy items (e.g. title "Follow", "Feb 2001", or headline as title)
+  try {
+    const { data: badNews } = await supabase
+      .from("news")
+      .select("id, title, date")
+      .or("title.eq.Follow,date.eq.Feb 2001,title.ilike.Postdoctoral Researcher I IIT%");
+
+    if (badNews && badNews.length > 0) {
+      console.log(`Cleaning up ${badNews.length} corrupted legacy news item(s)...`);
+      for (const bad of badNews) {
+        await supabase.from("news").delete().eq("id", bad.id);
+        console.log(`  ✓ Removed bad record ID ${bad.id} ("${bad.title}")`);
+      }
+    }
+  } catch (err: any) {
+    console.warn("Legacy cleanup check skipped:", err.message);
+  }
+
   const postsToProcess: RawPost[] = [];
 
   // 1. Automated Headless Scraper for Team Members if LINKEDIN_LI_AT is provided
@@ -441,10 +605,31 @@ async function main() {
         .from("team_members")
         .select("name, links");
 
-      const membersToScrape = (dbMembers || [])
-        .filter((m) => m.links?.LinkedIn && typeof m.links.LinkedIn === "string" && m.links.LinkedIn.trim())
-        .map((m) => ({ name: m.name, linkedinUrl: m.links.LinkedIn.trim() }));
+      const memberMap = new Map<string, { name: string; linkedinUrl: string }>();
 
+      // InSilico Vida official company profile
+      const companyUrl =
+        process.env.LINKEDIN_COMPANY_URL ||
+        "https://www.linkedin.com/company/insilico-vida/home/";
+
+      memberMap.set("insilico vida", {
+        name: "InSilico Vida",
+        linkedinUrl: companyUrl.trim(),
+      });
+
+      // Merge local fallback teamMembers and Supabase team_members
+      for (const m of teamMembers) {
+        if (m.links?.LinkedIn && typeof m.links.LinkedIn === "string" && m.links.LinkedIn.trim()) {
+          memberMap.set(m.name.toLowerCase(), { name: m.name, linkedinUrl: m.links.LinkedIn.trim() });
+        }
+      }
+      for (const m of dbMembers || []) {
+        if (m.links?.LinkedIn && typeof m.links.LinkedIn === "string" && m.links.LinkedIn.trim()) {
+          memberMap.set(m.name.toLowerCase(), { name: m.name, linkedinUrl: m.links.LinkedIn.trim() });
+        }
+      }
+
+      const membersToScrape = Array.from(memberMap.values());
       if (membersToScrape.length > 0) {
         const scrapedPosts = await scrapeLinkedInTeamPosts(membersToScrape, liAtCookie);
         postsToProcess.push(...scrapedPosts);
@@ -487,15 +672,14 @@ async function main() {
     }
   }
 
-  // 2. Process single post URL if provided via env
+  // 3. Process single post URL if provided via env
   if (singlePostUrl) {
     console.log(`Extracting single post from: ${singlePostUrl} (Author: ${singlePostAuthor || "Team Member"})...`);
     const post = await fetchPostMetadata(singlePostUrl, singlePostAuthor);
     if (post) postsToProcess.push(post);
   }
 
-  // 3. Fallback: Parse command-line args if supplied
-  // Usage: npx tsx scripts/sync_linkedin.ts --url "https://..." --author "Deepika" --title "..." --desc "..."
+  // 4. Fallback: Parse command-line args if supplied
   const args = process.argv.slice(2);
   const urlIdx = args.indexOf("--url");
   const authorIdx = args.indexOf("--author");
@@ -517,23 +701,17 @@ async function main() {
       title: cliTitle,
       description: cliDesc,
       link: finalLink,
-      date: formatNewsDate(),
+      date: parseLinkedInDate(),
       author: cliAuthor,
     });
   }
 
   if (postsToProcess.length === 0) {
     console.log("No LinkedIn posts found to sync.");
-    console.log("\nMulti-Feed Configuration Options:");
-    console.log("  LINKEDIN_FEEDS='[{\"name\":\"Dr. Vikas Kumar\",\"url\":\"https://...\"},{\"name\":\"Deepika\",\"url\":\"https://...\"}]'");
-    console.log("  or LINKEDIN_FEEDS='Dr. Vikas Kumar=https://...,Deepika=https://...'");
-    console.log("  or LINKEDIN_FEED_URL='https://...' LINKEDIN_AUTHOR='Deepika'");
-    console.log("\nCLI Example:");
-    console.log("  npx tsx scripts/sync_linkedin.ts --url \"https://linkedin.com/posts/...\" --author \"Deepika\" --title \"Title\" --desc \"Description\"");
     return;
   }
 
-  // 4. Fetch existing news from Supabase for deduplication
+  // 5. Fetch existing news from Supabase for deduplication
   console.log("\nFetching existing news items from Supabase for deduplication...");
   const { data: existingNews, error: fetchErr } = await supabase
     .from("news")
@@ -568,7 +746,7 @@ async function main() {
     console.log(`[INSERT] Adding new post for ${post.author || "Lab"}: "${post.title}"...`);
     const { error: insertErr } = await supabase.from("news").insert([
       {
-        date: post.date || formatNewsDate(),
+        date: post.date || parseLinkedInDate(),
         title: post.title,
         description: post.description,
         link: post.link || undefined,

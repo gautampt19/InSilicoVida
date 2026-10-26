@@ -170,25 +170,6 @@ const Index = () => {
     });
   }, [teamMembers]);
 
-  const activeFeedAuthors = useMemo(() => {
-    const authorsMap = new Map<string, { name: string; image?: string }>();
-    newsItems.forEach((item) => {
-      if (item.link?.includes("#author=")) {
-        const raw = decodeURIComponent(item.link.split("#author=")[1]?.split("&")[0]);
-        const match = teamMembers.find(
-          (m) =>
-            m.name.toLowerCase().includes(raw.toLowerCase()) ||
-            raw.toLowerCase().includes(m.name.toLowerCase())
-        );
-        authorsMap.set(raw, {
-          name: match ? match.name : raw,
-          image: match?.image,
-        });
-      }
-    });
-    return Array.from(authorsMap.values());
-  }, [newsItems, teamMembers]);
-
   useGSAP(() => {
     if (isLoading) return;
     // Hero fade in
@@ -332,42 +313,8 @@ const Index = () => {
               {/* Right Column: Latest News (Top Right) */}
               <div className="lg:col-span-4 w-full">
                 <div className="border border-border/50 rounded-2xl bg-card/60 backdrop-blur-md shadow-sm hover:shadow-md transition-shadow overflow-hidden">
-                  <div className="px-6 py-4 border-b border-border/40 bg-muted/20 flex items-center justify-between">
+                  <div className="px-6 py-4 border-b border-border/40 bg-muted/20">
                     <h2 className="text-lg font-serif text-foreground font-medium">Latest News</h2>
-                    {activeFeedAuthors.length > 0 ? (
-                      <div className="flex items-center gap-2">
-                        <div className="flex -space-x-1.5 overflow-hidden">
-                          {activeFeedAuthors.map((author, idx) => (
-                            author.image ? (
-                              <img
-                                key={idx}
-                                src={author.image}
-                                alt={author.name}
-                                title={`Feed: ${author.name}`}
-                                className="inline-block h-5 w-5 rounded-full ring-2 ring-background object-cover"
-                              />
-                            ) : (
-                              <div
-                                key={idx}
-                                title={`Feed: ${author.name}`}
-                                className="inline-flex items-center justify-center h-5 w-5 rounded-full ring-2 ring-background bg-primary/10 text-primary text-[9px] font-bold"
-                              >
-                                {author.name.slice(0, 1)}
-                              </div>
-                            )
-                          ))}
-                        </div>
-                        <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium bg-[#0A66C2]/10 text-[#0A66C2] dark:text-[#70b5f9] border border-[#0A66C2]/20">
-                          <Linkedin size={10} className="fill-current" />
-                          <span>Team Feeds</span>
-                        </span>
-                      </div>
-                    ) : (
-                      <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-medium bg-[#0A66C2]/10 text-[#0A66C2] dark:text-[#70b5f9] border border-[#0A66C2]/20">
-                        <Linkedin size={11} className="fill-current" />
-                        <span>Live Feed</span>
-                      </span>
-                    )}
                   </div>
 
                   <div className="p-6 h-[650px] overflow-hidden relative group/ticker">
@@ -389,24 +336,6 @@ const Index = () => {
                             (news.link.includes("linkedin.com") || news.link.includes("lnkd.in"))
                           );
 
-                          const rawAuthor = news.link?.includes("#author=")
-                            ? decodeURIComponent(news.link.split("#author=")[1]?.split("&")[0])
-                            : null;
-
-                          const matchedMember = rawAuthor
-                            ? teamMembers.find(
-                                (m) =>
-                                  m.name.toLowerCase().includes(rawAuthor.toLowerCase()) ||
-                                  rawAuthor.toLowerCase().includes(m.name.toLowerCase())
-                              )
-                            : teamMembers.find((m) => {
-                                if (!m.links?.LinkedIn) return false;
-                                const cleanProfile = m.links.LinkedIn.toLowerCase().replace(/^https?:\/\//, "").replace(/^www\./, "").replace(/\/+$/, "");
-                                return cleanProfile.length > 5 && news.link?.toLowerCase().includes(cleanProfile);
-                              });
-
-                          const authorDisplay = matchedMember ? matchedMember.name : rawAuthor;
-                          const authorImage = matchedMember?.image;
                           const cleanLink = news.link ? normalizeExternalUrl(news.link.split("#author=")[0].split("?author=")[0]) : undefined;
 
                           return (
@@ -424,19 +353,11 @@ const Index = () => {
                                   {news.date}
                                 </span>
                                 {isLinkedIn && (
-                                  <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-[#0A66C2]/15 text-[#0A66C2] dark:text-[#70b5f9] border border-[#0A66C2]/20 shadow-2xs">
-                                    {authorImage ? (
-                                      <img
-                                        src={authorImage}
-                                        alt={authorDisplay || "Author"}
-                                        className="w-3.5 h-3.5 rounded-full object-cover shrink-0"
-                                      />
-                                    ) : (
-                                      <Linkedin size={10} className="fill-current shrink-0" />
-                                    )}
-                                    <span className="truncate max-w-[120px]">
-                                      {authorDisplay || "LinkedIn"}
-                                    </span>
+                                  <span
+                                    title="LinkedIn Post"
+                                    className="inline-flex items-center justify-center h-5 w-5 rounded-full bg-[#0A66C2]/15 text-[#0A66C2] dark:text-[#70b5f9] border border-[#0A66C2]/20 shadow-2xs shrink-0"
+                                  >
+                                    <Linkedin size={10} className="fill-current shrink-0" />
                                   </span>
                                 )}
                               </div>
@@ -474,7 +395,7 @@ const Index = () => {
                                   rel="noopener noreferrer"
                                   className="mt-2.5 pt-2 border-t border-[#0A66C2]/15 flex items-center justify-between text-xs text-[#0A66C2] dark:text-[#70b5f9] font-medium hover:underline"
                                 >
-                                  <span>{authorDisplay ? `View ${authorDisplay}'s Post` : "Read on LinkedIn"}</span>
+                                  <span>View on LinkedIn</span>
                                   <ArrowRight size={11} className="group-hover:translate-x-1 transition-transform" />
                                 </a>
                               )}

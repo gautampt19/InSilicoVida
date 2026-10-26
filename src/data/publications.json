@@ -1,5 +1,425 @@
 [
   {
+    "id": "doi:10.1016/j.tox.2026.154611",
+    "title": "Unravelling the potential use of metabolomics and in vitro-in vivo extrapolation for plant protection product next generation mixture risk assessment",
+    "authors": "Alkiviadis Stagkos-Georgiadis, Deepika Deepika, Hennicke Kamp, Julia Grottker, Vikas Kumar, Philip Marx-Stoelting, Sabine Martin, Vera Ritz, Tewes Tralau, Denise Bloch",
+    "journal": "Toxicology",
+    "year": "2027",
+    "doi": "https://doi.org/10.1016/j.tox.2026.154611",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1021/acs.chemrestox.5c00460",
+    "title": "A Computational Framework to Evaluate Interactions of BPA and Its Analogs with Human Liver X Receptor-Beta for Health Risk Assessment",
+    "authors": "Rajesh Kumar Pathak, Saurav Kumar, Vikas Kumar",
+    "journal": "Chemical Research in Toxicology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1021/acs.chemrestox.5c00460",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s44339-026-00052-2",
+    "title": "A proof-of-concept study towards physiologically based kinetic (PBK) modeling in agricultural operator risk assessment",
+    "authors": "Yemurai Musengi, Vikas Kumar, Deepika Deepika, Alfonsina Paola D’Ambrosio Melendrez, Philip Marx-Stoelting, Denise Bloch",
+    "journal": "Discover Toxicology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1007/s44339-026-00052-2",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1021/acs.est.6c05148",
+    "title": "Accelerating AOP Development in the AOP-Wiki with AI: A Practical Road Map for the Community",
+    "authors": "You Song, Vikas Kumar, Shihori Tanabe, Daniel L. Villeneuve, Clemens Wittwehr",
+    "journal": "Environmental Science & Technology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1021/acs.est.6c05148",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:agentdrivenknowledgesystemfora",
+    "title": "Agent-Driven knowledge system for Adverse Outcome Pathway (AOP) development in Chemical Risk Assessment",
+    "authors": "S Kumar, S Sharma, D Deepika, V Kumar",
+    "journal": "NAUNYN-SCHMIEDEBERGS ARCHIVES OF PHARMACOLOGY 399 (SUPPL 1)",
+    "year": "2026",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:ahKOoLCzQxcC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.comtox.2026.100426",
+    "title": "An exchange standard for FAIR PBK models in chemical risk assessment – A PARC community effort",
+    "authors": "J.W. Kruisselbrink, J. Minnema, D. Deepika, S. Kumar, S. Sharma, T. Gastellu, C. Vogs, J. Westerhout, A. Karakoltzidis, K.E. Tollefsen, A. Zwartsen, M. Palm, J. van Klaveren, A. Ratier, V. Kumar, J. Engel",
+    "journal": "Computational Toxicology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1016/j.comtox.2026.100426",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.64898/2026.04.07.716912",
+    "title": "ARACRA: Automated RNA-seq Analysis for Chemical Risk Assessment",
+    "authors": "Shubh Sharma, Saurav Kumar, Judit Biosca-Brull, Deepika Deepika, Vikas Kumar",
+    "journal": "Computational and Structural Biotechnology Journal",
+    "year": "2026",
+    "doi": "https://doi.org/10.64898/2026.04.07.716912",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s13721-026-00749-9",
+    "title": "Biological big data analysis in the post-genomic era: applications and limitations",
+    "authors": "Shubham Pant, Jyoti Kant Choudhari, Rajesh Kumar Pathak, Anil Kumar Yadav, Dev Bukhsh Singh",
+    "journal": "Network Modeling Analysis in Health Informatics and Bioinformatics",
+    "year": "2026",
+    "doi": "https://doi.org/10.1007/s13721-026-00749-9",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.comtox.2026.100447",
+    "title": "Dual-site binding of BPA analogs to thyroid receptor alpha: A comprehensive computational study with relevance to autoimmunity and toxicological assessment",
+    "authors": "Rajesh Kumar Pathak, Alberto Fernández, Vikas Kumar",
+    "journal": "Computational Toxicology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1016/j.comtox.2026.100447",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.cbpc.2025.110441",
+    "title": "Elucidating altrenogest-induced lipid accumulation via estrogen receptor alpha modulation: Insights from computational and cell-based approaches",
+    "authors": "Da-Hyun Jeong, Rajesh Kumar Pathak, Taeeun Kim, Jun-Mo Kim, Hee-Seok Lee",
+    "journal": "Comparative Biochemistry and Physiology Part C: Toxicology & Pharmacology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1016/j.cbpc.2025.110441",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:fairorientedevaluationofpbpkmo",
+    "title": "FAIR-Oriented Evaluation of PBPK Models under the OECD Assessment Framework within an NGRA Context: A Case Study on PFAS",
+    "authors": "D Deepika, K Bharti, S Sharma, S Kumar, V Kumar",
+    "journal": "NAUNYN-SCHMIEDEBERGS ARCHIVES OF PHARMACOLOGY 399 (SUPPL 1)",
+    "year": "2026",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:6daZS1cS2l8C",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.3389/ftox.2025.1719447",
+    "title": "Food contaminants: mechanisms of toxicity, computational assessment, and mitigation",
+    "authors": "Laura Escorihuela, Rajesh Kumar Pathak, Benjamí Martorell, Vikas Kumar",
+    "journal": "Frontiers in Toxicology",
+    "year": "2026",
+    "doi": "https://doi.org/10.3389/ftox.2025.1719447",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.envint.2026.110321",
+    "title": "Immunomodulatory effects of Bisphenol A, perfluorooctanoic acid, and tris(1,3-dichloro-2-propyl) phosphate on THP-1-derived macrophages",
+    "authors": "Oscar Sabuz, Jordi Blanco, Deepika Deepika, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Environment International",
+    "year": "2026",
+    "doi": "https://doi.org/10.1016/j.envint.2026.110321",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.3389/fphar.2026.1840947",
+    "title": "Microbiota-based PBPK model: new approach methodology for assessing the kinetics of drugs and chemicals",
+    "authors": "Deepika Deepika, Kanchan Bharti, Judit Biosca Brull, Oscar Sabuz, Yemurai Musengi, Vikas Kumar",
+    "journal": "Frontiers in Pharmacology",
+    "year": "2026",
+    "doi": "https://doi.org/10.3389/fphar.2026.1840947",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1021/acs.chemrestox.5c00516",
+    "title": "Microbiota-Driven Metabolic Alterations Induced by BPA, TDCPP and PFOA in an Ex Vivo Human Fecal Fermentation Model",
+    "authors": "Oscar Sabuz, Jacob Folz, Deepika Deepika, Jordi Blanco, Marta Schuhmacher, Georg Aichinger, Vikas Kumar",
+    "journal": "Chemical Research in Toxicology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1021/acs.chemrestox.5c00516",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.envint.2026.110531",
+    "title": "Mixture risk assessment of pesticides with acute neurotoxic effects: a novel approach based on urinary exposure biomarkers",
+    "authors": "Philippe Palmont, Madeline Carsique, Karine Angeli, Hannah P. McKeon, Alexandra Mienné, Anastasia Spyropoulou, Adna Alilović, Liesbeth Bruckers, Bianca Cox, Pavel Čupr, Katleen Debrouwere, Deepika Deepika, Clémence Fillol, Eva Govarts, Tomáš Janoš, Marike Kolossa-Gehring, Vikas Kumar, Michelle Laeremans, Lucija Perharič, Anja Remškar, Janja Snoj Tratnik, Libor Šulc, Nina Vogel, Aude Ratier, Angelo Moretto, Antonio F. Hernández-Jerez, Waldo de Boer, Johannes Kruisselbrink, Jasper Engel, Jacob van Klaveren, Kyriaki Machera, Amélie Crépet",
+    "journal": "Environment International",
+    "year": "2026",
+    "doi": "https://doi.org/10.1016/j.envint.2026.110531",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1038/s41598-026-48993-3",
+    "title": "One pot synthesis of N-7 alkylated xanthine derivatives and their exploration as antioxidant, antimicrobial and nematicidal agents",
+    "authors": "Amita Saini, Divya Utreja, N. K. Dhillon, Anu Kalia, Rajesh Kumar Pathak, Yadhu Suneja, Harwinder Singh Buttar, Prabhjot Kaur",
+    "journal": "Scientific Reports",
+    "year": "2026",
+    "doi": "https://doi.org/10.1038/s41598-026-48993-3",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2026.112770",
+    "title": "P30-23 A computational framework to assess the autoimmune risk of BPA analogs targeting TRα",
+    "authors": "R.K. Pathak, A. Fernández, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2026",
+    "doi": "https://doi.org/10.1016/j.toxlet.2026.112770",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:pbpkwebsimopenfairwebbasedpbpk",
+    "title": "PBPK-WebSim: Open & FAIR Web-Based PBPK Modeling framework from Annotated SBML",
+    "authors": "V Kumar, S Kumar, S Sharma, D Deepika",
+    "journal": "NAUNYN-SCHMIEDEBERGS ARCHIVES OF PHARMACOLOGY 399 (SUPPL 1)",
+    "year": "2026",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:uhm167Bumv8C",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.comtox.2026.100445",
+    "title": "PBPKO: an ontology for standardizing and harmonizing physiologically based pharmacokinetic (PBPK) models",
+    "authors": "Saurav Kumar, Shubh Sharma, Panče Panov, Johannes W. Kruisselbrink, Antonio Moreno Ribas, Deepika Deepika, Vikas Kumar",
+    "journal": "Computational Toxicology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1016/j.comtox.2026.100445",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.14573/altex.2603121",
+    "title": "Stakeholder input towards further refinement and consolidation of the alternative safety profiling algorithm (ASPA) for next generation risk assessment (NGRA)",
+    "authors": "M Luyten, M Herzler, F Affourtit, D Allen, MW Ashraf, N Ball, E Berggren, ...",
+    "journal": "ALTEX",
+    "year": "2026",
+    "doi": "https://doi.org/10.14573/altex.2603121",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.3168/jds.2026-28438",
+    "title": "Subtype-selective binding of milk β-casomorphins across the opioid receptor family revealed by molecular docking and molecular dynamics simulation",
+    "authors": "Tae-Hong Min, Min-Jae Jang, Arvind Kumar Yadav, Chiwoong Lim, Rajesh Kumar Pathak, Jun-Mo Kim",
+    "journal": "Journal of Dairy Science",
+    "year": "2026",
+    "doi": "https://doi.org/10.3168/jds.2026-28438",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.12688/f1000research.175826.1",
+    "title": "The Environmental Health Language Collaborative (EHLC) Adverse Outcome Pathway (AOP) Standards Workshop Report",
+    "authors": "Holly Mortensen, Virginia Hench, Penny Nymark, Scott Lynn, Helena Hogberg, Madison Feshuk, Anne Thessen, David Hines, Sierra Moxon, Karamarie Fecho, Nyssa Tucker, Alexander Tropsha, James Balhoff, Jennifer Fostel, Harry Caufield, Julija Filipovska, Allen Peter Davis, Julia Malinowska, Vikas Kumar, Marvin Martens, HC Bledsoe, Grace Chappell, Samantha Hall, Maria Shatz, Charles Schmitt",
+    "journal": "F1000Research",
+    "year": "2026",
+    "doi": "https://doi.org/10.12688/f1000research.175826.1",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:thefairprinciplesinenvironment",
+    "title": "The FAIR Principles in Environmental Toxicology and Chemistry: Enabling Data-Driven Insights",
+    "authors": "S Baken, V Kumar",
+    "journal": "SETAC Europe 36th Annual Meeting",
+    "year": "2026",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:CQrscp367IIC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1186/s40104-025-01347-x",
+    "title": "Tissue-specific epigenetic regulation of fat metabolism in pigs through integrated analysis of DNA methylation and gene expression networks",
+    "authors": "Do-Young Kim, Byeonghwi Lim, Rajesh Kumar Pathak, Woncheoul Park, Jong-Eun Park, Jun-Mo Kim",
+    "journal": "Journal of Animal Science and Biotechnology",
+    "year": "2026",
+    "doi": "https://doi.org/10.1186/s40104-025-01347-x",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.3389/ftox.2025.1632941",
+    "title": "Advancing human health risk assessment: the role of new approach methodologies",
+    "authors": "Deepika Deepika, Kanchan Bharti, Shubh Sharma, Saurav Kumar, Rajesh Kumar Pathak, Judit Biosca Brull, Oscar Sabuz, Silvia García Vilana, Vikas Kumar",
+    "journal": "Frontiers in Toxicology",
+    "year": "2025",
+    "doi": "https://doi.org/10.3389/ftox.2025.1632941",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/978-981-97-7395-4_19",
+    "title": "Applications of Nano-bioinformatics in Livestock Research",
+    "authors": "Shubham Pant, Rajesh Kumar Pathak, Dev Bukhsh Singh, Jun-Mo Kim",
+    "journal": "Bioinformatics in Veterinary Science",
+    "year": "2025",
+    "doi": "https://doi.org/10.1007/978-981-97-7395-4_19",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:bioinformaticsinveterinaryscie",
+    "title": "Bioinformatics in Veterinary Science: Vetinformatics",
+    "authors": "JM Kim, RK Pathak",
+    "journal": "Springer Nature",
+    "year": "2025",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:PVjk1bu6vJQC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.3389/fddsv.2025.1632015",
+    "title": "Editorial: Enhancing drug discovery through structure-based design and computational techniques",
+    "authors": "Rajesh Kumar Pathak, Dev Bukhsh Singh, Binh P. Nguyen",
+    "journal": "Frontiers in Drug Discovery",
+    "year": "2025",
+    "doi": "https://doi.org/10.3389/fddsv.2025.1632015",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.3389/fvets.2025.1672786",
+    "title": "Editorial: Vetinformatics: an insight for decoding livestock systems through in silico biology, volume II",
+    "authors": "Jun-Mo Kim, Rajesh Kumar Pathak",
+    "journal": "Frontiers in Veterinary Science",
+    "year": "2025",
+    "doi": "https://doi.org/10.3389/fvets.2025.1672786",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.envpol.2025.126873",
+    "title": "Estimated exposure of flame-retardants in Spanish toddlers: a modelling approach",
+    "authors": "Roser Esplugas, Joaquim Rovira, Helena García-Cortés, Vikas Kumar, Montse Mari, Antonio F. Hernández, Marina Lacasaña-Navarro, José L. Domingo, Marta Schuhmacher",
+    "journal": "Environmental Pollution",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.envpol.2025.126873",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.comtox.2025.100381",
+    "title": "Evaluation of PBK models using the OECD assessment framework taking PFAS as case study",
+    "authors": "Deepika Deepika, Kanchan Bharti, Shubh Sharma, Saurav Kumar, Trine Husøy, Marcin W. Wojewodzic, Klára Komprdová, Aude Ratier, Joost Westerhout, Thomas Gastellu, Meg-Anne Moriceau, Sanah Majid, Renske Hoondert, Johannes Kruisselbrink, Jasper Engel, Annelies Noorlander, Carolina Vogs, Vikas Kumar",
+    "journal": "Computational Toxicology",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.comtox.2025.100381",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.envint.2025.109632",
+    "title": "Exploring the relationship between the androgen receptor and structural configuration of benzophenones: a combination of computational analysis and laboratory models",
+    "authors": "Da-Hyun Jeong, Rajesh Kumar Pathak, Da-Woon Jung, Jun-Mo Kim, Hee-Seok Lee",
+    "journal": "Environment International",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.envint.2025.109632",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.ecoenv.2025.118799",
+    "title": "Integrative in silico and in vitro approach for clarifying mode of action to activate estrogen receptor alpha and lipid accumulation by methiocarb",
+    "authors": "Da-Hyun Jeong, Rajesh Kumar Pathak, Eunhee Lee, Jun-Mo Kim, Hee-Seok Lee",
+    "journal": "Ecotoxicology and Environmental Safety",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.ecoenv.2025.118799",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/978-981-97-7395-4_1",
+    "title": "Introduction to Vetinformatics and Its Application in Veterinary Science",
+    "authors": "Rajesh Kumar Pathak, Jun-Mo Kim",
+    "journal": "Bioinformatics in Veterinary Science",
+    "year": "2025",
+    "doi": "https://doi.org/10.1007/978-981-97-7395-4_1",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2025.07.150",
+    "title": "OS01-03 AOP-Sketchpad: Decentralized FAIR dissemination of Adverse Outcome Pathways using Nanopublications",
+    "authors": "S. Kumar, R. Kumar, S. Sharma, D. Deepika, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.toxlet.2025.07.150",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2025.07.210",
+    "title": "P03-15 From Pathways to Predictions: An Ontology-Driven Data Integration Framework for Integrating AOP and PBPK in Chemical Risk Assessment",
+    "authors": "V. Kumar, S. Kumar, D. Deepika, S. Sharma, J. Kruisselbrink, P. Panov",
+    "journal": "Toxicology Letters",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.toxlet.2025.07.210",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2025.07.618",
+    "title": "P21-13 Characterizing plant protection product mixture effects: An integrated transcriptomic and IVIVE approach",
+    "authors": "Y. Musengi, I. Suciu, V. Kumar, D. Bloch",
+    "journal": "Toxicology Letters",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.toxlet.2025.07.618",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2025.07.890",
+    "title": "P30-29 Advancing NAM-based testing strategy: Computational model driven quantification of Adverse outcome pathways (AOPs) for endocrine disrupting chemicals (EDCs)",
+    "authors": "D. Deepika, S.J. Moe, Y. Song, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.toxlet.2025.07.890",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2025.07.913",
+    "title": "P30-54 Building an quantitative AOP for developmental neurotoxicity using prediction modeling along with in vitro data: A case study for bisphenol S",
+    "authors": "M. Ni, D. Deepika, Y. Zhou, W. Xiong, X. Li, L. Zhang, V. Kumar, J. Chen",
+    "journal": "Toxicology Letters",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.toxlet.2025.07.913",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2025.07.923",
+    "title": "P30-65 Ensuring protocol robustness and integrity in the development of Adverse Outcome Pathway (AOP) for regulatory application",
+    "authors": "B. Viviani, K. Jagiello, B. Judzińska, M. Midali, M. Serafini, M. Stępnik, K. Audouze, D. Deepika, T. Hofer, C. Ibanez, T. Jaymay, A. Karakoltzidis, S. Kumar, V. Kumar, O. Laurent, C. Mandin, O. Myhre, N. Papaioannou, E. Renieri, D. Schultz, A. Stratidakis, M. Torrente, M.W. Wojewodzic",
+    "journal": "Toxicology Letters",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.toxlet.2025.07.923",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:profilingepigeneticmarksintheh",
+    "title": "Profiling epigenetic marks in the human germ line and their potential use as biomarkers in risk assessment for subfertility and inheritance of chronic disorders in offspring of …",
+    "authors": "E Casella, J Depovere, V Kumar, D Deepika, AF Hernandez, M Lacasana, ...",
+    "journal": "PARC WP5 Annual Meeting",
+    "year": "2025",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:TKTY8N1AUUAC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "S2CIE: semantic, syntactic, and context-based information extraction for AOP development",
     "authors": "Saurav Kumar, Shubh Sharma, Deepika Deepika, Judit Biosca-Brull, Antonio Moreno, Vikas Kumar",
     "journal": "Environment International",
@@ -9,31 +429,54 @@
     "id": "doi:10.1016/j.envint.2025.109986"
   },
   {
-    "title": "Computational Tools to Facilitate Early Warning of New Emerging Risk Chemicals",
-    "authors": "Farina Tariq, Lutz Ahrens, Nikiforos A. Alygizakis, Karine Audouze, Emilio Benfenati, Pedro N. Carvalho, Ioana Chelcea, Spyros Karakitsios, Achilleas Karakoltzidis, Vikas Kumar, Liadys Mora Lagares, Dimosthenis Sarigiannis, Gianluca Selvestrel, Olivier Taboureau, Katrin Vorkamp, Patrik L. Andersson",
-    "journal": "Toxics",
-    "year": "2024",
-    "doi": "https://doi.org/g8nmwn",
+    "id": "doi:10.1007/s10658-025-03162-6",
+    "title": "Synthesis and bioactivity assessment of trisindoline derivatives as agrochemical agents",
+    "authors": "Gurbir Kaur, Divya Utreja, Anu Kalia, Sukhjeet Kaur, Rajesh K. Pathak, Harwinder Singh Buttar",
+    "journal": "European Journal of Plant Pathology",
+    "year": "2025",
+    "doi": "https://doi.org/10.1007/s10658-025-03162-6",
     "image": "",
-    "id": "doi:10.3390/toxics12100736"
+    "isOpenAccess": true
   },
   {
-    "title": "AOPWIKI-EXPLORER: An interactive graph-based query engine leveraging large language models",
-    "authors": "Saurav Kumar, Deepika Deepika, Karin Slater, Vikas Kumar",
+    "id": "doi:10.1007/978-981-97-7395-4_7",
+    "title": "Systems Biology: Insights, Advances, and Challenges",
+    "authors": "Sumit Kumar, Rajesh Kumar Pathak, Dev Bukhsh Singh, Devendra Kumar Bhatt",
+    "journal": "Bioinformatics in Veterinary Science",
+    "year": "2025",
+    "doi": "https://doi.org/10.1007/978-981-97-7395-4_7",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.comtox.2025.100368",
+    "title": "The FAIR AOP roadmap for 2025: Advancing findability, accessibility, interoperability, and re-usability of adverse outcome pathways",
+    "authors": "Holly M. Mortensen, Maciej Gromelski, Ginnie Hench, Marvin Martens, Clemens Wittwehr, Saurav Kumar, Vikas Kumar, Karine Audouze, Vassilis Virvilis, Penny Nymark, Michelle Angrish, Iseult Lynch, Stephen Edwards, Barbara Magagna, Marcin W. Wojewodzic",
     "journal": "Computational Toxicology",
-    "year": "2024",
-    "doi": "https://doi.org/gtprnt",
+    "year": "2025",
+    "doi": "https://doi.org/10.1016/j.comtox.2025.100368",
     "image": "",
-    "id": "doi:10.1016/j.comtox.2024.100308"
+    "isOpenAccess": true
   },
   {
-    "title": "IVIVE-PBPK based new approach methodology for addressing early life toxicity induced by Bisphenol A",
-    "authors": "Mengmei Ni, Deepika Deepika, Xiaomeng Li, Wei Xiong, Lishi Zhang, Jinyao Chen, Vikas Kumar",
-    "journal": "Environmental Research",
+    "id": "doi:10.1007/978-981-97-7395-4_9",
+    "title": "Vetinformatics Approaches in Veterinary Medicine",
+    "authors": "Rajesh Kumar Pathak, Young-Jun Seo, Jun-Mo Kim",
+    "journal": "Bioinformatics in Veterinary Science",
+    "year": "2025",
+    "doi": "https://doi.org/10.1007/978-981-97-7395-4_9",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.2139/ssrn.4713176",
+    "title": "A Computational Assay for Identifying Millet-Derived Compounds that Antagonize the Interaction between Bisphenols and Estrogen-Related Receptor Gamma",
+    "authors": "Rajesh  Kumar Pathak, Jun-Mo Kim",
+    "journal": "Frontiers in Pharmacology 15",
     "year": "2024",
-    "doi": "https://doi.org/gs4d32",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0013935123021473-ga1.jpg",
-    "id": "doi:10.1016/j.envres.2023.117343"
+    "doi": "https://doi.org/10.2139/ssrn.4713176",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "A preliminary estimate of the environmental burden of disease associated with exposure to pyrethroid insecticides and ADHD in Europe based on human biomonitoring",
@@ -45,13 +488,161 @@
     "id": "doi:10.1186/s12940-024-01131-w"
   },
   {
+    "id": "scholar:arefineparticlesthemostdangero",
+    "title": "ARE FINE PARTICLES THE MOST DANGEROUS? AN EXPOSURE AND DOSIMETRY APPROACH",
+    "authors": "F Sánchez-Soberón, M Mari, Q Aiello, V Kumar, M Nadal, JL Domingo, ...",
+    "journal": "Work 1 (6E)",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:cNe27ouKFcQC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1038/s41598-024-62924-0",
+    "title": "Assessing external exposome by implementing an Environmental Data Management System using Open Data",
+    "authors": "Sofia Tagliaferro, Sara Maio, Federico Pirona, Ilaria Stanisci, Giuseppe Sarno, Patrizia Silvi, Marianthi Kermenidou, Nafsika Papaioannou, Reena Perchard, Igor Prpic, Kinga Polanska, Joanna Jerzynska, Elisabete Ramos, Joaquim Rovira, Jordina Belmonte, Janja Snoj Snoj Tratnik, Milena Horvat, David Kocman, Zdravko Spiric, Jacqueline Zickella, Salvatore Fasola, Stefania La Grutta, Velia Malizia, Laura Montalbano, Bart Keijser, Jasper Kieboom, Martin Larsen, Marta Schumacher, Tim van den Broek, Rémy Villette, Nour Baiz, Henrique Barros, John Bartzis, Norhidayah Binti Ahmad, Beatrice Bocca, Sonia Brescianini, Gemma Calamandrei, Anthoula Chatzimpaloglou, Eugenia Dogliotti, Ingrid Falnoga, Maria João Fonseca, Catherine Gabriel, Amir Gamil, Alberto Gotti, Wojciech Hanke, Edward Johnstone, Joanna Jurewicz, Michael Kabesch, Katarzyna Kalska-Sochacka, Spyros Karakitsios, David Kocman, Vikas Kumar, Darja Mazej, Filomena Mazzei, Ettore Meccia, Luisa Minghetti, Lorenza Nisticò, Eduardo de Oliveira Fernandes, Reena Perchard, Anna Pino, Dimosthenis Sarigiannis, Marta Schumacher, Maria Antonietta Stazi, Kamila Szcześniak, Patrizia Tancredi, Gabriela Ventura Silva, Giovanni Viegi, Sandra Baldacci, Isabella Annesi-Maesano",
+    "journal": "Scientific Reports",
+    "year": "2024",
+    "doi": "https://doi.org/10.1038/s41598-024-62924-0",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.envint.2024.108733",
+    "title": "Bioassay predictive values for chemical health risks in drinking water",
+    "authors": "Tessa E. Pronk, Renske P.J. Hoondert, Stefan A.E. Kools, Vikas Kumar, Milo L. de Baat",
+    "journal": "Environment International",
+    "year": "2024",
+    "doi": "https://doi.org/10.1016/j.envint.2024.108733",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s10115-023-02049-4",
+    "title": "Biological big-data sources, problems of storage, computational issues, and applications: a comprehensive review",
+    "authors": "Jyoti Kant Chaudhari, Shubham Pant, Richa Jha, Rajesh Kumar Pathak, Dev Bukhsh Singh",
+    "journal": "Knowledge and Information Systems",
+    "year": "2024",
+    "doi": "https://doi.org/10.1007/s10115-023-02049-4",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Computational Tools to Facilitate Early Warning of New Emerging Risk Chemicals",
+    "authors": "Farina Tariq, Lutz Ahrens, Nikiforos A. Alygizakis, Karine Audouze, Emilio Benfenati, Pedro N. Carvalho, Ioana Chelcea, Spyros Karakitsios, Achilleas Karakoltzidis, Vikas Kumar, Liadys Mora Lagares, Dimosthenis Sarigiannis, Gianluca Selvestrel, Olivier Taboureau, Katrin Vorkamp, Patrik L. Andersson",
+    "journal": "Toxics",
+    "year": "2024",
+    "doi": "https://doi.org/g8nmwn",
+    "image": "",
+    "id": "doi:10.3390/toxics12100736"
+  },
+  {
+    "id": "scholar:costeffectivebiosensorsandauto",
+    "title": "Cost effective Biosensors and automation in Environment Monitoring",
+    "authors": "V Kumar, A Fragoso",
+    "journal": "Publication",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:EUQCXRtRnyEC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:decodingerazolederivativeinter",
+    "title": "Decoding ERα–azole derivative interactions to evaluate environmental health risks through computational and experimental models",
+    "authors": "RK Pathak, DH Jeong, V Kumar, HS Lee, JM Kim",
+    "journal": "SETAC Europe 36th Annual Meeting",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:PicmXY_cuE0C",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "title": "Enhanced identification of endocrine disruptors through integration of science-based regulatory practices and innovative methodologies: The MERLON Project",
+    "authors": "Terje Svingen, Anna-Maria Andersson, Julianna Angelova, Marta Axelstad, Julie Bakker, Lisa Baumann, Anna Beronius, Nora Bouftas, Frederic Chalmel, Sofie Christiansen, Charlotte Cornil, Pauliina Damdimopoulou, Deepika Deepika, Martijn E. T. Dollé, Monica Kam Draskau, Margit Bistrup Fischer, Casper P. Hagen, Ellen Hessel, Marie Louise Holmer, Samantha Hughes, Genon Jensen, Hanna Katarina Lilith Johansson, Anders Juul, Vikas Kumar, Saurav Kumar, Aurélie Lardenois, Katharina M. Main, Severine Mazaud-Guittot, S. Jannicke Moe, Gylli Mola, Anne-Simone Parent, Rafael Pineda, Antoine Rolland, Anna Kjerstine Rosenmai, You Song, Antonio Suglia, Manuel Tena-Sempere, Lydia Wehrli, Johanna Zilliacus, Majorie van Duursen",
+    "journal": "Open Research Europe",
+    "year": "2024",
+    "doi": "https://doi.org/gt56t3",
+    "image": "",
+    "id": "doi:10.12688/openreseurope.17319.1"
+  },
+  {
+    "id": "doi:10.2139/ssrn.5002613",
+    "title": "Exploring the Androgen Receptor Binding Affinity of Azole Derivatives Through Multi-Scale Computational Approaches and Experimental Validation",
+    "authors": "Rajesh  Kumar Pathak, Da-Hyun Jeong, Min-Jae Jang, Hee-Seok Lee, Jun-Mo Kim",
+    "journal": "Environmental Science & Technology 59 (45)",
+    "year": "2024",
+    "doi": "https://doi.org/10.2139/ssrn.5002613",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:improvingtheunderstandingofneu",
+    "title": "Improving the understanding of Neurotoxicity Mechanism of Metal mixture: Cytotoxicity Study of Metals (Pb, Cd, MeHg and As) Exposure on Hippocampal HT22 Cell Line",
+    "authors": "V Karri, D Ramos, EDO Cacheado, M Schuhmacher, V Kumar",
+    "journal": "Life Sciences 84 (9-10)",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:oursBaop5wYC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1080/19768354.2024.2419473",
+    "title": "Integrative transcriptomic profiling uncovers immune and functional responses to bisphenol a across multiple tissues in male mice",
+    "authors": "Yejee Park, Min-Jae Jang, Do-Yeal Ryu, Byeonghwi Lim, Rajesh Kumar Pathak, Myung-Geol Pang, Jun-Mo Kim",
+    "journal": "Animal Cells and Systems",
+    "year": "2024",
+    "doi": "https://doi.org/10.1080/19768354.2024.2419473",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:intergenerationalchemicalriska",
+    "title": "Intergenerational chemical risk assessment in humans using epigenetic epidemiology studies and machine learning approaches.",
+    "authors": "E Casella, M Butynets, V Kumar, D Deepika, AF Hernandez, M Lacasaña, ...",
+    "journal": "EU PARC WP5 Hazard assessment",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:VyewGSb6xwwC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "title": "IVIVE-PBPK based new approach methodology for addressing early life toxicity induced by Bisphenol A",
+    "authors": "Mengmei Ni, Deepika Deepika, Xiaomeng Li, Wei Xiong, Lishi Zhang, Jinyao Chen, Vikas Kumar",
+    "journal": "Environmental Research",
+    "year": "2024",
+    "doi": "https://doi.org/gs4d32",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0013935123021473-ga1.jpg",
+    "id": "doi:10.1016/j.envres.2023.117343"
+  },
+  {
+    "id": "scholar:lacomisininterministerialdebio",
+    "title": "La Comisión Interministerial de Biomonitorización Humana en España: un reto hecho realidad",
+    "authors": "A Castaño, C Caballo, M Esteban-Lopez, MF Fernández, ...",
+    "journal": "Sociedad Española de Sanidad Ambiental (SESA)",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:QDEWnZBrHwAC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2024.07.331",
+    "title": "P04-04 Development of a Putative Adverse Outcome Pathway (AOP) for the identification of substances with a potential link to Alzheimer's Disease (AD)",
+    "authors": "M. Midali, M.W. Wojewodzic, K. Audouze, E. Bernardini, T. Coustillet, X. Coumoul, C. Durand, A. Georgiou, A. Girardon, T. Hofer, K. Jagiello, B. Judzinska, A. Karakoltzidis, C. Ibanez, O. Laurent, C. Mandin, N. Papaioannou, F. Rampichini, E. Renieri, C. Samieri, D.A. Sarigiannis, M.M. Serafini, D. Schultz, M. Stepnik, S. Kumar, V. Kumar, A. Stratidakis, O. Myhre, B. Viviani",
+    "journal": "Toxicology Letters",
+    "year": "2024",
+    "doi": "https://doi.org/10.1016/j.toxlet.2024.07.331",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2024.07.364",
     "title": "P05-28 Developing an open-source harmonized Physiologically Based Kinetic (PBK) model for 4 PFAS (PFOS, PFOA, PFNA, and PFHxS) to assess the toxicological profile of forever chemicals",
     "authors": "D. Deepika, A. Noorlander, V. Kumar",
     "journal": "Toxicology Letters",
     "year": "2024",
-    "doi": "https://doi.org/g9q3hj",
+    "doi": "https://doi.org/10.1016/j.toxlet.2024.07.364",
     "image": "",
-    "id": "doi:10.1016/j.toxlet.2024.07.364"
+    "isOpenAccess": true
   },
   {
     "title": "P05-32 S2CIE: semantic, syntactic, and context-based information extraction for AOP development",
@@ -81,13 +672,74 @@
     "id": "doi:10.1016/j.toxlet.2024.07.383"
   },
   {
-    "title": "Enhanced identification of endocrine disruptors through integration of science-based regulatory practices and innovative methodologies: The MERLON Project",
-    "authors": "Terje Svingen, Anna-Maria Andersson, Julianna Angelova, Marta Axelstad, Julie Bakker, Lisa Baumann, Anna Beronius, Nora Bouftas, Frederic Chalmel, Sofie Christiansen, Charlotte Cornil, Pauliina Damdimopoulou, Deepika Deepika, Martijn E. T. Dollé, Monica Kam Draskau, Margit Bistrup Fischer, Casper P. Hagen, Ellen Hessel, Marie Louise Holmer, Samantha Hughes, Genon Jensen, Hanna Katarina Lilith Johansson, Anders Juul, Vikas Kumar, Saurav Kumar, Aurélie Lardenois, Katharina M. Main, Severine Mazaud-Guittot, S. Jannicke Moe, Gylli Mola, Anne-Simone Parent, Rafael Pineda, Antoine Rolland, Anna Kjerstine Rosenmai, You Song, Antonio Suglia, Manuel Tena-Sempere, Lydia Wehrli, Johanna Zilliacus, Majorie van Duursen",
-    "journal": "Open Research Europe",
+    "id": "scholar:physiologicallybasedkineticpbk",
+    "title": "Physiologically Based Kinetic (PBK) modeling, a new era in mixture risk assessment",
+    "authors": "Y Musengi, V Kumar, D Bloch",
+    "journal": "Publication",
     "year": "2024",
-    "doi": "https://doi.org/gt56t3",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:rt-opDMcQ_cC",
     "image": "",
-    "id": "doi:10.12688/openreseurope.17319.1"
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1080/17435390.2024.2401430",
+    "title": "Physiologically based pharmacokinetic modeling of metal nanoparticles for risk assessment of inhalation exposures: a state-of-the-science expert panel review",
+    "authors": "C. R. Kirman, B. Kent, J. Bigelow, R. A. Canady, Q. Chen, W. C. Chou, D. Li, Z. Lin, V. Kumar, A. Paini, P. Poulin, L. M. Sweeney, S. M. Hays",
+    "journal": "Nanotoxicology",
+    "year": "2024",
+    "doi": "https://doi.org/10.1080/17435390.2024.2401430",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:resuscitationplus",
+    "title": "Resuscitation Plus",
+    "authors": "S Garcıa-Vilana, V Kumar, S Kumar, E Barberia, X Jimenez-Fabrega, ...",
+    "journal": "Publication",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:STWYWLtSq6gC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:siliconhumanoxidativestressmod",
+    "title": "Silicon Human: oxidative stress model for aging, Parkinson's disease and precision therapies",
+    "authors": "AN Kolodkin, RP Sharma, AM Colangelo, YL Orlov, D Jennen, JJ Briede, ...",
+    "journal": "Publication",
+    "year": "2024",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:V0QqM0Py3VsC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.envpol.2024.123549",
+    "title": "Structural insight into the mechanisms and interacting features of endocrine disruptor Bisphenol A and its analogs with human estrogen-related receptor gamma",
+    "authors": "Rajesh Kumar Pathak, Jun-Mo Kim",
+    "journal": "Environmental Pollution",
+    "year": "2024",
+    "doi": "https://doi.org/10.1016/j.envpol.2024.123549",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.resplu.2024.100559",
+    "title": "Study of risk factors for injuries due to cardiopulmonary resuscitation with special focus on the role of the heart: A machine learning analysis of a prospective registry with multiple sources of information (ReCaPTa Study)",
+    "authors": "Silvia García-Vilana, Vikas Kumar, Saurav Kumar, Eneko Barberia, Inés Landín, Ester Granado-Font, Silvia Solà-Muñoz, Xavier Jiménez-Fàbrega, Alfredo Bardají, Bjarne Madsen Hardig, Youcef Azeli",
+    "journal": "Resuscitation Plus",
+    "year": "2024",
+    "doi": "https://doi.org/10.1016/j.resplu.2024.100559",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1093/bib/bbae025",
+    "title": "Veterinary systems biology for bridging the phenotype–genotype gap via computational modeling for disease epidemiology and animal welfare",
+    "authors": "Rajesh Kumar Pathak, Jun-Mo Kim",
+    "journal": "Briefings in Bioinformatics",
+    "year": "2024",
+    "doi": "https://doi.org/10.1093/bib/bbae025",
+    "image": "",
+    "isOpenAccess": true
   },
   {
     "title": "AOPWIKI-EXPLORER: An Interactive Graph-based Query Engine leveraging Large Language Models",
@@ -99,13 +751,14 @@
     "id": "doi:10.1101/2023.11.21.568076"
   },
   {
-    "title": "The Role of “Physiologically Based Pharmacokinetic Model (PBPK)” New Approach Methodology (NAM) in Pharmaceuticals and Environmental Chemical Risk Assessment",
-    "authors": "Deepika Deepika, Vikas Kumar",
-    "journal": "International Journal of Environmental Research and Public Health",
+    "id": "doi:10.2139/ssrn.4654333",
+    "title": "Deciphering the Mechanisms and Interactions of the Endocrine Disruptor Bisphenol a and its Analogs with the Androgen Receptor",
+    "authors": "Rajesh  Kumar Pathak, Da-Woon Jung, Seung-Hee Shin, Buom-Yong Ryu, Hee-Seok Lee, Jun-Mo Kim",
+    "journal": "Journal of Hazardous Materials",
     "year": "2023",
-    "doi": "https://doi.org/gs4d33",
-    "image": "https://www.mdpi.com/ijerph/ijerph-20-03473/article_deploy/html/images/ijerph-20-03473-g003-550.jpg",
-    "id": "doi:10.3390/ijerph20043473"
+    "doi": "https://doi.org/10.2139/ssrn.4654333",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Development and Evaluation of Amorphous Solid Dispersion of Riluzole with PBPK Model to Simulate the Pharmacokinetic Profile",
@@ -117,40 +770,192 @@
     "id": "doi:10.1208/s12249-023-02680-y"
   },
   {
-    "title": "The Role of “Physiologically Based Pharmacokinetic Model (PBPK)” New Approach Methodology (NAMs) in Pharmaceuticals and Environmental Chemical Risk Assessment",
-    "authors": "Deepika Deepika, Vikas Kumar",
-    "journal": "MDPI AG",
-    "year": "2022",
-    "doi": "https://doi.org/gs4d34",
+    "id": "doi:10.1016/j.toxlet.2023.06.006",
+    "title": "Development of a rat physiologically based kinetic model (PBK) for three organophosphate flame retardants (TDCIPP, TCIPP, TCEP)",
+    "authors": "Deepika Deepika, Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2023",
+    "doi": "https://doi.org/10.1016/j.toxlet.2023.06.006",
     "image": "",
-    "id": "doi:10.20944/preprints202212.0564.v1"
+    "isOpenAccess": true
   },
   {
-    "title": "Chlorpyrifos, permethrin and cyfluthrin effect on cell survival, permeability, and tight junction in an in-vitro model of the human blood-brain barrier (BBB)",
-    "authors": "Deepika Deepika, Saurav Kumar, Natalia Bravo, Roser Esplugas, Marco Capodiferro, Raju Prasad Sharma, Marta Schuhmacher, Joan O. Grimalt, Jordi Blanco, Vikas Kumar",
-    "journal": "NeuroToxicology",
-    "year": "2022",
-    "doi": "https://doi.org/gs4d3w",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0161813X22001553-gr1.jpg",
-    "id": "doi:10.1016/j.neuro.2022.09.010"
+    "id": "doi:10.1186/s13036-023-00378-0",
+    "title": "Identification of histidine kinase inhibitors through screening of natural compounds to combat mastitis caused by Streptococcus agalactiae in dairy cattle",
+    "authors": "Rajesh Kumar Pathak, Jun-Mo Kim",
+    "journal": "Journal of Biological Engineering",
+    "year": "2023",
+    "doi": "https://doi.org/10.1186/s13036-023-00378-0",
+    "image": "",
+    "isOpenAccess": true
   },
   {
-    "title": "Unravelling sex-specific BPA toxicokinetics in children using a pediatric PBPK model",
-    "authors": "Deepika Deepika, Raju Prasad Sharma, Marta Schuhmacher, Amrit Kaur Sakhi, Cathrine Thomsen, Leda Chatzi, Marina Vafeiadi, Joane Quentin, Remy Slama, Regina Grazuleviciene, Sandra Andrušaitytė, Dagmar Waiblinger, John Wright, Tiffany C. Yang, Jose Urquiza, Martine Vrijheid, Maribel Casas, José L. Domingo, Vikas Kumar",
-    "journal": "Environmental Research",
-    "year": "2022",
-    "doi": "https://doi.org/grr6b7",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0013935122014013-gr1.jpg",
-    "id": "doi:10.1016/j.envres.2022.114074"
+    "id": "doi:10.1016/s0378-4274(23)01016-0",
+    "title": "LP-53: Control Coefficient Analysis of PBPK to Understand Xenobiotic Fluxes and Dynamic Pharmacokinetics Processes",
+    "authors": "V. Kumar, D. Deepika, R.P. Sharma, H.V. Westerhoff",
+    "journal": "Toxicology Letters",
+    "year": "2023",
+    "doi": "https://doi.org/10.1016/s0378-4274(23)01016-0",
+    "image": "",
+    "isOpenAccess": true
   },
   {
-    "title": "Pharmacophore Modeling Using Machine Learning for Screening the Blood–Brain Barrier Permeation of Xenobiotics",
-    "authors": "Saurav Kumar, Deepika Deepika, Vikas Kumar",
+    "id": "doi:10.1016/s0378-4274(23)00448-4",
+    "title": "P01-05: Oxidative stress-based Systems Biology (SB) Model for building Quantitative Adverse Outcome Pathways (qAOPs)",
+    "authors": "D. Deepika, R.P. Sharma, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2023",
+    "doi": "https://doi.org/10.1016/s0378-4274(23)00448-4",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/s0378-4274(23)00513-1",
+    "title": "P06-08: AOP-BOT: An AI assistance for AOP development",
+    "authors": "S. Kumar, N. ZaidKilani, S. Khalid, L. Slater, A. Karakoltzidis, N. Papaioannou, P. Nymark, K.E. Tollefsen, H.A. Rashwan, K. Audouze, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2023",
+    "doi": "https://doi.org/10.1016/s0378-4274(23)00513-1",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/s0378-4274(23)00643-4",
+    "title": "P13-02: Gut microbiota role in chemical-induced immunotoxicity",
+    "authors": "O. Sabuz, J. Blanco, D. Deepika, M. Schuhmacher, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2023",
+    "doi": "https://doi.org/10.1016/s0378-4274(23)00643-4",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/s0378-4274(23)00809-3",
+    "title": "P21-01: Investigating the effect of Bisphenols on gut bacteria and neuronal cells",
+    "authors": "J. Balaguer Trias, J. Blanco, D. Deepika, M. Schuhmacher, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2023",
+    "doi": "https://doi.org/10.1016/s0378-4274(23)00809-3",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s42161-022-01301-0",
+    "title": "Studies of antibacterial activity and molecular docking of potential bioactive compounds of plant extracts against KdgR protein of Dickeya dadantii",
+    "authors": "Sujata Singh Yadav, Anshul Arya, Vishal Singh, Rajesh Kumar Pathak, Yogendra Singh",
+    "journal": "Journal of Plant Pathology",
+    "year": "2023",
+    "doi": "https://doi.org/10.1007/s42161-022-01301-0",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1186/s13036-023-00342-y",
+    "title": "Targeting the PEDV 3CL protease for identification of small molecule inhibitors: an insight from virtual screening, ADMET prediction, molecular dynamics, free energy landscape, and binding energy calculations",
+    "authors": "Rajesh Kumar Pathak, Won-Il Kim, Jun-Mo Kim",
+    "journal": "Journal of Biological Engineering",
+    "year": "2023",
+    "doi": "https://doi.org/10.1186/s13036-023-00342-y",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "The Role of “Physiologically Based Pharmacokinetic Model (PBPK)” New Approach Methodology (NAM) in Pharmaceuticals and Environmental Chemical Risk Assessment",
+    "authors": "Deepika Deepika, Vikas Kumar",
     "journal": "International Journal of Environmental Research and Public Health",
+    "year": "2023",
+    "doi": "https://doi.org/gs4d33",
+    "image": "https://www.mdpi.com/ijerph/ijerph-20-03473/article_deploy/html/images/ijerph-20-03473-g003-550.jpg",
+    "id": "doi:10.3390/ijerph20043473"
+  },
+  {
+    "id": "doi:10.3389/978-2-8325-3913-2",
+    "title": "Vetinformatics: An insight for decoding livestock systems through in silico biology",
+    "authors": "JM Kim, RK Pathak",
+    "journal": "Frontiers Research Topics",
+    "year": "2023",
+    "doi": "https://doi.org/10.3389/978-2-8325-3913-2",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1080/03601234.2022.2097504",
+    "title": "3-Hydroxy-3-alkylindolin-2-ones: regioselective synthesis, molecular docking and nematicidal studies against<i>Meloidogyne incognita</i>",
+    "authors": "Divya Utreja, Komalpreet Kaur, Narpinderjeet K. Dhillon, Rajesh K. Pathak",
+    "journal": "Journal of Environmental Science and Health, Part B",
     "year": "2022",
-    "doi": "https://doi.org/gr24dx",
-    "image": "https://www.mdpi.com/ijerph/ijerph-19-13471/article_deploy/html/images/ijerph-19-13471-g001-550.jpg",
-    "id": "doi:10.3390/ijerph192013471"
+    "doi": "https://doi.org/10.1080/03601234.2022.2097504",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "eid:2-s2.0-84858665865",
+    "title": "A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model",
+    "authors": "CJ Brookes, V Kumar, SN Lane",
+    "journal": "Modelling for Environment's Sake: Proceedings of the 5th Biennial Conference of the International Environmental Modelling and Software Society, iEMSs 2010",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858665865&partnerID=MN8TOARS",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "eid:2-s2.0-84858308718",
+    "title": "A consistent framework for knowledge integration to support integrated catchment management",
+    "authors": "A Holzkämper, B Surridge, A Paetzold, V Kumar, DN Lerner, L Maltby, ...",
+    "journal": "Proc. iEMSs 4th Biennial Meeting - Int. Congress on Environmental Modelling and Software: Integrating Sciences and Information Technology for Environmental Assessment and Decision Making, iEMSs 2008",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858308718&partnerID=MN8TOARS",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "eid:2-s2.0-84858323055",
+    "title": "An integrated multimedia model and multicriteria analysis approach to managing sewage sludge application on agricultural soils: Framework and methodology",
+    "authors": "A Passuello, M Schuhmacher, V Kumar, M Nadal, JL Domingo",
+    "journal": "Proc. iEMSs 4th Biennial Meeting - Int. Congress on Environmental Modelling and Software: Integrating Sciences and Information Technology for Environmental Assessment and Decision Making, iEMSs 2008",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858323055&partnerID=MN8TOARS",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "eid:2-s2.0-84858653039",
+    "title": "An interactive visual decision support tool for sustainable urban river corridor management",
+    "authors": "L Gill, V Kumar, E Lange, DN Lerner, E Morgan, D Romano, E Shaw",
+    "journal": "Modelling for Environment's Sake: Proceedings of the 5th Biennial Conference of the International Environmental Modelling and Software Society, iEMSs 2010",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858653039&partnerID=MN8TOARS",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "title": "Antibacterial & antioxidant activity of different extract of moringa oleifera leaves - an in-vitro study",
+    "authors": "Kanchan Bharti, et al.",
+    "journal": "International Journal of Pharmaceutical Sciences Review and Research",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84862955392&partnerID=MN8TOARS",
+    "image": "",
+    "id": "eid:2-s2.0-84862955392"
+  },
+  {
+    "id": "eid:2-s2.0-84894162282",
+    "title": "Application of Bayesian networks for agricultural land suitability classification: A case study of biosolids amendment",
+    "authors": "A Passuello, O Cadiach, V Kumar, M Schuhmacher",
+    "journal": "iEMSs 2012 - Managing Resources of a Limited Planet: Proceedings of the 6th Biennial Meeting of the International Environmental Modelling and Software Society",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84894162282&partnerID=MN8TOARS",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "eid:2-s2.0-84857234665",
+    "title": "Bayesian challenges in Integrated Catchment modelling",
+    "authors": "V Kumar, A Holzkämper, B Surridge, PI Rockett, M Niranjan, DN Lerner",
+    "journal": "Proc. iEMSs 4th Biennial Meeting - Int. Congress on Environmental Modelling and Software: Integrating Sciences and Information Technology for Environmental Assessment and Decision Making, iEMSs 2008",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84857234665&partnerID=MN8TOARS",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Bibliometric Analysis of the Toxicity of Bisphenol A",
@@ -162,6 +967,73 @@
     "id": "doi:10.3390/ijerph19137886"
   },
   {
+    "title": "Chlorpyrifos, permethrin and cyfluthrin effect on cell survival, permeability, and tight junction in an in-vitro model of the human blood-brain barrier (BBB)",
+    "authors": "Deepika Deepika, Saurav Kumar, Natalia Bravo, Roser Esplugas, Marco Capodiferro, Raju Prasad Sharma, Marta Schuhmacher, Joan O. Grimalt, Jordi Blanco, Vikas Kumar",
+    "journal": "NeuroToxicology",
+    "year": "2022",
+    "doi": "https://doi.org/gs4d3w",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0161813X22001553-gr1.jpg",
+    "id": "doi:10.1016/j.neuro.2022.09.010"
+  },
+  {
+    "id": "doi:10.1186/s12917-022-03432-z",
+    "title": "Designing multi-epitope-based vaccine targeting surface immunogenic protein of Streptococcus agalactiae using immunoinformatics to control mastitis in dairy cattle",
+    "authors": "Rajesh Kumar Pathak, Byeonghwi Lim, Do-Young Kim, Jun-Mo Kim",
+    "journal": "BMC Veterinary Research",
+    "year": "2022",
+    "doi": "https://doi.org/10.1186/s12917-022-03432-z",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/b978-0-323-89775-4.00004-3",
+    "title": "Discovery and optimization of lead molecules in drug designing",
+    "authors": "Shivani Verma, Rajesh Kumar Pathak",
+    "journal": "Bioinformatics",
+    "year": "2022",
+    "doi": "https://doi.org/10.1016/b978-0-323-89775-4.00004-3",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1111/imig.13002",
+    "title": "Environmental change and human mobility: Opportunities and challenges of big data",
+    "authors": "Susan F. Martin, Lisa Singh",
+    "journal": "International Migration",
+    "year": "2022",
+    "doi": "https://doi.org/10.1111/imig.13002",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Environmental integrated closed loop logistics model: An artificial bee colony approach",
+    "authors": "Vikas Kumar, et al.",
+    "journal": "SCMIS 2010 - Proceedings of 2010 8th International Conference on Supply Chain Management and Information Systems: Logistics Systems and Engineering",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-79551522606&partnerID=MN8TOARS",
+    "image": "",
+    "id": "eid:2-s2.0-79551522606"
+  },
+  {
+    "title": "Exploring the utility of Bayesian Networks for modelling cultural ecosystem services: a canoeing case study",
+    "authors": "E. Shaw, Vikas Kumar, E. Lange, D.N. Lerner",
+    "journal": "Modelling for Environment's Sake: Proceedings of the 5th Biennial Conference of the International Environmental Modelling and Software Society, iEMSs 2010",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858635017&partnerID=MN8TOARS",
+    "image": "",
+    "id": "eid:2-s2.0-84858635017"
+  },
+  {
+    "id": "doi:10.1007/978-3-031-00868-9_8",
+    "title": "Finger Millet Transcriptome Analysis Using High Throughput Sequencing Technologies",
+    "authors": "Rajesh Kumar Pathak, Dev Bukhsh Singh, Dinesh Pandey, Vikram Singh Gaur, Anil Kumar",
+    "journal": "Compendium of Plant Genomes",
+    "year": "2022",
+    "doi": "https://doi.org/10.1007/978-3-031-00868-9_8",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
     "title": "Framework for risk assessment of PFAS utilizing experimental studies and in-silico models",
     "authors": "Deepika Deepika, Joaquim Rovira, Óscar Sabuz, Jordina Balaguer, Marta Schuhmacher, José L. Domingo, Vikas Kumar",
     "journal": "Environmental Research",
@@ -169,6 +1041,25 @@
     "doi": "https://doi.org/gp4pmm",
     "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0013935122000494-ga1.jpg",
     "id": "doi:10.1016/j.envres.2022.112722"
+  },
+  {
+    "id": "doi:10.1007/s43450-022-00235-z",
+    "title": "From Traditional Herbal Medicine to Rational Drug Discovery: Strategies, Challenges, and Future Perspectives",
+    "authors": "Dev Bukhsh Singh, Rajesh Kumar Pathak, Dipti Rai",
+    "journal": "Revista Brasileira de Farmacognosia",
+    "year": "2022",
+    "doi": "https://doi.org/10.1007/s43450-022-00235-z",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Human Biomonitoring Data in Health Risk Assessments Published in Peer-Reviewed Journals between 2016 and 2021: Confronting Reality after a Preliminary Review",
+    "authors": "Tine Bizjak, Marco Capodiferro, Deepika Deepika, Öykü Dinçkol, Vazha Dzhedzheia, Lorena Lopez-Suarez, Ioannis Petridis, Agneta A. Runkel, Dayna R. Schultz, Branko Kontić",
+    "journal": "International Journal of Environmental Research and Public Health",
+    "year": "2022",
+    "doi": "https://doi.org/gqgdbd",
+    "image": "https://www.mdpi.com/ijerph/ijerph-19-03362/article_deploy/html/images/ijerph-19-03362-g003-550.jpg",
+    "id": "doi:10.3390/ijerph19063362"
   },
   {
     "title": "Impact of Contaminants on Microbiota: Linking the Gut–Brain Axis with Neurotoxicity",
@@ -180,121 +1071,54 @@
     "id": "doi:10.3390/ijerph19031368"
   },
   {
-    "title": "Unified framework for water balance and hydrologic simulation: Part I – theoretical development",
-    "authors": "",
-    "journal": "International Journal of Earth Sciences and Engineering",
+    "id": "doi:10.1007/s00344-021-10561-6",
+    "title": "Integrated Approaches to Develop Drought-Tolerant Rice: Demand of Era for Global Food Security",
+    "authors": "Arun Kumar, R. S. Sengar, Rajesh Kumar Pathak, Amit Kumar Singh",
+    "journal": "Journal of Plant Growth Regulation",
     "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84986196586&partnerID=MN8TOARS",
+    "doi": "https://doi.org/10.1007/s00344-021-10561-6",
     "image": "",
-    "id": "eid:2-s2.0-84986196586"
+    "isOpenAccess": true
   },
   {
-    "title": "Antibacterial &amp; antioxidant activity of different extract of moringa oleifera leaves - an in-vitro study",
-    "authors": "",
-    "journal": "International Journal of Pharmaceutical Sciences Review and Research",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84862955392&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-84862955392"
-  },
-  {
-    "title": "Application of Bayesian networks for agricultural land suitability classification: A case study of biosolids amendment",
-    "authors": "",
-    "journal": "iEMSs 2012 - Managing Resources of a Limited Planet: Proceedings of the 6th Biennial Meeting of the International Environmental Modelling and Software Society",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84894162282&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-84894162282"
-  },
-  {
-    "title": "A comparison of Fuzzy, Bayesian and Weighted Average formulations of an in-stream habitat suitability model",
-    "authors": "",
-    "journal": "Modelling for Environment's Sake: Proceedings of the 5th Biennial Conference of the International Environmental Modelling and Software Society, iEMSs 2010",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858665865&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-84858665865"
-  },
-  {
-    "title": "An interactive visual decision support tool for sustainable urban river corridor management",
-    "authors": "",
-    "journal": "Modelling for Environment's Sake: Proceedings of the 5th Biennial Conference of the International Environmental Modelling and Software Society, iEMSs 2010",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858653039&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-84858653039"
-  },
-  {
-    "title": "Bayesian networks and social objectives: A canoeing case study",
-    "authors": "",
-    "journal": "Modelling for Environment's Sake: Proceedings of the 5th Biennial Conference of the International Environmental Modelling and Software Society, iEMSs 2010",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858635017&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-84858635017"
-  },
-  {
-    "title": "Environmental integrated closed loop logistics model: An artificial bee colony approach",
-    "authors": "",
-    "journal": "SCMIS 2010 - Proceedings of 2010 8th International Conference on Supply Chain Management and Information Systems: Logistics Systems and Engineering",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-79551522606&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-79551522606"
-  },
-  {
+    "id": "eid:2-s2.0-84858625488",
     "title": "Integrated meta-modelling for decision support in Integrated Catchment Management",
-    "authors": "",
+    "authors": "V Kumar, A Holzkaemper, DN Lerner",
     "journal": "Modelling for Environment's Sake: Proceedings of the 5th Biennial Conference of the International Environmental Modelling and Software Society, iEMSs 2010",
     "year": "2022",
     "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858625488&partnerID=MN8TOARS",
     "image": "",
-    "id": "eid:2-s2.0-84858625488"
+    "isOpenAccess": false
   },
   {
-    "title": "Warranty failure analysis in service supply Chain a multi-agent framework",
-    "authors": "",
-    "journal": "SCMIS 2010 - Proceedings of 2010 8th International Conference on Supply Chain Management and Information Systems: Logistics Systems and Engineering",
+    "id": "doi:10.1016/b978-0-323-89775-4.00006-7",
+    "title": "Introduction to basics of bioinformatics",
+    "authors": "Rajesh Kumar Pathak, Dev Bukhsh Singh, Rahul Singh",
+    "journal": "Bioinformatics",
     "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-79551555737&partnerID=MN8TOARS",
+    "doi": "https://doi.org/10.1016/b978-0-323-89775-4.00006-7",
     "image": "",
-    "id": "eid:2-s2.0-79551555737"
+    "isOpenAccess": true
   },
   {
-    "title": "A consistent framework for knowledge integration to support integrated catchment management",
-    "authors": "",
-    "journal": "Proc. iEMSs 4th Biennial Meeting - Int. Congress on Environmental Modelling and Software: Integrating Sciences and Information Technology for Environmental Assessment and Decision Making, iEMSs 2008",
+    "id": "doi:10.3389/fvets.2022.854528",
+    "title": "Investigating Multi-Target Antiviral Compounds by Screening of Phytochemicals From Neem (Azadirachta indica) Against PRRSV: A Vetinformatics Approach",
+    "authors": "Rajesh Kumar Pathak, Do-Young Kim, Byeonghwi Lim, Jun-Mo Kim",
+    "journal": "Frontiers in Veterinary Science",
     "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858308718&partnerID=MN8TOARS",
+    "doi": "https://doi.org/10.3389/fvets.2022.854528",
     "image": "",
-    "id": "eid:2-s2.0-84858308718"
+    "isOpenAccess": true
   },
   {
-    "title": "An integrated multimedia model and multicriteria analysis approach to managing sewage sludge application on agricultural soils: Framework and methodology",
-    "authors": "",
-    "journal": "Proc. iEMSs 4th Biennial Meeting - Int. Congress on Environmental Modelling and Software: Integrating Sciences and Information Technology for Environmental Assessment and Decision Making, iEMSs 2008",
+    "id": "doi:10.3390/toxics10080427",
+    "title": "Methylmercury Risk Assessment Based on European Human Biomonitoring Data",
+    "authors": "Noelia Domínguez-Morueco, Susana Pedraza-Díaz, María del Carmen González-Caballero, Marta Esteban-López, Mercedes de Alba-González, Andromachi Katsonouri, Tiina Santonen, Ana Cañas-Portilla, Argelia Castaño",
+    "journal": "Toxics",
     "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84858323055&partnerID=MN8TOARS",
+    "doi": "https://doi.org/10.3390/toxics10080427",
     "image": "",
-    "id": "eid:2-s2.0-84858323055"
-  },
-  {
-    "title": "Bayesian challenges in Integrated Catchment modelling",
-    "authors": "",
-    "journal": "Proc. iEMSs 4th Biennial Meeting - Int. Congress on Environmental Modelling and Software: Integrating Sciences and Information Technology for Environmental Assessment and Decision Making, iEMSs 2008",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84857234665&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-84857234665"
-  },
-  {
-    "title": "A multicriteria Fuzzy Decision System to sort contaminated soils",
-    "authors": "",
-    "journal": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
-    "year": "2022",
-    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-33745606018&partnerID=MN8TOARS",
-    "image": "",
-    "id": "eid:2-s2.0-33745606018"
+    "isOpenAccess": true
   },
   {
     "title": "P04-03 Evaluation of the generic physiologically based pharmacokinetic model (PBPK) for organophosphate flame retardants (OPFRs) and neurotoxic risk assessment in children",
@@ -333,40 +1157,129 @@
     "id": "doi:10.1016/j.toxlet.2022.07.425"
   },
   {
-    "title": "Human Biomonitoring Data in Health Risk Assessments Published in Peer-Reviewed Journals between 2016 and 2021: Confronting Reality after a Preliminary Review",
-    "authors": "Tine Bizjak, Marco Capodiferro, Deepika Deepika, Öykü Dinçkol, Vazha Dzhedzheia, Lorena Lopez-Suarez, Ioannis Petridis, Agneta A. Runkel, Dayna R. Schultz, Branko Kontić",
+    "id": "doi:10.1016/j.toxlet.2022.07.437",
+    "title": "P10-06 Development of a gut microbiota-host in-vitro model for immunotoxicity",
+    "authors": "O. Sabuz Vidal, J. Blanco, M. Schuhmacher, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2022",
+    "doi": "https://doi.org/10.1016/j.toxlet.2022.07.437",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Pharmacophore Modeling Using Machine Learning for Screening the Blood–Brain Barrier Permeation of Xenobiotics",
+    "authors": "Saurav Kumar, Deepika Deepika, Vikas Kumar",
     "journal": "International Journal of Environmental Research and Public Health",
     "year": "2022",
-    "doi": "https://doi.org/gqgdbd",
-    "image": "https://www.mdpi.com/ijerph/ijerph-19-03362/article_deploy/html/images/ijerph-19-03362-g003-550.jpg",
-    "id": "doi:10.3390/ijerph19063362"
+    "doi": "https://doi.org/gr24dx",
+    "image": "https://www.mdpi.com/ijerph/ijerph-19-13471/article_deploy/html/images/ijerph-19-13471-g001-550.jpg",
+    "id": "doi:10.3390/ijerph192013471"
   },
   {
-    "title": "EDC-induced mechanisms of immunotoxicity: a systematic review",
-    "authors": "Oscar Sabuz Vidal, Deepika Deepika, Marta Schuhmacher, Vikas Kumar",
-    "journal": "Critical Reviews in Toxicology",
-    "year": "2021",
-    "doi": "https://doi.org/gs4d36",
-    "image": "https://www.tandfonline.com/cms/asset/c3f1703e-f0cd-47cc-85c4-2c0b012014b0/itxc_a_2009438_uf0001_c.jpg",
-    "id": "doi:10.1080/10408444.2021.2009438"
-  },
-  {
-    "title": "Risk Assessment of Perfluorooctane Sulfonate (PFOS) using Dynamic Age Dependent Physiologically based Pharmacokinetic Model (PBPK) across Human Lifetime",
-    "authors": "Deepika Deepika, Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
-    "journal": "Environmental Research",
-    "year": "2021",
-    "doi": "https://doi.org/gs4d37",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0013935121005818-ga1.jpg",
-    "id": "doi:10.1016/j.envres.2021.111287"
-  },
-  {
-    "title": "Human biomonitoring of bisphenol A along pregnancy: An exposure reconstruction of the EXHES-Spain cohort",
-    "authors": "María Ángeles Martínez, Neus González, Anna Martí, Montse Marquès, Joaquim Rovira, Vikas Kumar, Martí Nadal",
-    "journal": "Environmental Research",
-    "year": "2021",
-    "doi": "https://doi.org/gs4d38",
+    "id": "doi:10.33263/lianbs124.128",
+    "title": "Pharmacotherapeutic and Computational Approaches for Biopharmaceutical Considerations towards Drug Development and Delivery against COVID-19",
+    "authors": "P Kesharwani, D Deepika, K Bharti, A Jain, S Sharma, B Mishra, V Kumar",
+    "journal": "Letters in Applied NanoBioScience",
+    "year": "2022",
+    "doi": "https://doi.org/10.33263/lianbs124.128",
     "image": "",
-    "id": "doi:10.1016/j.envres.2021.110941"
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1007/s11356-022-24469-5",
+    "title": "Respiratory functions and health risk assessment in inhalational exposure to vinyl acetate in the process of carpet manufacturing using Monte Carlo simulations",
+    "authors": "Amir Hossein Khoshakhlagh, Hamid Reza Saberi, Agnieszka Gruszecka-Kosowska, Vikas Kumar",
+    "journal": "Environmental Science and Pollution Research",
+    "year": "2022",
+    "doi": "https://doi.org/10.1007/s11356-022-24469-5",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/978-3-031-00868-9_9",
+    "title": "Seed Biology and Packaging of Finger Millet Using Omics Approaches for Nutritional Security",
+    "authors": "Anil Kumar, Rajesh Kumar Pathak, Sanjay Mohan Gupta, Salej Sood",
+    "journal": "Compendium of Plant Genomes",
+    "year": "2022",
+    "doi": "https://doi.org/10.1007/978-3-031-00868-9_9",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1186/s13036-022-00284-x",
+    "title": "Structural insights into inhibition of PRRSV Nsp4 revealed by structure-based virtual screening, molecular dynamics, and MM-PBSA studies",
+    "authors": "Rajesh Kumar Pathak, Young-Jun Seo, Jun-Mo Kim",
+    "journal": "Journal of Biological Engineering",
+    "year": "2022",
+    "doi": "https://doi.org/10.1186/s13036-022-00284-x",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/b978-0-323-89775-4.00027-4",
+    "title": "Structure-based drug designing",
+    "authors": "Shubham Pant, Shivani Verma, Rajesh Kumar Pathak, Dev Bukhsh Singh",
+    "journal": "Bioinformatics",
+    "year": "2022",
+    "doi": "https://doi.org/10.1016/b978-0-323-89775-4.00027-4",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "The Role of “Physiologically Based Pharmacokinetic Model (PBPK)” New Approach Methodology (NAMs) in Pharmaceuticals and Environmental Chemical Risk Assessment",
+    "authors": "Deepika Deepika, Vikas Kumar",
+    "journal": "MDPI AG",
+    "year": "2022",
+    "doi": "https://doi.org/gs4d34",
+    "image": "",
+    "id": "doi:10.20944/preprints202212.0564.v1"
+  },
+  {
+    "title": "Unified framework for water balance and hydrologic simulation: Part I – theoretical development",
+    "authors": "Vikas Kumar, et al.",
+    "journal": "International Journal of Earth Sciences and Engineering",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-84986196586&partnerID=MN8TOARS",
+    "image": "",
+    "id": "eid:2-s2.0-84986196586"
+  },
+  {
+    "id": "doi:10.1038/s41598-022-08833-6",
+    "title": "Unraveling structural and conformational dynamics of DGAT1 missense nsSNPs in dairy cattle",
+    "authors": "Rajesh Kumar Pathak, Byeonghwi Lim, Yejee Park, Jun-Mo Kim",
+    "journal": "Scientific Reports",
+    "year": "2022",
+    "doi": "https://doi.org/10.1038/s41598-022-08833-6",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Unravelling sex-specific BPA toxicokinetics in children using a pediatric PBPK model",
+    "authors": "Deepika Deepika, Raju Prasad Sharma, Marta Schuhmacher, Amrit Kaur Sakhi, Cathrine Thomsen, Leda Chatzi, Marina Vafeiadi, Joane Quentin, Remy Slama, Regina Grazuleviciene, Sandra Andrušaitytė, Dagmar Waiblinger, John Wright, Tiffany C. Yang, Jose Urquiza, Martine Vrijheid, Maribel Casas, José L. Domingo, Vikas Kumar",
+    "journal": "Environmental Research",
+    "year": "2022",
+    "doi": "https://doi.org/grr6b7",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0013935122014013-gr1.jpg",
+    "id": "doi:10.1016/j.envres.2022.114074"
+  },
+  {
+    "id": "doi:10.3389/fvets.2022.1008728",
+    "title": "Vetinformatics from functional genomics to drug discovery: Insights into decoding complex molecular mechanisms of livestock systems in veterinary science",
+    "authors": "Rajesh Kumar Pathak, Jun-Mo Kim",
+    "journal": "Frontiers in Veterinary Science",
+    "year": "2022",
+    "doi": "https://doi.org/10.3389/fvets.2022.1008728",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Warranty failure analysis in service supply Chain a multi-agent framework",
+    "authors": "Vikas Kumar, et al.",
+    "journal": "SCMIS 2010 - Proceedings of 2010 8th International Conference on Supply Chain Management and Information Systems: Logistics Systems and Engineering",
+    "year": "2022",
+    "doi": "http://www.scopus.com/inward/record.url?eid=2-s2.0-79551555737&partnerID=MN8TOARS",
+    "image": "",
+    "id": "eid:2-s2.0-79551555737"
   },
   {
     "title": "ANN-Based Integrated Risk Ranking Approach: A Case Study of Contaminants of Emerging Concern of Fish and Seafood in Europe",
@@ -378,6 +1291,16 @@
     "id": "doi:10.3390/ijerph18041598"
   },
   {
+    "id": "doi:10.1016/b978-0-12-821792-4.00018-7",
+    "title": "Calcium uptake and translocation in plants",
+    "authors": "Rajesh Kumar Pathak, Dev Bukhsh Singh, Himanshu Sharma, Dinesh Pandey, Seema Dwivedi",
+    "journal": "Calcium Transport Elements in Plants",
+    "year": "2021",
+    "doi": "https://doi.org/10.1016/b978-0-12-821792-4.00018-7",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
     "title": "Characterization of river biofilm responses to the exposure with heavy metals using a novel micro fluorometer biosensor",
     "authors": "Roberta Carafa, Nora Exposito Lorenzo, Jordi Sierra Llopart, Vikas Kumar, Marta Schuhmacher",
     "journal": "Aquatic Toxicology",
@@ -385,6 +1308,113 @@
     "doi": "https://doi.org/gs4d39",
     "image": "",
     "id": "doi:10.1016/j.aquatox.2020.105732"
+  },
+  {
+    "id": "doi:10.1007/s40203-020-00061-y",
+    "title": "Chemo-informatics guided study of natural inhibitors targeting rho GTPase: a lead for treatment of glaucoma",
+    "authors": "Sumit Kumar Rai, Rajesh Kumar Pathak, Dev Bukhsh Singh, Arun Bhatt, Mamta Baunthiyal",
+    "journal": "In Silico Pharmacology",
+    "year": "2021",
+    "doi": "https://doi.org/10.1007/s40203-020-00061-y",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "EDC-induced mechanisms of immunotoxicity: a systematic review",
+    "authors": "Oscar Sabuz Vidal, Deepika Deepika, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Critical Reviews in Toxicology",
+    "year": "2021",
+    "doi": "https://doi.org/gs4d36",
+    "image": "https://www.tandfonline.com/cms/asset/c3f1703e-f0cd-47cc-85c4-2c0b012014b0/itxc_a_2009438_uf0001_c.jpg",
+    "id": "doi:10.1080/10408444.2021.2009438"
+  },
+  {
+    "id": "doi:10.1289/isee.2021.p-412",
+    "title": "EXHES study reveals the impact of prenatal exposure to metals, PFASs, organophosphates, and organochlorines on early child development",
+    "authors": "Nafsika Papaioannou, Catherine Gabriel, Michael Dickinson, Ioannis Petridis, Joaquim Rovira, Vikas Kumar, Marta Schuhmacher, Spyros Karakitsios, Denis A. Sarigiannis",
+    "journal": "ISEE Conference Abstracts",
+    "year": "2021",
+    "doi": "https://doi.org/10.1289/isee.2021.p-412",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1007/s42485-021-00070-1",
+    "title": "Harnessing the potential of omics for prevention and management of the complex crop plant’s diseases",
+    "authors": "Manisha Rani, Harmilan Kaur Mangat, Rajesh Kumar Pathak, Inderjit Singh Yadav",
+    "journal": "Journal of Proteins and Proteomics",
+    "year": "2021",
+    "doi": "https://doi.org/10.1007/s42485-021-00070-1",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/s0378-4274(21)00698-6",
+    "title": "Health risk assessment of Bisphenol A and its alternatives (BPS, BPF) using a pregnancy PBPK model",
+    "authors": "O. Sabuz, D. Deepika, M. Schuhmacher, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2021",
+    "doi": "https://doi.org/10.1016/s0378-4274(21)00698-6",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Human biomonitoring of bisphenol A along pregnancy: An exposure reconstruction of the EXHES-Spain cohort",
+    "authors": "María Ángeles Martínez, Neus González, Anna Martí, Montse Marquès, Joaquim Rovira, Vikas Kumar, Martí Nadal",
+    "journal": "Environmental Research",
+    "year": "2021",
+    "doi": "https://doi.org/gs4d38",
+    "image": "",
+    "id": "doi:10.1016/j.envres.2021.110941"
+  },
+  {
+    "id": "doi:10.1007/978-3-030-86169-8_9",
+    "title": "In Silico Approaches in Bioremediation Research and Advancements",
+    "authors": "Shabda Verma, Satinder Kour, Rajesh Kumar Pathak",
+    "journal": "Bioremediation of Environmental Pollutants",
+    "year": "2021",
+    "doi": "https://doi.org/10.1007/978-3-030-86169-8_9",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "IN201841006334 - TOPICAL COMPOSITION FOR HAIR GROWTH PROMOTING AGENTS",
+    "authors": "Kanchan Bharti, Vikas Kumar",
+    "journal": "Patent Office",
+    "year": "2021",
+    "doi": "https://patentscope.wipo.int/search/en/detail.jsf?docId=IN275752148&tab=NATIONALBIBLIO",
+    "image": "",
+    "id": ":"
+  },
+  {
+    "id": "doi:10.1007/s13369-021-05377-1",
+    "title": "Molecular Docking and Antibacterial Studies of Pyranopyrazole Derivatives Synthesized Using [Pap-Glu@Chi] Biocatalyst Through a Greener Approach",
+    "authors": "Akansha Agrwal, Rajesh Kumar Pathak, Virendra Kasana",
+    "journal": "Arabian Journal for Science and Engineering",
+    "year": "2021",
+    "doi": "https://doi.org/10.1007/s13369-021-05377-1",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:moleculardynamicssimulationind",
+    "title": "Molecular Dynamics Simulation in Drug Discovery",
+    "authors": "RK Pathak, DB Singh, S Singh, S Srivastava, RK Kesharwani",
+    "journal": "Recent Advances in Computer Aided Drug Designing",
+    "year": "2021",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:TIZ-Mc8IlK0C",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.pestbp.2020.104736",
+    "title": "N-alkyl isatin derivatives: Synthesis, nematicidal evaluation and protein target identifications for their mode of action",
+    "authors": "Komalpreet Kaur, Divya Utreja, Narpinderjeet K. Dhillon, Rajesh K. Pathak, Kamaljit Singh",
+    "journal": "Pesticide Biochemistry and Physiology",
+    "year": "2021",
+    "doi": "https://doi.org/10.1016/j.pestbp.2020.104736",
+    "image": "",
+    "isOpenAccess": true
   },
   {
     "title": "Performance of Chlorella Vulgaris Exposed to Heavy Metal Mixtures: Linking Measured Endpoints and Mechanisms",
@@ -396,49 +1426,73 @@
     "id": "doi:10.3390/ijerph18031037"
   },
   {
-    "title": "IN201841006334 - TOPICAL COMPOSITION FOR HAIR GROWTH PROMOTING AGENTS",
-    "authors": "",
-    "journal": "Patent Office",
+    "id": "doi:10.1016/s0378-4274(21)00460-4",
+    "title": "PFAS & Pesticides effect on cell Survival, Permeability and Tight Junction in an in-vitro model of the Human Blood-Brain Barrier",
+    "authors": "D. Deepika, M. Capodiferro, R. Esplugas, J. Blanco, R.P. Sharma, M. Schuhmacher, J. Grimalt, V. Kumar",
+    "journal": "Toxicology Letters",
     "year": "2021",
-    "doi": "https://patentscope.wipo.int/search/en/detail.jsf?docId=IN275752148&tab=NATIONALBIBLIO",
+    "doi": "https://doi.org/10.1016/s0378-4274(21)00460-4",
     "image": "",
-    "id": ":"
+    "isOpenAccess": true
   },
   {
-    "title": "ROS networks: designs, aging, Parkinson’s disease and precision therapies",
-    "authors": "Alexey N. Kolodkin, Raju Prasad Sharma, Anna Maria Colangelo, Andrew Ignatenko, Francesca Martorana, Danyel Jennen, Jacco J. Briedé, Nathan Brady, Matteo Barberis, Thierry D. G. A. Mondeel, Michele Papa, Vikas Kumar, Bernhard Peters, Alexander Skupin, Lilia Alberghina, Rudi Balling, Hans V. Westerhoff",
-    "journal": "npj Systems Biology and Applications",
-    "year": "2020",
-    "doi": "https://doi.org/gs4d4c",
-    "image": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41540-020-00150-w/MediaObjects/41540_2020_150_Fig1_HTML.png?as=webp",
-    "id": "doi:10.1038/s41540-020-00150-w"
+    "title": "Risk Assessment of Perfluorooctane Sulfonate (PFOS) using Dynamic Age Dependent Physiologically based Pharmacokinetic Model (PBPK) across Human Lifetime",
+    "authors": "Deepika Deepika, Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Environmental Research",
+    "year": "2021",
+    "doi": "https://doi.org/gs4d37",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0013935121005818-ga1.jpg",
+    "id": "doi:10.1016/j.envres.2021.111287"
   },
   {
-    "title": "Maternal exposure to mixtures of dienestrol, linuron and flutamide. Part II: Endocrine-related gene expression assessment on male offspring rat testes",
-    "authors": "Efrosini S. Katsanou, Petros Batakis, Anastasia Spyropoulou, Elga Schreiber, Toine Bovee, Margarita Torrente, Maria Mercedes Gómez, Vikas Kumar, José Luis Domingo, Kyriaki Machera",
+    "id": "doi:10.1007/978-981-16-0676-2_10",
+    "title": "Science-Led Innovation for Searching and Creating Values in Natural Gene Pool of Millets for Agri-Food Nutrition and Health",
+    "authors": "Anil Kumar, Divya Sharma, Rajesh Kumar Pathak, Ram Sewak Singh Tomar, Aparna Agrawal, Manoj Kumar Tripathi",
+    "journal": "Millets and Millet Technology",
+    "year": "2021",
+    "doi": "https://doi.org/10.1007/978-981-16-0676-2_10",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.2174/1570178618666210610160546",
+    "title": "Synthesis and Evaluation of Isatin Schiff Bases Against Plant Pathogens Validated Through Aspartyl Protease and Acetylcholine Binding Proteins Docked Studies",
+    "authors": "Shivani Loomba, Divya Utreja, Komalpreet Kaur, Jaspal Kaur, Shivali Sharma, Narpinderjit K. Dhillon, Rajesh K. Pathak",
+    "journal": "Letters in Organic Chemistry",
+    "year": "2021",
+    "doi": "https://doi.org/10.2174/1570178618666210610160546",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.21203/rs.3.rs-269641/v1",
+    "title": "Virtual screening, molecular dynamics and binding energy-MM-PBSA studies of natural compounds to identify potential EcR inhibitors against Bemisia tabaci Gennadius",
+    "authors": "Harmilan Kaur Mangat, Manisha Rani, Rajesh Kumar Pathak, Inderjit Singh Yadav, Divya Utreja, Pardeep Kumar Chhuneja, Parveen Chhuneja",
+    "journal": "Plos one 17 (1)",
+    "year": "2021",
+    "doi": "https://doi.org/10.21203/rs.3.rs-269641/v1",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.fct.2020.111440",
+    "title": "A generic PBTK model implemented in the MCRA platform: Predictive performance and uses in risk assessment of chemicals",
+    "authors": "Cleo Tebby, Hilko van der Voet, Georges de Sousa, Emiel Rorije, Vikas Kumar, Waldo de Boer, Johannes W. Kruisselbrink, Frédéric Y. Bois, Moosa Faniband, Angelo Moretto, Céline Brochot",
     "journal": "Food and Chemical Toxicology",
     "year": "2020",
-    "doi": "https://doi.org/gs4d4d",
+    "doi": "https://doi.org/10.1016/j.fct.2020.111440",
     "image": "",
-    "id": "doi:10.1016/j.fct.2020.111603"
+    "isOpenAccess": true
   },
   {
-    "title": "Test and Risk Assessment Strategies for combined exposure to multiple chemicals",
-    "authors": "V. Kumar, A.R. Boobis, Angelo Moretto",
+    "id": "doi:10.1016/j.fct.2020.111257",
+    "title": "A systems toxicology approach to compare the heavy metal mixtures (Pb, As, MeHg) impact in neurodegenerative diseases",
+    "authors": "Venkatanaidu Karri, Marta Schuhmacher, Vikas Kumar",
     "journal": "Food and Chemical Toxicology",
     "year": "2020",
-    "doi": "https://doi.org/gsfp9m",
+    "doi": "https://doi.org/10.1016/j.fct.2020.111257",
     "image": "",
-    "id": "doi:10.1016/j.fct.2020.111607"
-  },
-  {
-    "title": "Comparison of aggregated exposure to di(2-ethylhexyl) phthalate from diet and personal care products with urinary concentrations of metabolites using a PBPK model – Results from the Norwegian biomonitoring study in EuroMix",
-    "authors": "T. Husøy, M.A. Martínez, R.P. Sharma, V. Kumar, M. Andreassen, A.K. Sakhi, C. Thomsen, H. Dirven",
-    "journal": "Food and Chemical Toxicology",
-    "year": "2020",
-    "doi": "https://doi.org/gs4d4f",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0278691520304002-gr6.jpg",
-    "id": "doi:10.1016/j.fct.2020.111510"
+    "isOpenAccess": true
   },
   {
     "title": "An integrative translational framework for chemical induced neurotoxicity – a systematic review",
@@ -450,13 +1504,221 @@
     "id": "doi:10.1080/10408444.2020.1763253"
   },
   {
-    "title": "Physiology-based toxicokinetic modelling in the frame of the European Human Biomonitoring Initiative",
-    "authors": "Dimosthenis A. Sarigiannis, Spyros Karakitsios, Elena Dominguez-Romero, Krystalia Papadaki, Celine Brochot, Vikas Kumar, Marta Schuhmacher, Moustapha Sy, Hans Mielke, Mathias Greiner, Marcel Mengelers, Martin Scheringer",
-    "journal": "Environmental Research",
-    "year": "2019",
-    "doi": "https://doi.org/gs4d4h",
+    "id": "doi:10.1016/j.fct.2020.111298",
+    "title": "Bisphenol A analogues (BPS and BPF) present a greater obesogenic capacity in 3T3-L1 cell line",
+    "authors": "M.Á. Martínez, J. Blanco, J. Rovira, V. Kumar, J.L. Domingo, M. Schuhmacher",
+    "journal": "Food and Chemical Toxicology",
+    "year": "2020",
+    "doi": "https://doi.org/10.1016/j.fct.2020.111298",
     "image": "",
-    "id": "doi:10.1016/j.envres.2019.01.045"
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1039/9781839160738",
+    "title": "Challenges in Endocrine Disruptor Toxicology and Risk Assessment",
+    "authors": "A Fucic, A Mantovani",
+    "journal": "Royal Society of Chemistry",
+    "year": "2020",
+    "doi": "https://doi.org/10.1039/9781839160738",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1007/s13721-020-00240-z",
+    "title": "Comparative analysis of ROS-scavenging gene families in finger millet, rice, sorghum, and foxtail millet revealed potential targets for antioxidant activity and drought tolerance improvement",
+    "authors": "Himanshu Avashthi, Rajesh Kumar Pathak, Vikram Singh Gaur, Satendra Singh, Vijai Kumar Gupta, Pramod Wasudeo Ramteke, Anil Kumar",
+    "journal": "Network Modeling Analysis in Health Informatics and Bioinformatics",
+    "year": "2020",
+    "doi": "https://doi.org/10.1007/s13721-020-00240-z",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.fct.2020.111510",
+    "title": "Comparison of aggregated exposure to di(2-ethylhexyl) phthalate from diet and personal care products with urinary concentrations of metabolites using a PBPK model – Results from the Norwegian biomonitoring study in EuroMix",
+    "authors": "T. Husøy, M.A. Martínez, R.P. Sharma, V. Kumar, M. Andreassen, A.K. Sakhi, C. Thomsen, H. Dirven",
+    "journal": "Food and Chemical Toxicology",
+    "year": "2020",
+    "doi": "https://doi.org/10.1016/j.fct.2020.111510",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1186/s43141-020-00032-y",
+    "title": "Computational analysis of microarray data of Arabidopsis thaliana challenged with Alternaria brassicicola for identification of key genes in Brassica",
+    "authors": "Rajesh Kumar Pathak, Mamta Baunthiyal, Dinesh Pandey, Anil Kumar",
+    "journal": "Journal of Genetic Engineering and Biotechnology",
+    "year": "2020",
+    "doi": "https://doi.org/10.1186/s43141-020-00032-y",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/978-1-0716-0607-0_6",
+    "title": "Computational Approaches in Drug Designing and Their Applications",
+    "authors": "Dev Bukhsh Singh, Rajesh Kumar Pathak",
+    "journal": "Springer Protocols Handbooks",
+    "year": "2020",
+    "doi": "https://doi.org/10.1007/978-1-0716-0607-0_6",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/978-981-15-6815-2_1",
+    "title": "Computational Approaches in Drug Discovery and Design",
+    "authors": "Rajesh Kumar Pathak, Dev Bukhsh Singh, Mamta Sagar, Mamta Baunthiyal, Anil Kumar",
+    "journal": "Computer-Aided Drug Design",
+    "year": "2020",
+    "doi": "https://doi.org/10.1007/978-981-15-6815-2_1",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.envres.2019.108948",
+    "title": "Development and evaluation of a harmonized whole body physiologically based pharmacokinetic (PBPK) model for flutamide in rats and its extrapolation to humans",
+    "authors": "Raju Prasad Sharma, Vikas Kumar, Marta Schuhmacher, Alexey Kolodkin, Hans V. Westerhoff",
+    "journal": "Environmental Research",
+    "year": "2020",
+    "doi": "https://doi.org/10.1016/j.envres.2019.108948",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.fct.2020.111306",
+    "title": "Hepatotoxicity of the pesticides imazalil, thiacloprid and clothianidin – Individual and mixture effects in a 28-day study in female Wistar rats",
+    "authors": "Jimmy Alarcan, Julia Waizenegger, Marize de Lourdes Marzo Solano, Dajana Lichtenstein, Claudia Luckert, Ad Peijnenburg, Geert Stoopen, Raju Prasad Sharma, Vikas Kumar, Philip Marx-Stoelting, Alfonso Lampen, Albert Braeuning",
+    "journal": "Food and Chemical Toxicology",
+    "year": "2020",
+    "doi": "https://doi.org/10.1016/j.fct.2020.111306",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s42485-020-00048-5",
+    "title": "Identification of natural lead compounds for leaf rust of Wheat: a molecular docking and simulation study",
+    "authors": "Karan Singh Sidhu, Sukhwinder Kaur Bhangu, Rajesh Kumar Pathak, Inderjit Singh Yadav, Parveen Chhuneja",
+    "journal": "Journal of Proteins and Proteomics",
+    "year": "2020",
+    "doi": "https://doi.org/10.1007/s42485-020-00048-5",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:integratedomicsfordissectingho",
+    "title": "Integrated Omics for Dissecting Host-Pathogen Interaction: Challenges and Opportunities",
+    "authors": "RK Pathak, DB Singh",
+    "journal": "Recent Trends in ‘Computational Omics: Concepts and Methodology’",
+    "year": "2020",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:Z5m8FVwuT1cC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1039/9781839160738-00080",
+    "title": "Integrated Translation Framework for Endocrine Disruptors in the area of Computational Toxicology",
+    "authors": "V. Kumar, Deepika Deepika, R. P. Sharma",
+    "journal": "Challenges in Endocrine Disruptor Toxicology and Risk Assessment",
+    "year": "2020",
+    "doi": "https://doi.org/10.1039/9781839160738-00080",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.fct.2020.111256",
+    "title": "Maternal exposure to mixtures of dienestrol, linuron and flutamide. Part I: Feminization effects on male rat offspring",
+    "authors": "Elga Schreiber, Tània Garcia, Neus González, Roser Esplugas, Raju Prasad Sharma, Margarita Torrente, Vikas Kumar, Toine Bovee, Efrosini S. Katsanou, Kyriaki Machera, José Luis Domingo, Mercedes Gómez",
+    "journal": "Food and Chemical Toxicology",
+    "year": "2020",
+    "doi": "https://doi.org/10.1016/j.fct.2020.111256",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Maternal exposure to mixtures of dienestrol, linuron and flutamide. Part II: Endocrine-related gene expression assessment on male offspring rat testes",
+    "authors": "Efrosini S. Katsanou, Petros Batakis, Anastasia Spyropoulou, Elga Schreiber, Toine Bovee, Margarita Torrente, Maria Mercedes Gómez, Vikas Kumar, José Luis Domingo, Kyriaki Machera",
+    "journal": "Food and Chemical Toxicology",
+    "year": "2020",
+    "doi": "https://doi.org/gs4d4d",
+    "image": "",
+    "id": "doi:10.1016/j.fct.2020.111603"
+  },
+  {
+    "id": "doi:10.1007/978-981-15-6815-2_6",
+    "title": "Molecular Docking and Structure-Based Drug Design",
+    "authors": "Shikha Agnihotry, Rajesh Kumar Pathak, Ajeet Srivastav, Pradeep Kumar Shukla, Budhayash Gautam",
+    "journal": "Computer-Aided Drug Design",
+    "year": "2020",
+    "doi": "https://doi.org/10.1007/978-981-15-6815-2_6",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.2174/9789811448461120060007",
+    "title": "Natural Products in Cancer Chemoprevention and Chemotherapy",
+    "authors": "Dev Bukhsh Singh, Manish Kumar Gupta, Rajesh Kumar Pathak",
+    "journal": "Frontiers in Natural Product Chemistry",
+    "year": "2020",
+    "doi": "https://doi.org/10.2174/9789811448461120060007",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.envres.2020.109534",
+    "title": "Reconstruction of phthalate exposure and DINCH metabolites from biomonitoring data from the EXHES cohort of Tarragona, Spain: A case study on estimated vs reconstructed DEHP using the PBPK model",
+    "authors": "M.A. Martínez, J. Rovira, R. Prasad Sharma, M. Schuhmacher, V. Kumar",
+    "journal": "Environmental Research",
+    "year": "2020",
+    "doi": "https://doi.org/10.1016/j.envres.2020.109534",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "ROS networks: designs, aging, Parkinson’s disease and precision therapies",
+    "authors": "Alexey N. Kolodkin, Raju Prasad Sharma, Anna Maria Colangelo, Andrew Ignatenko, Francesca Martorana, Danyel Jennen, Jacco J. Briedé, Nathan Brady, Matteo Barberis, Thierry D. G. A. Mondeel, Michele Papa, Vikas Kumar, Bernhard Peters, Alexander Skupin, Lilia Alberghina, Rudi Balling, Hans V. Westerhoff",
+    "journal": "npj Systems Biology and Applications",
+    "year": "2020",
+    "doi": "https://doi.org/gs4d4c",
+    "image": "https://media.springernature.com/lw685/springer-static/image/art%3A10.1038%2Fs41540-020-00150-w/MediaObjects/41540_2020_150_Fig1_HTML.png?as=webp",
+    "id": "doi:10.1038/s41540-020-00150-w"
+  },
+  {
+    "id": "doi:10.1007/978-981-15-2874-3_16",
+    "title": "Systems Biology Approaches for Food and Health",
+    "authors": "Rajesh Kumar Pathak, Dev Bukhsh Singh",
+    "journal": "Advances in Agri-Food Biotechnology",
+    "year": "2020",
+    "doi": "https://doi.org/10.1007/978-981-15-2874-3_16",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Test and Risk Assessment Strategies for combined exposure to multiple chemicals",
+    "authors": "V. Kumar, A.R. Boobis, Angelo Moretto",
+    "journal": "Food and Chemical Toxicology",
+    "year": "2020",
+    "doi": "https://doi.org/gsfp9m",
+    "image": "",
+    "id": "doi:10.1016/j.fct.2020.111607"
+  },
+  {
+    "id": "scholar:vuresearchportal",
+    "title": "VU Research Portal",
+    "authors": "RP Sharma, V Kumar, M Schuhmacher, A Kolodkin, HV Westerhoff",
+    "journal": "Environmental Research 182",
+    "year": "2020",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:uENYxwZKF5gC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1080/07391102.2019.1568303",
+    "title": "<i>In silico</i> identification of mimicking molecule(s) triggering von Willebrand factor in human: a molecular drug target for regulating coagulation pathway",
+    "authors": "Garima Rana, Rajesh Kumar Pathak, Rohit Shukla, Mamta Baunthiyal",
+    "journal": "Journal of Biomolecular Structure and Dynamics",
+    "year": "2019",
+    "doi": "https://doi.org/10.1080/07391102.2019.1568303",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "An Ex Vivo Evaluation of Moxifloxacin Nanostructured Lipid Carrier Enriched In Situ Gel for Transcorneal Permeation on Goat Cornea",
@@ -468,6 +1730,26 @@
     "id": "doi:10.1016/j.xphs.2019.04.005"
   },
   {
+    "id": "doi:10.1101/647776",
+    "title": "Design principles of ROS dynamic networks relevant to precision therapies for age-related diseases",
+    "authors": "Alexey Kolodkin, Raju Prasad Sharma, Anna Maria Colangelo, Andrew Ignatenko, Francesca Martorana, Danyel Jennen, Jacco J. Briede, Nathan Brady, Matteo Barberis, Thierry D.G.A. Mondeel, Michele Papa, Vikas Kumar, Bernhard Peters, Alexander Skupin, Lilia Alberghina, Rudi Balling, Hans V. Westerhoff",
+    "journal": "bioRxiv",
+    "year": "2019",
+    "doi": "https://doi.org/10.1101/647776",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:integrationofpbpkwithrossbmode",
+    "title": "Integration of PBPK with ROS SB model for PFOS induced neurotoxicity",
+    "authors": "D Deepika, RP Sharma, M Schuhmacher, V Kumar",
+    "journal": "TOXICOLOGY LETTERS 314",
+    "year": "2019",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:X8aq8RHJ9bUC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "Intranasal Drug Delivery of Frovatriptan Succinate–Loaded Polymeric Nanoparticles for Brain Targeting",
     "authors": "Deepika Deepika, Hitesh Kumar Dewangan, Lakshmi Maurya, Sanjay Singh",
     "journal": "Journal of Pharmaceutical Sciences",
@@ -477,40 +1759,43 @@
     "id": "doi:10.1016/j.xphs.2018.07.013"
   },
   {
-    "title": "Comparing dietary and non-dietary source contribution of BPA and DEHP to prenatal exposure: A Catalonia (Spain) case study",
-    "authors": "M.A. Martínez, J. Rovira, R. Prasad Sharma, M. Nadal, M. Schuhmacher, V. Kumar",
+    "title": "Physiology-based toxicokinetic modelling in the frame of the European Human Biomonitoring Initiative",
+    "authors": "Dimosthenis A. Sarigiannis, Spyros Karakitsios, Elena Dominguez-Romero, Krystalia Papadaki, Celine Brochot, Vikas Kumar, Marta Schuhmacher, Moustapha Sy, Hans Mielke, Mathias Greiner, Marcel Mengelers, Martin Scheringer",
     "journal": "Environmental Research",
-    "year": "2018",
-    "doi": "https://doi.org/gfcwn8",
+    "year": "2019",
+    "doi": "https://doi.org/gs4d4h",
     "image": "",
-    "id": "doi:10.1016/j.envres.2018.05.008"
+    "id": "doi:10.1016/j.envres.2019.01.045"
   },
   {
-    "title": "Development of a human physiologically based pharmacokinetic (PBPK) model for phthalate (DEHP) and its metabolites: A bottom up modeling approach",
-    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "id": "doi:10.1016/j.envres.2019.05.040",
+    "title": "Prenatal exposure to PFOS and PFOA in a pregnant women cohort of Catalonia, Spain",
+    "authors": "Joaquim Rovira, Maria Ángeles Martínez, Raju Prasad Sharma, Teresa Espuis, Martí Nadal, Vikas Kumar, Danae Costopoulou, Irene Vassiliadou, Leondios Leondiadis, José L. Domingo, Marta Schuhmacher",
+    "journal": "Environmental Research",
+    "year": "2019",
+    "doi": "https://doi.org/10.1016/j.envres.2019.05.040",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:tarragonamotherchildriskexposu",
+    "title": "Tarragona mother-child risk exposure assessment to wide spread Endocrine disruptors (EDs) and in Vitro EDs exposure effects on adipogenesis",
+    "authors": "MÁM Rodríguez, M Schuhmacher, J Rovira, V Kumar",
+    "journal": "Publication",
+    "year": "2019",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:zAdBnjttzAIC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2018.06.896",
+    "title": "A system-based comparative proteomics approach to investigate heavy metals mixtures toxicity mechanism relates to the neurodegeneration on hippocampal cell line",
+    "authors": "V. Kumar, V. Karri, M. Edwin, S.L. Coort, C.T. Evelo, E. Oliveira, M. Schuhmacher",
     "journal": "Toxicology Letters",
     "year": "2018",
-    "doi": "https://doi.org/gd6wpv",
+    "doi": "https://doi.org/10.1016/j.toxlet.2018.06.896",
     "image": "",
-    "id": "doi:10.1016/j.toxlet.2018.06.1217"
-  },
-  {
-    "title": "Differential protein expression of hippocampal cells associated with heavy metals (Pb, As, and MeHg) neurotoxicity: Deepening into the molecular mechanism of neurodegenerative diseases",
-    "authors": "Venkatanaidu Karri, David Ramos, Julia Bauzá Martinez, Antonia Odena, Eliandre Oliveira, Susan L. Coort, Chris T. Evelo, Edwin C.M. Mariman, Marta Schuhmacher, Vikas Kumar",
-    "journal": "Journal of Proteomics",
-    "year": "2018",
-    "doi": "https://doi.org/gfbd8c",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S1874391918302641-ga1.jpg",
-    "id": "doi:10.1016/j.jprot.2018.06.020"
-  },
-  {
-    "title": "The development of a pregnancy PBPK Model for Bisphenol A and its evaluation with the available biomonitoring data",
-    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
-    "journal": "Science of The Total Environment",
-    "year": "2018",
-    "doi": "https://doi.org/gjgn26",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0048969717334423-fx1.jpg",
-    "id": "doi:10.1016/j.scitotenv.2017.12.023"
+    "isOpenAccess": true
   },
   {
     "title": "An in vitro cytotoxic approach to assess the toxicity of heavy metals and their binary mixtures on hippocampal HT-22 cell line",
@@ -522,6 +1807,85 @@
     "id": "doi:10.1016/j.toxlet.2017.10.002"
   },
   {
+    "id": "scholar:anoptimizedsubgrouppartitionba",
+    "title": "An optimized sub group partition based healthcare data mining in big data",
+    "authors": "VR Nagarajan, V Kumar",
+    "journal": "Int J Innov Res Sci Technol 4 (10)",
+    "year": "2018",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:12oLulcdP1kC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1201/9780429436949-12",
+    "title": "Applications of Environmental Impact Analysis in Industrial Process Chains",
+    "authors": "Francisco Sánchez-Soberón, Montserrat Mari, Vikas Kumar, Julio Rodrigo, Montserrat Meneses, Haydée Yrigoyen, Francesc Castells, Marta Schuhmacher",
+    "journal": "Integrated Life-Cycle and Risk Assessment for Industrial Processes and Products",
+    "year": "2018",
+    "doi": "https://doi.org/10.1201/9780429436949-12",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2018.06.701",
+    "title": "Assessment of reproductive toxicity of male rats through maternal exposure to dienestrol",
+    "authors": "N. González, E. Schreiber, M. Torrente, V. Kumar, J.L. Domingo, M.M. Gómez",
+    "journal": "Toxicology Letters",
+    "year": "2018",
+    "doi": "https://doi.org/10.1016/j.toxlet.2018.06.701",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2018.06.702",
+    "title": "Assessment of the oxidative stress effects on the reproductive system of young male rats to n-butylparaben",
+    "authors": "E. Schreiber Bru, T. Garcia, M. Torrente, V. Kumar, R.P. Sharma, J.L. Domingo, M.M. Gómez",
+    "journal": "Toxicology Letters",
+    "year": "2018",
+    "doi": "https://doi.org/10.1016/j.toxlet.2018.06.702",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s13205-018-1473-y",
+    "title": "Augmentation of crop productivity through interventions of omics technologies in India: challenges and opportunities",
+    "authors": "Rajesh Kumar Pathak, Mamta Baunthiyal, Dinesh Pandey, Anil Kumar",
+    "journal": "3 Biotech",
+    "year": "2018",
+    "doi": "https://doi.org/10.1007/s13205-018-1473-y",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.envres.2018.05.008",
+    "title": "Comparing dietary and non-dietary source contribution of BPA and DEHP to prenatal exposure: A Catalonia (Spain) case study",
+    "authors": "M.A. Martínez, J. Rovira, R. Prasad Sharma, M. Nadal, M. Schuhmacher, V. Kumar",
+    "journal": "Environmental Research",
+    "year": "2018",
+    "doi": "https://doi.org/10.1016/j.envres.2018.05.008",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Development of a human physiologically based pharmacokinetic (PBPK) model for phthalate (DEHP) and its metabolites: A bottom up modeling approach",
+    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2018",
+    "doi": "https://doi.org/gd6wpv",
+    "image": "",
+    "id": "doi:10.1016/j.toxlet.2018.06.1217"
+  },
+  {
+    "id": "doi:10.1016/j.jprot.2018.06.020",
+    "title": "Differential protein expression of hippocampal cells associated with heavy metals (Pb, As, and MeHg) neurotoxicity: Deepening into the molecular mechanism of neurodegenerative diseases",
+    "authors": "Venkatanaidu Karri, David Ramos, Julia Bauzá Martinez, Antonia Odena, Eliandre Oliveira, Susan L. Coort, Chris T. Evelo, Edwin C.M. Mariman, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Journal of Proteomics",
+    "year": "2018",
+    "doi": "https://doi.org/10.1016/j.jprot.2018.06.020",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
     "title": "Finding synergies for 3Rs – Toxicokinetics and read-across: Report from an EPAA partners' Forum",
     "authors": "Charles Laroche, Manoj Aggarwal, Hans Bender, Paul Benndorf, Barbara Birk, Jonathan Crozier, Gianni Dal Negro, Federica De Gaetano, Christian Desaintes, Iain Gardner, Bruno Hubesch, Amaia Irizar, David John, Vikas Kumar, Alfonso Lostia, Irene Manou, Mario Monshouwer, Boris P. Müller, Alicia Paini, Kirsty Reid, Timothy Rowan, Magdalini Sachana, Katrin Schutte, Catrina Stirling, Rob Taalman, Leon van Aerts, Renate Weissenhorn, Ursula G. Sauer",
     "journal": "Regulatory Toxicology and Pharmacology",
@@ -529,6 +1893,46 @@
     "doi": "https://doi.org/gfqmrk",
     "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0273230018302186-gr2.jpg",
     "id": "doi:10.1016/j.yrtph.2018.08.006"
+  },
+  {
+    "id": "doi:10.1007/s13205-017-1068-z",
+    "title": "Identification and molecular characterization of Dof transcription factor gene family preferentially expressed in developing spikes of Eleusine coracana L.",
+    "authors": "Supriya Gupta, Rajesh Kumar Pathak, Sanjay Mohan Gupta, Vikram Singh Gaur, N. K. Singh, Anil Kumar",
+    "journal": "3 Biotech",
+    "year": "2018",
+    "doi": "https://doi.org/10.1007/s13205-017-1068-z",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.compbiolchem.2018.05.015",
+    "title": "Identification of new drug-like compounds from millets as Xanthine oxidoreductase inhibitors for treatment of Hyperuricemia: A molecular docking and simulation study",
+    "authors": "Rajesh Kumar Pathak, Ayushi Gupta, Rohit Shukla, Mamta Baunthiyal",
+    "journal": "Computational Biology and Chemistry",
+    "year": "2018",
+    "doi": "https://doi.org/10.1016/j.compbiolchem.2018.05.015",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.21475/poj.11.02.18.1238",
+    "title": "In silico identification of agriculturally important molecule(s) for defense induction against bacterial blight disease in Soybean (Glycine max)",
+    "authors": "Saril Mamgain, Shalini Dhiman, Rajesh Kumar Pathak, Mamta Baunthiyal",
+    "journal": "Plant Omics",
+    "year": "2018",
+    "doi": "https://doi.org/10.21475/poj.11.02.18.1238",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:networkbiologyapproachtoidenti",
+    "title": "Network Biology Approach to Identify Key Components Triggered during Exposure to Fluoride for Therapeutics in Human",
+    "authors": "S Pant, RK Pathak, M Baunthiyal",
+    "journal": "Journal Article",
+    "year": "2018",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:g3aElNc5_aQC",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Package Development of Pharmaceutical Products",
@@ -540,6 +1944,95 @@
     "id": "doi:10.1016/b978-0-12-814421-3.00015-4"
   },
   {
+    "id": "doi:10.1016/j.toxlet.2018.06.1023",
+    "title": "PBPK/PD coupled HPG SB model to analyze the reproductive toxicity of EDs: Case study on mixture effects of DEHP and TCDD",
+    "authors": "R.P. Sharma, M. Schuhmacher, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2018",
+    "doi": "https://doi.org/10.1016/j.toxlet.2018.06.1023",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2018.06.709",
+    "title": "Prediction and evaluation of the internal dosimetry of two wide spread endocrine disruptors in fetus using a physiologically based pharmacokinetic model",
+    "authors": "M.A. Martinez, J. Rovira, R. Prasad Sharma, M. Nadal, M. Schuhmacher, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2018",
+    "doi": "https://doi.org/10.1016/j.toxlet.2018.06.709",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s13205-018-1483-9",
+    "title": "Systems biology of seeds: decoding the secret of biochemical seed factories for nutritional security",
+    "authors": "Anil Kumar, Rajesh Kumar Pathak, Aranyadip Gayen, Supriya Gupta, Manoj Singh, Charu Lata, Himanshu Sharma, Joy Kumar Roy, Sanjay Mohan Gupta",
+    "journal": "3 Biotech",
+    "year": "2018",
+    "doi": "https://doi.org/10.1007/s13205-018-1483-9",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.18699/bgrssb-2018-109",
+    "title": "The “transformer” model of ROS management for PD and cancer: Network diversification as the source of precision in blue-print modelling",
+    "authors": "A Kolodkin, AM Colangelo, L Alberghina, RP Sharma, V Kumar, D Jennen, ...",
+    "journal": "11-ая Международная конференция по биоинформатике регуляции и структуры геномов и системной биологии",
+    "year": "2018",
+    "doi": "https://doi.org/10.18699/bgrssb-2018-109",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "title": "The development of a pregnancy PBPK Model for Bisphenol A and its evaluation with the available biomonitoring data",
+    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Science of The Total Environment",
+    "year": "2018",
+    "doi": "https://doi.org/gjgn26",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0048969717334423-fx1.jpg",
+    "id": "doi:10.1016/j.scitotenv.2017.12.023"
+  },
+  {
+    "id": "doi:10.1007/s10535-018-0776-5",
+    "title": "The role of tripartite interaction of calcium sensors and transporters in the accumulation of calcium in finger millet grain",
+    "authors": "S. B. Kokane, R. K. Pathak, M. Singh, A. Kumar",
+    "journal": "Biologia plantarum",
+    "year": "2018",
+    "doi": "https://doi.org/10.1007/s10535-018-0776-5",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s13205-018-1511-9",
+    "title": "Transcriptome-wide identification of genes involved in Ascorbate–Glutathione cycle (Halliwell–Asada pathway) and related pathway for elucidating its role in antioxidative potential in finger millet (Eleusine coracana (L.))",
+    "authors": "Himanshu Avashthi, Rajesh Kumar Pathak, Neetesh Pandey, Sandeep Arora, Amrendra Kumar Mishra, Vijai Kumar Gupta, Pramod Wasudeo Ramteke, Anil Kumar",
+    "journal": "3 Biotech",
+    "year": "2018",
+    "doi": "https://doi.org/10.1007/s13205-018-1511-9",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:addressingthecomplexityofstres",
+    "title": "Addressing the complexity of Stress Biology through Hi-throughput Omics Data Analysis using Bioinformatics Tools: A National Bioinformatics Workshop Report",
+    "authors": "A Kumar, A Tiwari, RK Pathak, G Taj, AK Tewari, D Pandey, BR Singh, ...",
+    "journal": "International Journal of Computational Bioinformatics and In Silico Modeling …",
+    "year": "2017",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:2KloaMYe4IUC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.5958/2230-732x.2017.00033.x",
+    "title": "Binding Affinity Analysis of Cinnamanilide and α-Aminophosphonic Acid Derivatives for Acetohydroxyacid Synthase through Molecular Docking",
+    "authors": "Shivani Verma, Rajesh Kumar Pathak, Virendra Kasana, Anil Kumar",
+    "journal": "International Journal of Agriculture, Environment and Biotechnology",
+    "year": "2017",
+    "doi": "https://doi.org/10.5958/2230-732x.2017.00033.x",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "Comparative In Vitro Toxicity Evaluation of Heavy Metals (Lead, Cadmium, Arsenic, and Methylmercury) on HT-22 Hippocampal Cell Line",
     "authors": "Venkatanaidu Karri, Vikas Kumar, David Ramos, Eliandre Oliveira, Marta Schuhmacher",
     "journal": "Biological Trace Element Research",
@@ -547,6 +2040,25 @@
     "doi": "https://doi.org/gdqsjd",
     "image": "",
     "id": "doi:10.1007/s12011-017-1177-x"
+  },
+  {
+    "title": "Developing integrated PBPK/PD coupled mechanistic pathway model (miRNA-BDNF): An approach towards system toxicology",
+    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2017",
+    "doi": "https://doi.org/gcjt4x",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S037842741731161X-fx1.jpg",
+    "id": "doi:10.1016/j.toxlet.2017.08.003"
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2017.07.796",
+    "title": "Development and validation of PBPK model for DEHP and its metabolites: Application to cohort and case–control studies",
+    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2017",
+    "doi": "https://doi.org/10.1016/j.toxlet.2017.07.796",
+    "image": "",
+    "isOpenAccess": true
   },
   {
     "title": "Effects on the reproductive system of young male rats of subcutaneous exposure to n-butylparaben",
@@ -558,22 +2070,44 @@
     "id": "doi:10.1016/j.fct.2017.05.031"
   },
   {
-    "title": "Review on crosstalk and common mechanisms of endocrine disruptors: Scaffolding to improve PBPK/PD model of EDC mixture",
-    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
-    "journal": "Environment International",
+    "id": "scholar:estimacindelaexposicinprenatal",
+    "title": "Estimación de la exposición prenatal dietética a dos disruptores endocrinos: BPA y DEHP",
+    "authors": "MÁM Rodríguez, J Rovira, RP Sharma, M Nadal, M Schuhmacher, ...",
+    "journal": "Revista de Salud Ambiental 17 (extraordinari)",
     "year": "2017",
-    "doi": "https://doi.org/f9tdpr",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:luR84W4EXegC",
     "image": "",
-    "id": "doi:10.1016/j.envint.2016.09.016"
+    "isOpenAccess": false
   },
   {
-    "title": "Developing integrated PBPK/PD coupled mechanistic pathway model (miRNA-BDNF): An approach towards system toxicology",
-    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
-    "journal": "Toxicology Letters",
+    "id": "doi:10.3389/fpls.2017.00609",
+    "title": "In Silico Identification of Mimicking Molecules as Defense Inducers Triggering Jasmonic Acid Mediated Immunity against Alternaria Blight Disease in Brassica Species",
+    "authors": "Rajesh K. Pathak, Mamta Baunthiyal, Rohit Shukla, Dinesh Pandey, Gohar Taj, Anil Kumar",
+    "journal": "Frontiers in Plant Science",
     "year": "2017",
-    "doi": "https://doi.org/gcjt4x",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S037842741731161X-fx1.jpg",
-    "id": "doi:10.1016/j.toxlet.2017.08.003"
+    "doi": "https://doi.org/10.3389/fpls.2017.00609",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1038/s41598-017-16884-3",
+    "title": "Modeling of the jasmonate signaling pathway in Arabidopsis thaliana with respect to pathophysiology of Alternaria blight in Brassica",
+    "authors": "Rajesh Kumar Pathak, Mamta Baunthiyal, Neetesh Pandey, Dinesh Pandey, Anil Kumar",
+    "journal": "Scientific Reports",
+    "year": "2017",
+    "doi": "https://doi.org/10.1038/s41598-017-16884-3",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "doi:10.1007/s13205-017-0874-7",
+    "title": "Molecular characterization of EcCIPK24 gene of finger millet (Eleusine coracana) for investigating its regulatory role in calcium transport",
+    "authors": "Mahadev Chinchole, Rajesh Kumar Pathak, Uma M. Singh, Anil Kumar",
+    "journal": "3 Biotech",
+    "year": "2017",
+    "doi": "https://doi.org/10.1007/s13205-017-0874-7",
+    "image": "",
+    "isOpenAccess": true
   },
   {
     "title": "Performance of Raphidocelis subcapitata exposed to heavy metal mixtures",
@@ -594,22 +2128,33 @@
     "id": "doi:10.1016/j.envres.2017.07.016"
   },
   {
-    "title": "Heavy metals (Pb, Cd, As and MeHg) as risk factors for cognitive dysfunction: A general review of metal mixture mechanism in brain",
-    "authors": "Venkatanaidu Karri, Marta Schuhmacher, Vikas Kumar",
-    "journal": "Environmental Toxicology and Pharmacology",
-    "year": "2016",
-    "doi": "https://doi.org/f9h2j9",
+    "id": "doi:10.1016/j.toxlet.2017.07.920",
+    "title": "Proteomics approach for improving the mechanisms associated with MeHg toxicity in HT-22 hippocampal cell line",
+    "authors": "Venkatanaidu Karri, Marta Schuhmacher, Vikas Kumar, David Ramos, Eliandre De Oliveira Cacheado",
+    "journal": "Toxicology Letters",
+    "year": "2017",
+    "doi": "https://doi.org/10.1016/j.toxlet.2017.07.920",
     "image": "",
-    "id": "doi:10.1016/j.etap.2016.09.016"
+    "isOpenAccess": true
   },
   {
-    "title": "Influence of the uncertainty in the validation of PBPK models: A case-study for PFOS and PFOA",
-    "authors": "Francesc Fàbrega, Martí Nadal, Marta Schuhmacher, José L. Domingo, Vikas Kumar",
-    "journal": "Regulatory Toxicology and Pharmacology",
-    "year": "2016",
-    "doi": "https://doi.org/f8qj3h",
+    "title": "Review on crosstalk and common mechanisms of endocrine disruptors: Scaffolding to improve PBPK/PD model of EDC mixture",
+    "authors": "Raju Prasad Sharma, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Environment International",
+    "year": "2017",
+    "doi": "https://doi.org/f9tdpr",
     "image": "",
-    "id": "doi:10.1016/j.yrtph.2016.03.009"
+    "id": "doi:10.1016/j.envint.2016.09.016"
+  },
+  {
+    "id": "doi:10.24321/2394.6539.201703",
+    "title": "Study to Assess the Knowledge, Attitude and Practices of Biomedical Waste Management among Healthcare Personnel at a Tertiary Care Hospital in Haryana",
+    "authors": "Dr. Nitika Sharma",
+    "journal": "Journal of Advanced Research in Medical Science & Technology",
+    "year": "2017",
+    "doi": "https://doi.org/10.24321/2394.6539.201703",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Adaptation strategies for water supply management in a drought prone Mediterranean river basin: Application of outranking method",
@@ -630,13 +2175,82 @@
     "id": "doi:10.1016/j.scitotenv.2015.11.066"
   },
   {
-    "title": "Exploring the utility of Bayesian Networks for modelling cultural ecosystem services: A canoeing case study",
-    "authors": "Edward Shaw, Vikas Kumar, Eckart Lange, David N. Lerner",
-    "journal": "Science of The Total Environment",
+    "id": "doi:10.1016/j.toxlet.2016.06.1908",
+    "title": "Application of a PBPK/PD model to understand the neurotoxicity pathway of PFOS via microRNA",
+    "authors": "R. Prasad Sharma, M. Nadal, M. Schuhmacher, J. Domingo, V. Kumar",
+    "journal": "Toxicology Letters",
     "year": "2016",
-    "doi": "https://doi.org/f8dhr8",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0048969715305301-gr1.jpg",
-    "id": "doi:10.1016/j.scitotenv.2015.08.027"
+    "doi": "https://doi.org/10.1016/j.toxlet.2016.06.1908",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:climatechangeadaptationmitigat",
+    "title": "Climate change adaptation & mitigation strategies for Water-Energy-Land Nexus management in Mediterranean region: Case study of Catalunya (Spain).",
+    "authors": "V Kumar, M Schuhmacher",
+    "journal": "EGU General Assembly Conference Abstracts",
+    "year": "2016",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:qe6vwMD2xtsC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:francescfbregamartnadalmartasc",
+    "title": "Francesc Fàbrega, Martí Nadal, Marta Schuhmacher, José L. Domingo, 5",
+    "authors": "V Kumar",
+    "journal": "Publication",
+    "year": "2016",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:qsWQJNntlusC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "title": "Heavy metals (Pb, Cd, As and MeHg) as risk factors for cognitive dysfunction: A general review of metal mixture mechanism in brain",
+    "authors": "Venkatanaidu Karri, Marta Schuhmacher, Vikas Kumar",
+    "journal": "Environmental Toxicology and Pharmacology",
+    "year": "2016",
+    "doi": "https://doi.org/f9h2j9",
+    "image": "",
+    "id": "doi:10.1016/j.etap.2016.09.016"
+  },
+  {
+    "id": "doi:10.1016/j.toxlet.2016.06.1909",
+    "title": "Improving the neurotoxicity mechanism: Proteomics analysis of heavy metals exposure on hippocampal HT22 cell line",
+    "authors": "V. Karri, D. Ramos, E. De Oliveira Cacheado, M. Schuhmacher, V. Kumar",
+    "journal": "Toxicology Letters",
+    "year": "2016",
+    "doi": "https://doi.org/10.1016/j.toxlet.2016.06.1909",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "title": "Influence of the uncertainty in the validation of PBPK models: A case-study for PFOS and PFOA",
+    "authors": "Francesc Fàbrega, Martí Nadal, Marta Schuhmacher, José L. Domingo, Vikas Kumar",
+    "journal": "Regulatory Toxicology and Pharmacology",
+    "year": "2016",
+    "doi": "https://doi.org/f8qj3h",
+    "image": "",
+    "id": "doi:10.1016/j.yrtph.2016.03.009"
+  },
+  {
+    "id": "doi:10.21475/poj.16.09.03.p7654",
+    "title": "Molecular modeling and docking studies of phytoalexin(s) with pathogenic protein(s) as molecular targets for designing the derivatives with anti-fungal action on Alternaria spp. of Brassica",
+    "authors": "Rajesh Kumar Pathak, Gohar Taj, Dinesh Pandey, Virendra Kumar Kasana, Mamta Baunthiyal, Anil Kumar",
+    "journal": "Plant Omics",
+    "year": "2016",
+    "doi": "https://doi.org/10.21475/poj.16.09.03.p7654",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:p16068",
+    "title": "P16-068",
+    "authors": "RP Sharma, M Nadal, M Schuhmacher, J Domingo, V Kumar",
+    "journal": "Abstracts/Toxicology Letters 258S 62",
+    "year": "2016",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:AFXcoJnoRH0C",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Simulation Model for Predicting the Effects of Changes in Land Use on Watershed Hydrology",
@@ -657,6 +2271,36 @@
     "id": "doi:10.1016/j.jafrearsci.2016.08.015"
   },
   {
+    "id": "scholar:thrivingathightemperaturesmole",
+    "title": "Thriving at High Temperatures: Molecular Adaptations in Hyperthermophic Microorganisms",
+    "authors": "RK Pandey, A Rana, P Sharma, RK Pathak, M Rana, L Tewari",
+    "journal": "Int.J.Curr.Res.Aca.Rev. 4 (8)",
+    "year": "2016",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:ZfRJV9d4-WMC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:validationandapplicationofanin",
+    "title": "Validation and Application of an Integrated Air Quality Model: From Source Dispersion to Respiratory Deposition",
+    "authors": "V Kumar, F Sánchez-Soberón, J Rovira, M Mari, M Schuhmacher",
+    "journal": "Publication",
+    "year": "2016",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:kJDgFkosVoMC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1080/0952813x.2015.1024493",
+    "title": "A decision support system to find the best water allocation strategies in a Mediterranean river basin in future scenarios of global change",
+    "authors": "L. Del Vasto-Terrientes, V. Kumar, T.-C. Chao, A. Valls",
+    "journal": "Journal of Experimental & Theoretical Artificial Intelligence",
+    "year": "2015",
+    "doi": "https://doi.org/10.1080/0952813x.2015.1024493",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "An approach to assess the Particulate Matter exposure for the population living around a cement plant: modelling indoor air and particle deposition in the respiratory tract",
     "authors": "Francisco Sánchez-Soberón, Montse Mari, Vikas Kumar, Joaquim Rovira, Martí Nadal, Marta Schuhmacher",
     "journal": "Environmental Research",
@@ -666,22 +2310,43 @@
     "id": "doi:10.1016/j.envres.2015.09.008"
   },
   {
+    "id": "doi:10.6026/97320630011236",
+    "title": "Computer aided screening of natural compounds targeting the E6 protein of HPV using molecular docking",
+    "authors": "Saril Mamgain, Pushpendra Sharma, Rajesh Kumar Pathak, Mamta Baunthiyal",
+    "journal": "Bioinformation",
+    "year": "2015",
+    "doi": "https://doi.org/10.6026/97320630011236",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:highthroughputomicsdataformini",
+    "title": "High-throughput Omics Data for mining of important genes/traits linked to Agricultural Productivity: A National Bioinformatics workshop report",
+    "authors": "A Kumar, G Taj, D Pandey, RK Pathak, A Tiwari, H Avashthi",
+    "journal": "International Journal of Computational Bioinformatics and In Silico Modeling …",
+    "year": "2015",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:7T2F9Uy0os0C",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "Physiologically based pharmacokinetic modeling of perfluoroalkyl substances in the human body",
     "authors": "Francesc Fàbrega, Vikas Kumar, Emilio Benfenati, Marta Schuhmacher, José L. Domingo, Martí Nadal",
-    "journal": "Toxicological &amp; Environmental Chemistry",
+    "journal": "Toxicological & Environmental Chemistry",
     "year": "2015",
     "doi": "https://doi.org/gs4d4n",
     "image": "",
     "id": "doi:10.1080/02772248.2015.1060976"
   },
   {
-    "title": "A PBPK model to estimate PCDD/F levels in adipose tissue: Comparison with experimental values of residents near a hazardous waste incinerator",
-    "authors": "Marta Schuhmacher, Francesc Fàbrega, Vikas Kumar, Francisco García, Martí Nadal, José L. Domingo",
-    "journal": "Environment International",
-    "year": "2014",
-    "doi": "https://doi.org/f6rcxf",
-    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0160412014002414-gr1.jpg",
-    "id": "doi:10.1016/j.envint.2014.07.020"
+    "id": "doi:10.1089/omi.2015.0106",
+    "title": "Systems Biology for Smart Crops and Agricultural Innovation: Filling the Gaps between Genotype and Phenotype for Complex Traits Linked with Robust Agricultural Productivity and Sustainability",
+    "authors": "Anil Kumar, Rajesh Kumar Pathak, Sanjay Mohan Gupta, Vikram Singh Gaur, Dinesh Pandey",
+    "journal": "OMICS: A Journal of Integrative Biology",
+    "year": "2015",
+    "doi": "https://doi.org/10.1089/omi.2015.0106",
+    "image": "",
+    "isOpenAccess": true
   },
   {
     "title": "A hierarchical decision support system to evaluate the effects of climate change in water supply in a Mediterranean river basin",
@@ -693,6 +2358,15 @@
     "id": "doi:10.3233/978-1-61499-452-7-77"
   },
   {
+    "title": "A PBPK model to estimate PCDD/F levels in adipose tissue: Comparison with experimental values of residents near a hazardous waste incinerator",
+    "authors": "Marta Schuhmacher, Francesc Fàbrega, Vikas Kumar, Francisco García, Martí Nadal, José L. Domingo",
+    "journal": "Environment International",
+    "year": "2014",
+    "doi": "https://doi.org/f6rcxf",
+    "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0160412014002414-gr1.jpg",
+    "id": "doi:10.1016/j.envint.2014.07.020"
+  },
+  {
     "title": "Bayesian Network Application to Land Suitability Classification in the Sewage Sludge Amendment of Agricultural Soils",
     "authors": "Ana Passuello, Vikas Kumar, Oda Cadiach, Marta Schuhmacher",
     "journal": "Human and Ecological Risk Assessment: An International Journal",
@@ -702,13 +2376,63 @@
     "id": "doi:10.1080/10807039.2013.793092"
   },
   {
+    "id": "doi:10.1007/s13721-014-0066-x",
+    "title": "Binding affinity analysis and ADMET prediction of epigallocatechine gallate (EGCG) derivatives for AP-1 protein: a drug target for liver cancer",
+    "authors": "Mamta Sagar, Rajesh Kumar Pathak, Rishi Kumar Pandey, Dev Bukhsh Singh, Neetesh Pandey, Manish Kumar Gupta",
+    "journal": "Network Modeling Analysis in Health Informatics and Bioinformatics",
+    "year": "2014",
+    "doi": "https://doi.org/10.1007/s13721-014-0066-x",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
     "title": "Bis(Methylpyridine)‐<scp>EDTA</scp> Derivative as a Potential Ligand for <scp>PET</scp> Imaging: Synthesis, Complexation, and Biological Evaluation",
     "authors": "Pooja Singh, Swati Aggarwal, Anjani K. Tiwari, Vikas Kumar, Ramendra Pratap, Krishna Chuttani, Anil K. Mishra",
-    "journal": "Chemical Biology &amp; Drug Design",
+    "journal": "Chemical Biology & Drug Design",
     "year": "2014",
     "doi": "https://doi.org/gs4d4r",
     "image": "",
     "id": "doi:10.1111/cbdd.12366"
+  },
+  {
+    "id": "scholar:dof1transcriptionfactorinterac",
+    "title": "Dof1 transcription factor interacts with only specific regions of the promoters driving the expression of genes involved in carbon and nitrogen metabolism",
+    "authors": "AK Gupta, VS Gaur, RK Pathak, S Gupta, A Kumar",
+    "journal": "Int J Comput Bioinfo In Silico Model 3 (4)",
+    "year": "2014",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:dQ2og3OwTAUC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:insilicoidentificationofmapk36",
+    "title": "In silico identification of MAPK3/6 substrates in WRKY, bZIP, MYB, MYB- related, NAC and AP-2 transcription factor family in Arabidopsis thaliana",
+    "authors": "H Avashthi, B Gautam, PA Jain, A Tiwari, RK Pathak, A Srivastava, G Taj, ...",
+    "journal": "Int J Comput Bioinfo In Silico Model 3 (4)",
+    "year": "2014",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:_Ybze24A_UAC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1007/978-3-642-30574-0_18",
+    "title": "Kernel Methods and Applications in Bioinformatics",
+    "authors": "Yan Fu",
+    "journal": "Springer Handbook of Bio-/Neuroinformatics",
+    "year": "2014",
+    "doi": "https://doi.org/10.1007/978-3-642-30574-0_18",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.5958/2230-732x.2014.01376.x",
+    "title": "Molecular modeling and docking approach to predict the potential interacting partners of AtMAPK3P with the members of bZIP transcription factor family in<i>Arabidopsis</i>",
+    "authors": "Priyanka Giri, Gohar Taj, Anil Kumar",
+    "journal": "International Journal of Agriculture, Environment and Biotechnology",
+    "year": "2014",
+    "doi": "https://doi.org/10.5958/2230-732x.2014.01376.x",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "PBPK modeling for PFOS and PFOA: Validation with human experimental data",
@@ -720,6 +2444,16 @@
     "id": "doi:10.1016/j.toxlet.2014.01.007"
   },
   {
+    "id": "doi:10.6026/97320630010428",
+    "title": "Virtual screening of natural inhibitors to the predicted HBx protein structure of Hepatitis B Virus using molecular docking for identification of potential lead molecules for liver cancer",
+    "authors": "Rajesh Kumar Pathak, Mamta Baunthiyal, Gohar Taj, Anil Kumar",
+    "journal": "Bioinformation",
+    "year": "2014",
+    "doi": "https://doi.org/10.6026/97320630010428",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "A Multi-Agent Architecture Framework to Improve Wine Supply Chain Coordination",
     "authors": "Vikas Kumar, Supalak Akkaranggoon, Jose A. Garza-Reyes, Luis Rocha-Lona, Archana Kumari, Yuan Hsin Wang",
     "journal": "Lecture Notes in Mechanical Engineering",
@@ -727,6 +2461,16 @@
     "doi": "https://doi.org/gs4d4s",
     "image": "",
     "id": "doi:10.1007/978-3-319-00557-7_88"
+  },
+  {
+    "id": "scholar:decisionsupportsystembasedondp",
+    "title": "Decision support system based on DPSIR framework for a low flow Mediterranean river basin",
+    "authors": "RF Bangash, V Kumar, M Schuhmacher",
+    "journal": "EGU General Assembly Conference Abstracts",
+    "year": "2013",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:8k81kl-MbHgC",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Dynamic interactions between hydrogeological and exposure parameters in daily dose prediction under uncertainty and temporal variability",
@@ -738,15 +2482,6 @@
     "id": "doi:10.1016/j.jhazmat.2013.08.036"
   },
   {
-    "title": "The impact of climate change on water provision under a low flow regime: A case study of the ecosystems services in the Francoli river basin",
-    "authors": "Montse Marquès, Rubab Fatima Bangash, Vikas Kumar, Richard Sharp, Marta Schuhmacher",
-    "journal": "Journal of Hazardous Materials",
-    "year": "2013",
-    "doi": "https://doi.org/f5q8tp",
-    "image": "",
-    "id": "doi:10.1016/j.jhazmat.2013.07.049"
-  },
-  {
     "title": "Integrated modelling for Sustainability Appraisal of urban river corridors: Going beyond compartmentalised thinking",
     "authors": "Vikas Kumar, J.R. Rouquette, David N. Lerner",
     "journal": "Water Research",
@@ -754,6 +2489,25 @@
     "doi": "https://doi.org/f5pb5h",
     "image": "https://ars.els-cdn.com/content/image/1-s2.0-S0043135413008154-fx1.jpg",
     "id": "doi:10.1016/j.watres.2013.10.034"
+  },
+  {
+    "id": "doi:10.6026/97320630009443",
+    "title": "Modeling of the MAPK machinery activation in response to various abiotic and biotic stresses in plants by a system biology approach",
+    "authors": "Rajesh Kumar Pathak, Gohar Taj, Dinesh Pandey, Sandeep Arora, Anil Kumar",
+    "journal": "Bioinformation",
+    "year": "2013",
+    "doi": "https://doi.org/10.6026/97320630009443",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "title": "The impact of climate change on water provision under a low flow regime: A case study of the ecosystems services in the Francoli river basin",
+    "authors": "Montse Marquès, Rubab Fatima Bangash, Vikas Kumar, Richard Sharp, Marta Schuhmacher",
+    "journal": "Journal of Hazardous Materials",
+    "year": "2013",
+    "doi": "https://doi.org/f5q8tp",
+    "image": "",
+    "id": "doi:10.1016/j.jhazmat.2013.07.049"
   },
   {
     "title": "A concurrent neuro-fuzzy inference system for screening the ecological risk in rivers",
@@ -774,6 +2528,36 @@
     "id": "doi:10.1016/j.jenvman.2011.10.016"
   },
   {
+    "id": "doi:10.1016/j.proenv.2012.01.073",
+    "title": "Does it help? Testing the usefulness of a tool to aid Integrated Catchment Management",
+    "authors": "E.A. Shaw, V. Kumar, L. Gill, E. Lange, D.N. Lerner",
+    "journal": "Procedia Environmental Sciences",
+    "year": "2012",
+    "doi": "https://doi.org/10.1016/j.proenv.2012.01.073",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
+    "id": "scholar:greenteaanaturalsourceofdrugfo",
+    "title": "Green Tea: A Natural Source of Drug for Liver Cancer",
+    "authors": "RK Pathak, M Sagar",
+    "journal": "International Journal of Medical Sciences 5 (1 & 2)",
+    "year": "2012",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aGb3z1gAAAAJ&pagesize=100&sortby=pubdate&citation_for_view=aGb3z1gAAAAJ:d1gkVwhDpl0C",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1016/j.proenv.2012.01.062",
+    "title": "Integrated modelling for Sustainability Appraisal for Urban River Corridor (re)-development",
+    "authors": "Vikas Kumar, J.R. Rouquette, D.N. Lerner",
+    "journal": "Procedia Environmental Sciences",
+    "year": "2012",
+    "doi": "https://doi.org/10.1016/j.proenv.2012.01.062",
+    "image": "",
+    "isOpenAccess": true
+  },
+  {
     "title": "Challenges in developing an integrated catchment management model",
     "authors": "David N. Lerner, Vikas Kumar, Annelie Holzkämper, Benjamin W. J. Surridge, Bob Harris",
     "journal": "Water and Environment Journal",
@@ -781,6 +2565,16 @@
     "doi": "https://doi.org/cqmgb2",
     "image": "",
     "id": "doi:10.1111/j.1747-6593.2010.00229.x"
+  },
+  {
+    "id": "scholar:developingsustainableurbanrive",
+    "title": "Developing sustainable urban riversides: an approach and preliminary results",
+    "authors": "JR Rouquette, V Kumar, S Hornby, DN Lerner",
+    "journal": "Cities of the Future – Sustainable Urban Planning and Water Management 2011 …",
+    "year": "2011",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:1sJd4Hv_s6UC",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Health Risk Map of a Petrochemical Complex through GIS-Fuzzy Integration of Air Pollution Monitoring Data",
@@ -801,6 +2595,16 @@
     "id": "doi:10.1016/j.chemosphere.2011.04.041"
   },
   {
+    "id": "scholar:acomparisonoffuzzybayesianandw",
+    "title": "A comparison of Fuzzy, Bayesian and Weighted Average models of in-stream habitat suitability",
+    "authors": "CJ Brookes, V Kumar, SN Lane",
+    "journal": "International Congress on Environmental Modelling and Software",
+    "year": "2010",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:xtRiw3GOFMkC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "A Multi-agent Framework for Agile Outsourced Supply Chains",
     "authors": "N. Mishra, V. Kumar, F. T. S. Chan",
     "journal": "Enterprise Networks and Logistics for Agile Manufacturing",
@@ -808,6 +2612,16 @@
     "doi": "https://doi.org/chjsdw",
     "image": "",
     "id": "doi:10.1007/978-1-84996-244-5_10"
+  },
+  {
+    "id": "scholar:bayesian_analysis_exponential",
+    "title": "Bayesian analysis of exponential extension model",
+    "authors": "Vikas Kumar",
+    "journal": "J. Nat. Acad. Math",
+    "year": "2010",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:ZysSsiWj_g4C",
+    "image": "",
+    "isOpenAccess": false
   },
   {
     "title": "Integrated fuzzy framework to incorporate uncertainty in risk management",
@@ -819,9 +2633,19 @@
     "id": "doi:10.1504/IJEP.2010.034244"
   },
   {
+    "id": "scholar:macroecologicalmodelmemscoping",
+    "title": "Macro-Ecological Model (MEM) Scoping and Feasibility Study",
+    "authors": "A Holzkaemper, V Kumar, B Surridge, A Paetzold, D Lerner",
+    "journal": "Publication",
+    "year": "2009",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:WF5omc3nYNoC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "Partitioning total variance in risk assessment: Application to a municipal solid waste incinerator",
     "authors": "Vikas Kumar, Montse Mari, Marta Schuhmacher, José L. Domingo",
-    "journal": "Environmental Modelling &amp; Software",
+    "journal": "Environmental Modelling & Software",
     "year": "2009",
     "doi": "https://doi.org/d96b98",
     "image": "",
@@ -835,6 +2659,26 @@
     "doi": "https://doi.org/bm9w26",
     "image": "",
     "id": "doi:10.1111/j.1539-6924.2008.01018.x"
+  },
+  {
+    "id": "scholar:softcomputingapproachestouncer",
+    "title": "Soft computing approaches to uncertainty propagation in environmental risk mangement",
+    "authors": "V Kumar",
+    "journal": "Universitat Rovira i Virgili",
+    "year": "2008",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:roLk4NBRz8UC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "doi:10.1007/11681960_12",
+    "title": "A Multicriteria Fuzzy Decision System to Sort Contaminated Soils",
+    "authors": "M. García, E. López, V. Kumar, A. Valls",
+    "journal": "Lecture Notes in Computer Science",
+    "year": "2006",
+    "doi": "https://doi.org/10.1007/11681960_12",
+    "image": "",
+    "isOpenAccess": true
   },
   {
     "title": "Definition and GIS-based characterization of an integral risk index applied to a chemical/petrochemical area",
@@ -855,6 +2699,16 @@
     "id": "doi:10.1007/11681960_23"
   },
   {
+    "id": "scholar:variabilityanduncertaintyanaly",
+    "title": "Variability And Uncertainty Analysis Of Contaminant Transport Model Using Fuzzy Latin Hypercube Sampling Technique",
+    "authors": "V Kumar, D Nayagum, S Thornton, S Banwart, M Schuhmacher, D Lerner",
+    "journal": "AGU Fall Meeting Abstracts 2006",
+    "year": "2006",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:eQOLeE2rZwMC",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
     "title": "Fuzzy uncertainty analysis in system modelling",
     "authors": "Vikas Kumar, Marta Schuhmacher",
     "journal": "Computer Aided Chemical Engineering",
@@ -862,5 +2716,25 @@
     "doi": "https://doi.org/c9pc2c",
     "image": "",
     "id": "doi:10.1016/S1570-7946(05)80187-7"
+  },
+  {
+    "id": "doi:10.4324/9780203427828-9",
+    "title": "Protein structure prediction",
+    "authors": "David T. Jones",
+    "journal": "Bioinformatics",
+    "year": "2003",
+    "doi": "https://doi.org/10.4324/9780203427828-9",
+    "image": "",
+    "isOpenAccess": false
+  },
+  {
+    "id": "scholar:webenabledexpertsystemofextens",
+    "title": "Web enabled expert system of extension: A need of time in agriculture for developing countries",
+    "authors": "S Marwaha, V Kumar, R Bahal",
+    "journal": "Proceedings of the International Agronomy Conference",
+    "year": "2002",
+    "doi": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=rhH7LGQAAAAJ&cstart=100&pagesize=100&sortby=pubdate&citation_for_view=rhH7LGQAAAAJ:SIv7DqKytYAC",
+    "image": "",
+    "isOpenAccess": false
   }
 ]
