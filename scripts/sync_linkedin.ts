@@ -244,8 +244,8 @@ async function scrapeLinkedInTeamPosts(
       console.log(`- Scraping posts for "${member.name}" (${username})${isCompany ? " [Company Page]" : ""}...`);
 
       try {
-        await page.goto(activityUrl, { waitUntil: "domcontentloaded", timeout: 30000 });
-        await page.waitForTimeout(3500);
+        await page.goto(activityUrl, { waitUntil: "domcontentloaded", timeout: 15000 });
+        await page.waitForTimeout(2000);
 
         // Check if session expired or blocked
         if (page.url().includes("/login") || page.url().includes("/checkpoint/")) {
