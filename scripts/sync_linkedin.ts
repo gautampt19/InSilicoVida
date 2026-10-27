@@ -18,86 +18,103 @@ interface RawPost {
 
 const MONTH_NAMES = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-export function parseLinkedInDate(dateInput?: string | Date): string {
+export function parseLinkedInDateDetails(dateInput?: string | Date): {
+  formatted: string;
+  date: Date;
+  isWithinOneYear: boolean;
+} {
   const now = new Date();
   const currentYear = now.getFullYear();
+  const oneYearAgo = new Date(now);
+  oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+  // Give a grace buffer of 5 days (approx 370 days)
+  oneYearAgo.setDate(oneYearAgo.getDate() - 5);
+
+  let targetDate = new Date();
 
   if (!dateInput) {
-    return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
-  }
+    targetDate = now;
+  } else if (dateInput instanceof Date) {
+    targetDate = dateInput;
+  } else {
+    const clean = dateInput
+      .replace(/\r/g, "")
+      .replace(/•.*$/, "")
+      .replace(/\bedited\b/i, "")
+      .trim();
 
-  if (dateInput instanceof Date) {
-    return `${MONTH_NAMES[dateInput.getMonth()]} ${dateInput.getFullYear()}`;
-  }
-
-  const clean = dateInput
-    .replace(/\r/g, "")
-    .replace(/•.*$/, "")
-    .replace(/\bedited\b/i, "")
-    .trim();
-
-  if (!clean) {
-    return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
-  }
-
-  // Relative units: "3w", "2mo", "1yr", "5d", "4h"
-  const relMatch = clean.match(/^(\d+)\s*([whdmy]|mo|yr)/i);
-  if (relMatch) {
-    const count = parseInt(relMatch[1], 10);
-    const unit = relMatch[2].toLowerCase();
-    const target = new Date();
-    if (unit === "h" || unit === "d") {
-      target.setDate(target.getDate() - (unit === "d" ? count : 1));
-    } else if (unit === "w") {
-      target.setDate(target.getDate() - count * 7);
-    } else if (unit === "mo" || unit === "m") {
-      target.setMonth(target.getMonth() - count);
-    } else if (unit === "yr" || unit === "y") {
-      target.setFullYear(target.getFullYear() - count);
+    if (!clean) {
+      targetDate = now;
+    } else {
+      // Relative units: "3w", "2mo", "1yr", "2yr", "5d", "4h"
+      const relMatch = clean.match(/^(\d+)\s*([whdmy]|mo|yr)/i);
+      if (relMatch) {
+        const count = parseInt(relMatch[1], 10);
+        const unit = relMatch[2].toLowerCase();
+        targetDate = new Date();
+        if (unit === "h" || unit === "d") {
+          targetDate.setDate(targetDate.getDate() - (unit === "d" ? count : 1));
+        } else if (unit === "w") {
+          targetDate.setDate(targetDate.getDate() - count * 7);
+        } else if (unit === "mo" || unit === "m") {
+          targetDate.setMonth(targetDate.getMonth() - count);
+        } else if (unit === "yr" || unit === "y") {
+          targetDate.setFullYear(targetDate.getFullYear() - count);
+        }
+      } else if (/yesterday/i.test(clean)) {
+        targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() - 1);
+      } else if (/today|just now/i.test(clean)) {
+        targetDate = now;
+      } else {
+        const monthYearMatch = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+(20\d{2})$/i);
+        if (monthYearMatch) {
+          const monthIdx = MONTH_NAMES.findIndex(
+            (m) => m.toLowerCase() === monthYearMatch[1].slice(0, 3).toLowerCase()
+          );
+          if (monthIdx !== -1) {
+            targetDate = new Date(parseInt(monthYearMatch[2], 10), monthIdx, 1);
+          }
+        } else {
+          const fullDateMatch = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},\s*(20\d{2})/i);
+          if (fullDateMatch) {
+            const monthIdx = MONTH_NAMES.findIndex(
+              (m) => m.toLowerCase() === fullDateMatch[1].slice(0, 3).toLowerCase()
+            );
+            const yr = parseInt(fullDateMatch[2], 10);
+            if (monthIdx !== -1) {
+              targetDate = new Date(yr, monthIdx, 1);
+            }
+          } else {
+            const monthDayMatch = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}$/i);
+            if (monthDayMatch) {
+              const monthIdx = MONTH_NAMES.findIndex(
+                (m) => m.toLowerCase() === monthDayMatch[1].slice(0, 3).toLowerCase()
+              );
+              if (monthIdx !== -1) {
+                const yr = monthIdx > now.getMonth() ? currentYear - 1 : currentYear;
+                targetDate = new Date(yr, monthIdx, 1);
+              }
+            } else {
+              const d = new Date(clean);
+              if (!isNaN(d.getTime())) {
+                targetDate = d;
+              }
+            }
+          }
+        }
+      }
     }
-    return `${MONTH_NAMES[target.getMonth()]} ${target.getFullYear()}`;
   }
 
-  if (/yesterday/i.test(clean)) {
-    const target = new Date();
-    target.setDate(target.getDate() - 1);
-    return `${MONTH_NAMES[target.getMonth()]} ${target.getFullYear()}`;
-  }
+  const isWithinOneYear = targetDate.getTime() >= oneYearAgo.getTime();
+  const formatted = `${MONTH_NAMES[targetDate.getMonth()]} ${targetDate.getFullYear()}`;
 
-  if (/today|just now/i.test(clean)) {
-    return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
-  }
+  return { formatted, date: targetDate, isWithinOneYear };
+}
 
-  // Month + Day with year: "Nov 6, 2024" or "Jul 11, 2025"
-  const fullDateMatch = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2},\s*(20\d{2})/i);
-  if (fullDateMatch) {
-    const monthIdx = MONTH_NAMES.findIndex(
-      (m) => m.toLowerCase() === fullDateMatch[1].slice(0, 3).toLowerCase()
-    );
-    const yr = parseInt(fullDateMatch[2], 10);
-    if (monthIdx !== -1) {
-      return `${MONTH_NAMES[monthIdx]} ${yr}`;
-    }
-  }
-
-  // Month + Day without year: "Feb 7" or "Apr 27"
-  const monthDayMatch = clean.match(/^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\s+\d{1,2}/i);
-  if (monthDayMatch) {
-    const monthIdx = MONTH_NAMES.findIndex(
-      (m) => m.toLowerCase() === monthDayMatch[1].slice(0, 3).toLowerCase()
-    );
-    if (monthIdx !== -1) {
-      const yr = monthIdx > now.getMonth() ? currentYear - 1 : currentYear;
-      return `${MONTH_NAMES[monthIdx]} ${yr}`;
-    }
-  }
-
-  const d = new Date(clean);
-  if (!isNaN(d.getTime()) && d.getFullYear() >= 2015 && d.getFullYear() <= currentYear + 1) {
-    return `${MONTH_NAMES[d.getMonth()]} ${d.getFullYear()}`;
-  }
-
-  return `${MONTH_NAMES[now.getMonth()]} ${currentYear}`;
+export function parseLinkedInDate(dateInput?: string | Date): string {
+  return parseLinkedInDateDetails(dateInput).formatted;
 }
 
 export function formatNewsDate(dateInput?: string | Date): string {
@@ -356,6 +373,12 @@ async function scrapeLinkedInTeamPosts(
         console.log(`  ✓ Found ${extracted.length} post(s) for ${member.name}.`);
 
         for (const item of extracted) {
+          const dateDetails = parseLinkedInDateDetails(item.date);
+          if (!dateDetails.isWithinOneYear) {
+            console.log(`  [SKIP] Post for ${member.name} is older than 1 year (${item.date || "unknown"} -> ${dateDetails.formatted}).`);
+            continue;
+          }
+
           const lines = item.text
             .split("\n")
             .map((l) => l.trim())
@@ -389,7 +412,7 @@ async function scrapeLinkedInTeamPosts(
             title,
             description: item.text,
             link: finalLink,
-            date: parseLinkedInDate(item.date),
+            date: dateDetails.formatted,
             author: member.name,
           });
         }
@@ -414,7 +437,7 @@ async function main() {
   console.log("   InSilicoVida Multi-Person LinkedIn Sync");
   console.log("==========================================\n");
 
-  // 0. Auto-clean corrupted legacy items (e.g. title "Follow", "Feb 2001", or headline as title)
+  // 0. Auto-clean corrupted legacy items and remove any LinkedIn posts older than 1 year
   try {
     const { data: badNews } = await supabase
       .from("news")
@@ -428,8 +451,24 @@ async function main() {
         console.log(`  ✓ Removed bad record ID ${bad.id} ("${bad.title}")`);
       }
     }
+
+    // Clean up existing LinkedIn posts in DB that are older than 1 year
+    const { data: allLinkedInNews } = await supabase
+      .from("news")
+      .select("id, title, date, link")
+      .ilike("link", "%linkedin.com%");
+
+    if (allLinkedInNews && allLinkedInNews.length > 0) {
+      for (const item of allLinkedInNews) {
+        const details = parseLinkedInDateDetails(item.date);
+        if (!details.isWithinOneYear) {
+          await supabase.from("news").delete().eq("id", item.id);
+          console.log(`  ✓ Removed LinkedIn post older than 1 year: "${item.title}" (${item.date})`);
+        }
+      }
+    }
   } catch (err: any) {
-    console.warn("Legacy cleanup check skipped:", err.message);
+    console.warn("Cleanup check skipped:", err.message);
   }
 
   const postsToProcess: RawPost[] = [];
@@ -487,7 +526,14 @@ async function main() {
   if (singlePostUrl) {
     console.log(`Extracting single post from: ${singlePostUrl} (Author: ${singlePostAuthor || "Team Member"})...`);
     const post = await fetchPostMetadata(singlePostUrl, singlePostAuthor);
-    if (post) postsToProcess.push(post);
+    if (post) {
+      const details = parseLinkedInDateDetails(post.date);
+      if (details.isWithinOneYear) {
+        postsToProcess.push(post);
+      } else {
+        console.log(`  [SKIP] Single post is older than 1 year (${post.date}).`);
+      }
+    }
   }
 
   // 4. Fallback: Parse command-line args if supplied
