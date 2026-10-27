@@ -1,6 +1,10 @@
 name: Sync LinkedIn to News
 
 on:
+  push:
+    branches:
+      - update-website-features
+      - main
   schedule:
     # Runs every 10 minutes
     - cron: '*/10 * * * *'
