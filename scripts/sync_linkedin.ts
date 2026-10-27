@@ -476,7 +476,7 @@ async function main() {
     }
   } else {
     console.log("ℹ️  LINKEDIN_LI_AT session cookie not set. Skipping automated profile scraping.");
-    console.log("   (Add LINKEDIN_LI_AT secret in GitHub to automatically scrape team member posts every 6 hours)\n");
+    console.log("   (Add LINKEDIN_LI_AT secret in GitHub to automatically scrape team member posts every 10 minutes)\n");
   }
 
 
