@@ -480,7 +480,10 @@ async function main() {
   }
 
 
-  // 3. Process single post URL if provided via env
+  // 2. Process single post URL if provided via env
+  const singlePostUrl = process.env.LINKEDIN_POST_URL;
+  const singlePostAuthor = process.env.LINKEDIN_AUTHOR;
+
   if (singlePostUrl) {
     console.log(`Extracting single post from: ${singlePostUrl} (Author: ${singlePostAuthor || "Team Member"})...`);
     const post = await fetchPostMetadata(singlePostUrl, singlePostAuthor);
