@@ -2,7 +2,7 @@ import { useParams, Link, useNavigate } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useBlog } from "@/contexts/BlogContext";
-import { ArrowLeft, Calendar, Clock, User, Tag, Share2, Check } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Tag, Share2, Check } from "lucide-react";
 import { useState } from "react";
 
 export default function BlogPostDetail() {
@@ -133,6 +133,28 @@ export default function BlogPostDetail() {
           {/* Article Body Content */}
           <div className="prose dark:prose-invert max-w-none text-foreground/90 space-y-6 text-base leading-relaxed mb-16">
             {blog.content.split('\n\n').map((paragraph, idx) => {
+              const trimmed = paragraph.trim();
+
+              // Check for markdown image: ![caption](url)
+              const imgMatch = trimmed.match(/^!\[(.*?)\]\((.*?)\)$/);
+              if (imgMatch) {
+                return (
+                  <figure key={idx} className="my-8 rounded-2xl overflow-hidden border border-border/50 bg-muted/20">
+                    <img
+                      src={imgMatch[2]}
+                      alt={imgMatch[1] || blog.title}
+                      className="w-full h-auto max-h-[560px] object-cover mx-auto"
+                      loading="lazy"
+                    />
+                    {imgMatch[1] && (
+                      <figcaption className="text-center text-xs text-muted-foreground p-3 bg-muted/40 border-t border-border/30">
+                        {imgMatch[1]}
+                      </figcaption>
+                    )}
+                  </figure>
+                );
+              }
+
               if (paragraph.startsWith('### ')) {
                 return (
                   <h3 key={idx} className="font-serif text-2xl font-normal text-foreground mt-8 mb-4">
