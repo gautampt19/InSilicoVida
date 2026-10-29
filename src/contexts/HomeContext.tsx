@@ -37,7 +37,7 @@ const initialData: HomeData = {
   labName: defaultHomeContent.labName || "InSilico Vida",
   tagline: "Computational Modeling for Health Risk Assessment",
   description: defaultHomeContent.description,
-  bannerImage: "/banner.png",
+  bannerImage: "",
   highlights: defaultHomeContent.highlights,
   tickerItems: defaultTickerItems,
 };

@@ -564,20 +564,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* ── Full-width Research Banner ── */}
-        <section className="container mx-auto px-6 mt-12 mb-8">
-          <div className="border border-border rounded bg-card p-2 shadow-sm">
-            <img
-              src={homeData.bannerImage || "/banner.png"}
-              alt="Research Poster and Pharmacokinetic Modeling Diagram"
-              className="w-full h-auto rounded"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=1200&h=400";
-              }}
-            />
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="py-20 px-6">
           <div className="container mx-auto max-w-4xl">
